@@ -1,0 +1,3 @@
+[submodule "Jetbrains"]
+	path = platforms/Jetbrains
+	url = https://github.com/katuwiran/Rikai.Colorschemes.Jetbrains.git
