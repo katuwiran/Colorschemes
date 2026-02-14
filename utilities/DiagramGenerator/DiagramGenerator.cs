@@ -10,7 +10,7 @@ public class DiagramGenerator
 	// Configuration constants
 	private const int CellWidth     = 200;
 	private const int CellHeight    = 120;
-	private const int FontSizeLarge = 36;
+	private const int FontSizeLarge = 28;
 	private const int FontSizeSmall = 18;
 	private const int Padding       = 10;
 

@@ -24,7 +24,7 @@ public class ColorSchemeEntry
 	public required ColorEntry HighlightInactive { get; set; }
 	public required ColorEntry HighlightOverlay  { get; set; }
 
-	public static List<ColorEntry> Test      => ColorSchemeEntry.ToList(ColorSchemeEntry.FromColorScheme(ColorScheme.Test));
+	// public static List<ColorEntry> Test      => ColorSchemeEntry.ToList(ColorSchemeEntry.FromColorScheme(ColorScheme.Test));
 	public static List<ColorEntry> Moonlight => ColorSchemeEntry.ToList(ColorSchemeEntry.FromColorScheme(ColorScheme.Moonlight));
 	public static List<ColorEntry> Skylight  => ColorSchemeEntry.ToList(ColorSchemeEntry.FromColorScheme(ColorScheme.Skylight));
 
