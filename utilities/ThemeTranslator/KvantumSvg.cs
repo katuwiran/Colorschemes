@@ -6,22 +6,26 @@ public static partial class ThemeTranslator
 	public static string KvantumSvg(ColorScheme scheme)
 	{
 		// Brand Colors
-		const string Primary       = "#3c84f7";
-		const string PrimaryActive = "#4285f4";
-		const string Alert         = "#f04a50";
+		string primary       = $"#{scheme.Lavender}";
+		string primaryActive = $"#{scheme.Purple}";
+		string alert         = $"#{scheme.Magenta}";
+
+		string titleBar              = $"#{scheme.Surface}";
+		string gray                  = $"#{scheme.Muted}";
+		string interactiveBackground = $"#{scheme.Highlight}";
 
 		// UI Neutrals
-		const string White    = "#ffffff";
-		const string Black    = "#000000";
-		const string IconGray = "#5a5a5a";
-		const string Border   = "#666666";
-		const string Desk     = "#d1d1d1";
+		string white    = $"#{scheme.Base}";
+		string black    = $"#{scheme.Text}";
+		string iconGray = $"#{scheme.HighlightInactive}";
+		string border   = $"#{scheme.Overlay}";
+		string desk     = $"#{scheme.Inactive}";
 
 		// Opacity Levels
-		const string OpacityHidden   = "0";
-		const string OpacityFaint    = "0.1";
-		const string OpacityDisabled = "0.3";
-		const string OpacityNormal = "0.75";
+		const string opacityHidden   = "0";
+		const string opacityFaint    = "0.1";
+		const string opacityDisabled = "0.3";
+		const string opacityNormal   = "0.75";
 
 		return
 			$"""
@@ -40,11 +44,11 @@ public static partial class ThemeTranslator
 			    xmlns:svg="http://www.w3.org/2000/svg">
 			   <sodipodi:namedview
 			      id="namedview1812"
-			      pagecolor="{White}"
-			      bordercolor="{Border}"
+			      pagecolor="{white}"
+			      bordercolor="{border}"
 			      borderopacity="1.0"
 			      inkscape:pageshadow="2"
-			      inkscape:pageopacity="{OpacityHidden}"
+			      inkscape:pageopacity="{opacityHidden}"
 			      inkscape:pagecheckerboard="0"
 			      showgrid="true"
 			      inkscape:zoom="4"
@@ -60,7 +64,7 @@ public static partial class ThemeTranslator
 			      inkscape:bbox-nodes="true"
 			      inkscape:snap-bbox-edge-midpoints="true"
 			      inkscape:showpageshadow="2"
-			      inkscape:deskcolor="{Desk}">
+			      inkscape:deskcolor="{desk}">
 			     <inkscape:grid
 			        type="xygrid"
 			        id="grid51489"
@@ -79,7 +83,7 @@ public static partial class ThemeTranslator
 			          offset="0"
 			          id="stop3" />
 			       <stop
-			          stop-opacity="{OpacityHidden}"
+			          stop-opacity="{opacityHidden}"
 			          offset="1"
 			          id="stop5" />
 			     </linearGradient>
@@ -96,7 +100,7 @@ public static partial class ThemeTranslator
 			     <linearGradient
 			        id="color-primary">
 			       <stop
-			          stop-color="{Primary}"
+			          stop-color="{primary}"
 			          offset="1"
 			          id="stop22" />
 			     </linearGradient>
@@ -200,10 +204,10 @@ public static partial class ThemeTranslator
 			        y="667.5"
 			        width="45"
 			        height="45"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect26" />
 			     <g
-			        fill="{IconGray}"
+			        fill="{iconGray}"
 			        id="g32">
 			       <path
 			          d="m214.62 670-1.75 1 2.25 3.9063 1.75-1zm20.75 0-2.25 3.9063 1.75 1 2.25-3.9063zm-32.875 19v2h4.5v-2zm40.5 0v2h4.5v-2zm-27.875 16.094-2.25 3.9062 1.75 1 2.25-3.9062zm19.75 0-1.75 1 2.25 3.9062 1.75-1z"
@@ -218,7 +222,7 @@ public static partial class ThemeTranslator
 			      cx="98"
 			      cy="783.99"
 			      r="5"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <g
 			      id="button-default-indicator"
 			      transform="translate(-367.5 -2.5001)">
@@ -227,7 +231,7 @@ public static partial class ThemeTranslator
 			        y="87.5"
 			        width="25"
 			        height="25"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect36" />
 			     <path
 			        d="m396.25 86.25-17.5 17.5h17.5z"
@@ -243,7 +247,7 @@ public static partial class ThemeTranslator
 			        y="1039"
 			        width="7"
 			        height="32"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect44" />
 			     <rect
 			        x="277.63"
@@ -258,28 +262,28 @@ public static partial class ThemeTranslator
 			      y="822.26"
 			      width="10"
 			      height="10"
-			      opacity="{OpacityHidden}" />
+			      opacity="{opacityHidden}" />
 			   <rect
 			      id="grip-pressed"
 			      x="351"
 			      y="822.26"
 			      width="10"
 			      height="10"
-			      opacity="{OpacityHidden}" />
+			      opacity="{opacityHidden}" />
 			   <rect
 			      id="slider-tick-normal"
 			      x="210"
 			      y="789.99"
 			      width="5"
 			      height="1"
-			      fill="{IconGray}" />
+			      fill="{iconGray}" />
 			   <rect
 			      id="grip-normal"
 			      x="323"
 			      y="822.26"
 			      width="10"
 			      height="10"
-			      opacity="{OpacityHidden}" />
+			      opacity="{opacityHidden}" />
 			   <rect
 			      id="expand-lineedit-normal"
 			      x="256"
@@ -287,7 +291,7 @@ public static partial class ThemeTranslator
 			      width="10"
 			      height="10"
 			      opacity=".15"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <g
 			      id="splitter-grip-focused"
 			      transform="matrix(1.1429 0 0 1 -10.286 -279.01)"
@@ -297,7 +301,7 @@ public static partial class ThemeTranslator
 			        y="1039"
 			        width="7"
 			        height="32"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect66" />
 			     <rect
 			        x="277.63"
@@ -326,7 +330,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m65.002 432.02a1 1 0 0 0-0.70703 0.29297l-2.293 2.293-2.2832-2.2832a1 1 0 0 0-0.01-0.01 1 1 0 0 0-0.70117-0.28906l-0.01 0.0137a1 1 0 0 0-1 1 1 1 0 0 0 0.29297 0.70703l2.293 2.293-2.293 2.293a1 1 0 0 0-0.28906 0.69922 1 1 0 0 0 1 1 1 1 0 0 0 0.70703-0.29297l2.293-2.293 2.2832 2.2832a1 1 0 0 0 0.7168 0.30274 1 1 0 0 0 1-1 1 1 0 0 0-0.29297-0.70703l-2.3008-2.2988 2.2832-2.2832a1 1 0 0 0 0.31055-0.72071 1 1 0 0 0-1-1z"
 			        id="path75"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="mdi-minimize-normal"
@@ -346,7 +350,7 @@ public static partial class ThemeTranslator
 			        rx="1"
 			        ry="1"
 			        id="rect80"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="mdi-maximize-normal"
@@ -361,7 +365,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m98 432.03c-0.554 0-1 0.446-1 1v2h-2c-0.554 0-1 0.446-1 1s0.446 1 1 1h2v2c0 0.554 0.446 1 1 1s1-0.446 1-1v-2h2c0.554 0 1-0.446 1-1s-0.446-1-1-1h-2v-2c0-0.554-0.446-1-1-1z"
 			        id="path85"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="mdi-restore-normal"
@@ -376,7 +380,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m116 432.03a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"
 			        id="path90"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="mdi-close-focused"
@@ -390,7 +394,7 @@ public static partial class ThemeTranslator
 			        id="rect93" />
 			     <path
 			        d="m65.002 432.02a1 1 0 0 0-0.70703 0.29297l-2.293 2.293-2.2832-2.2832a1 1 0 0 0-0.01-0.01 1 1 0 0 0-0.70117-0.28906l-0.01 0.0137a1 1 0 0 0-1 1 1 1 0 0 0 0.29297 0.70703l2.293 2.293-2.293 2.293a1 1 0 0 0-0.28906 0.69922 1 1 0 0 0 1 1 1 1 0 0 0 0.70703-0.29297l2.293-2.293 2.2832 2.2832a1 1 0 0 0 0.7168 0.30274 1 1 0 0 0 1-1 1 1 0 0 0-0.29297-0.70703l-2.3008-2.2988 2.2832-2.2832a1 1 0 0 0 0.31055-0.72071 1 1 0 0 0-1-1z"
-			        fill="{Alert}"
+			        fill="{alert}"
 			        id="path95" />
 			   </g>
 			   <g
@@ -410,7 +414,7 @@ public static partial class ThemeTranslator
 			        height="2"
 			        rx="1"
 			        ry="1"
-			        fill="{Alert}"
+			        fill="{alert}"
 			        id="rect100" />
 			   </g>
 			   <g
@@ -425,7 +429,7 @@ public static partial class ThemeTranslator
 			        id="rect103" />
 			     <path
 			        d="m98 432.03c-0.554 0-1 0.446-1 1v2h-2c-0.554 0-1 0.446-1 1s0.446 1 1 1h2v2c0 0.554 0.446 1 1 1s1-0.446 1-1v-2h2c0.554 0 1-0.446 1-1s-0.446-1-1-1h-2v-2c0-0.554-0.446-1-1-1z"
-			        fill="{Alert}"
+			        fill="{alert}"
 			        id="path105" />
 			   </g>
 			   <g
@@ -440,7 +444,7 @@ public static partial class ThemeTranslator
 			        id="rect108" />
 			     <path
 			        d="m116 432.03a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"
-			        fill="{Alert}"
+			        fill="{alert}"
 			        id="path110" />
 			   </g>
 			   <g
@@ -455,7 +459,7 @@ public static partial class ThemeTranslator
 			        id="rect113" />
 			     <path
 			        d="m65.002 432.02a1 1 0 0 0-0.70703 0.29297l-2.293 2.293-2.2832-2.2832a1 1 0 0 0-0.01-0.01 1 1 0 0 0-0.70117-0.28906l-0.01 0.0137a1 1 0 0 0-1 1 1 1 0 0 0 0.29297 0.70703l2.293 2.293-2.293 2.293a1 1 0 0 0-0.28906 0.69922 1 1 0 0 0 1 1 1 1 0 0 0 0.70703-0.29297l2.293-2.293 2.2832 2.2832a1 1 0 0 0 0.7168 0.30274 1 1 0 0 0 1-1 1 1 0 0 0-0.29297-0.70703l-2.3008-2.2988 2.2832-2.2832a1 1 0 0 0 0.31055-0.72071 1 1 0 0 0-1-1z"
-			        fill="{PrimaryActive}"
+			        fill="{primaryActive}"
 			        id="path115" />
 			   </g>
 			   <g
@@ -475,7 +479,7 @@ public static partial class ThemeTranslator
 			        height="2"
 			        rx="1"
 			        ry="1"
-			        fill="{PrimaryActive}"
+			        fill="{primaryActive}"
 			        id="rect120" />
 			   </g>
 			   <g
@@ -490,7 +494,7 @@ public static partial class ThemeTranslator
 			        id="rect123" />
 			     <path
 			        d="m98 432.03c-0.554 0-1 0.446-1 1v2h-2c-0.554 0-1 0.446-1 1s0.446 1 1 1h2v2c0 0.554 0.446 1 1 1s1-0.446 1-1v-2h2c0.554 0 1-0.446 1-1s-0.446-1-1-1h-2v-2c0-0.554-0.446-1-1-1z"
-			        fill="{PrimaryActive}"
+			        fill="{primaryActive}"
 			        id="path125" />
 			   </g>
 			   <g
@@ -505,7 +509,7 @@ public static partial class ThemeTranslator
 			        id="rect128" />
 			     <path
 			        d="m116 432.03a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"
-			        fill="{PrimaryActive}"
+			        fill="{primaryActive}"
 			        id="path130" />
 			   </g>
 			   <g
@@ -521,7 +525,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m65.002 432.02a1 1 0 0 0-0.70703 0.29297l-2.293 2.293-2.2832-2.2832a1 1 0 0 0-0.01-0.01 1 1 0 0 0-0.70117-0.28906l-0.01 0.0137a1 1 0 0 0-1 1 1 1 0 0 0 0.29297 0.70703l2.293 2.293-2.293 2.293a1 1 0 0 0-0.28906 0.69922 1 1 0 0 0 1 1 1 1 0 0 0 0.70703-0.29297l2.293-2.293 2.2832 2.2832a1 1 0 0 0 0.7168 0.30274 1 1 0 0 0 1-1 1 1 0 0 0-0.29297-0.70703l-2.3008-2.2988 2.2832-2.2832a1 1 0 0 0 0.31055-0.72071 1 1 0 0 0-1-1z"
 			        id="path135"
-			        style="fill:{Black};opacity:{OpacityDisabled}" />
+			        style="fill:{black};opacity:{opacityDisabled}" />
 			   </g>
 			   <g
 			      id="mdi-minimize-disabled"
@@ -541,7 +545,7 @@ public static partial class ThemeTranslator
 			        rx="1"
 			        ry="1"
 			        id="rect140"
-			        style="fill:{Black};opacity:{OpacityDisabled}" />
+			        style="fill:{black};opacity:{opacityDisabled}" />
 			   </g>
 			   <g
 			      id="mdi-maximize-disabled"
@@ -556,7 +560,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m98 432.03c-0.554 0-1 0.446-1 1v2h-2c-0.554 0-1 0.446-1 1s0.446 1 1 1h2v2c0 0.554 0.446 1 1 1s1-0.446 1-1v-2h2c0.554 0 1-0.446 1-1s-0.446-1-1-1h-2v-2c0-0.554-0.446-1-1-1z"
 			        id="path145"
-			        style="fill:{Black};opacity:{OpacityDisabled}" />
+			        style="fill:{black};opacity:{opacityDisabled}" />
 			   </g>
 			   <g
 			      id="mdi-restore-disabled"
@@ -571,7 +575,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m116 432.03a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"
 			        id="path150"
-			        style="fill:{Black};opacity:{OpacityDisabled}" />
+			        style="fill:{black};opacity:{opacityDisabled}" />
 			   </g>
 			   <g
 			      id="mdi-menu-normal"
@@ -586,7 +590,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m140 432.03c-0.554 0-1 0.446-1 1s0.446 1 1 1h6c0.554 0 1-0.446 1-1s-0.446-1-1-1h-6zm0 3c-0.554 0-1 0.446-1 1s0.446 1 1 1h6c0.554 0 1-0.446 1-1s-0.446-1-1-1h-6zm0 3c-0.554 0-1 0.446-1 1s0.446 1 1 1h6c0.554 0 1-0.446 1-1s-0.446-1-1-1h-6z"
 			        id="path155"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="progress-normal-lefttyry"
@@ -616,42 +620,42 @@ public static partial class ThemeTranslator
 			      y="167"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-pattern-normal-bottom"
 			      x="32"
 			      y="187"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-pattern-normal-topleft"
 			      x="20"
 			      y="167"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-pattern-normal-topright"
 			      x="44"
 			      y="167"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-pattern-normal-bottomleft"
 			      x="20"
 			      y="187"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-pattern-normal-bottomright"
 			      x="44"
 			      y="187"
 			      width="12"
 			      height="12"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="progress-normal-top"
 			      x="71"
@@ -745,7 +749,7 @@ public static partial class ThemeTranslator
 			        width="8"
 			        height="8"
 			        id="rect186"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="progress-pattern-normal-left"
@@ -756,7 +760,7 @@ public static partial class ThemeTranslator
 			        width="8"
 			        height="8"
 			        id="rect189"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="progress-pattern-normal-right"
@@ -767,7 +771,7 @@ public static partial class ThemeTranslator
 			        width="8"
 			        height="8"
 			        id="rect192"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="progress-normal-left"
@@ -830,188 +834,188 @@ public static partial class ThemeTranslator
 			      y="930.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <rect
 			      id="itemview-pressed-bottom"
 			      x="52"
 			      y="942.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <path
 			      id="itemview-pressed"
 			      d="m52 934.26h8v8h-8z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <path
 			      id="itemview-pressed-topright"
 			      d="m60 930.26c4 0 4 4 4 4h-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <path
 			      id="itemview-pressed-bottomright"
 			      d="m60 942.26h4s0 4-4 4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <rect
 			      id="itemview-pressed-right"
 			      x="60"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <rect
 			      id="itemview-pressed-left"
 			      x="48"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <path
 			      id="itemview-pressed-topleft"
 			      d="m52 930.26v4h-4s0-4 4-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <path
 			      id="itemview-pressed-bottomleft"
 			      d="m48 942.26h4v4c-4 0-4-4-4-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityHidden}.25" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityHidden}.25" />
 			   <rect
 			      id="itemview-toggled-top"
 			      x="71"
 			      y="930.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <rect
 			      id="itemview-toggled-bottom"
 			      x="71"
 			      y="942.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <path
 			      id="itemview-toggled"
 			      d="m71 934.26h8v8h-8z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <rect
 			      id="itemview-toggled-right"
 			      x="79"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <path
 			      id="itemview-toggled-topright"
 			      d="m79 930.26c4 0 4 4 4 4h-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <path
 			      id="itemview-toggled-bottomright"
 			      d="m79 942.26h4s0 4-4 4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <rect
 			      id="itemview-toggled-left"
 			      x="67"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <path
 			      id="itemview-toggled-topleft"
 			      d="m71 930.26v4h-4s0-4 4-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <path
 			      id="itemview-toggled-bottomleft"
 			      d="m67 942.26h4v4c-4 0-4-4-4-4z"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5" />
 			   <rect
 			      id="itemview-focused-top"
 			      x="33"
 			      y="930.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <rect
 			      id="itemview-focused-bottom"
 			      x="33"
 			      y="942.26"
 			      width="8"
 			      height="4"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="itemview-focused"
 			      d="m33 934.26h8v8h-8z"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <rect
 			      id="itemview-focused-right"
 			      x="41"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="itemview-focused-topright"
 			      d="m41 930.26c4 0 4 4 4 4h-4z"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="itemview-focused-bottomright"
 			      d="m41 942.26h4s0 4-4 4z"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <rect
 			      id="itemview-focused-left"
 			      x="29"
 			      y="934.26"
 			      width="4"
 			      height="8"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="itemview-focused-topleft"
 			      d="m 33,930.26001 v 4 h -4 c 0,0 0,-4 4,-4 z"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="itemview-focused-bottomleft"
 			      d="m29 942.26h4v4c-4 0-4-4-4-4z"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <path
 			      id="toolbar-handle"
 			      d="m245 107a5 5 0 0 1-10 0 5 5 0 1 1 10 0z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-focused-left"
 			      d="m116 946v-17.999h-6l3.6e-4 18z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-topleft"
 			      d="m116 921c-3.2999-1e-4 -6 2.7-6 5.9999h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused"
 			      d="m117 928v18h18v-18z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-right"
 			      d="m136 946v-17.999h6l-3.7e-4 18z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-topright"
 			      d="m136 921c3.2999-1e-4 6 2.7 6 5.9999h-6z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-top"
 			      d="m117 927h17.999v-6h-18z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-bottom"
 			      d="m135 947h-17.999v6h18z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-bottomleft"
 			      d="m116 953c-3.2999 0-5.9999-2.7-5.9999-5.9999l5.9999-1e-4z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      id="menubaritem-focused-bottomright"
 			      d="m136 953c3.2999 0 5.9999-2.7 5.9999-5.9999l-5.9999-1e-4z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <path
 			      d="m223.93 399.69v32h32v-32z"
 			      id="titlebar-normal"
-			      style="fill:#f2f2f2;fill-opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1" />
 			   <use
 			      id="titlebar-focused"
 			      transform="translate(1.4175e-6 -45)"
@@ -1021,15 +1025,15 @@ public static partial class ThemeTranslator
 			   <path
 			      id="header-pressed"
 			      d="m146 104.88h-6v6h6z"
-			      style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			      style="opacity:{opacityHidden}.2;fill:{black}" />
 			   <path
 			      id="header-toggled"
 			      d="m124 104.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="header-focused"
 			      d="m108 104.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}" />
+			      style="fill:{black};opacity:{opacityFaint}" />
 			   <g
 			      id="tarrow-right-normal"
 			      transform="translate(-163.00382,-247.99535)">
@@ -1044,7 +1048,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path276"
-			        style="opacity:{OpacityNormal};fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityNormal};fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-right-focused"
@@ -1060,7 +1064,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path281"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-right-pressed"
@@ -1076,7 +1080,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path286"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-right-toggled"
@@ -1092,7 +1096,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path291"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-right-disabled"
@@ -1108,7 +1112,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path296"
-			        style="opacity:{OpacityDisabled};fill:#dfdfdf;fill-opacity:1" />
+			        style="opacity:{opacityDisabled};fill:#dfdfdf;fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-left-normal"
@@ -1124,7 +1128,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path301"
-			        style="opacity:{OpacityNormal};fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityNormal};fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-left-focused"
@@ -1140,7 +1144,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path306"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-left-pressed"
@@ -1156,7 +1160,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path311"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-left-toggled"
@@ -1172,7 +1176,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path316"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-left-disabled"
@@ -1188,7 +1192,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path321"
-			        style="opacity:{OpacityDisabled};fill:#dfdfdf;fill-opacity:1" />
+			        style="opacity:{opacityDisabled};fill:#dfdfdf;fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-up-normal"
@@ -1204,7 +1208,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path326"
-			        style="opacity:{OpacityNormal};fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityNormal};fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-up-focused"
@@ -1220,7 +1224,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path331"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-up-pressed"
@@ -1236,7 +1240,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path336"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-up-toggled"
@@ -1252,7 +1256,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path341"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-up-disabled"
@@ -1268,7 +1272,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path346"
-			        style="opacity:{OpacityDisabled};fill:#dfdfdf;fill-opacity:1" />
+			        style="opacity:{opacityDisabled};fill:#dfdfdf;fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-down-normal"
@@ -1284,7 +1288,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path351"
-			        style="opacity:{OpacityNormal};fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityNormal};fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="tarrow-down-focused"
@@ -1300,7 +1304,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path356"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-down-pressed"
@@ -1316,7 +1320,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path361"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-down-toggled"
@@ -1332,7 +1336,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path366"
-			        style="fill:{Black}" />
+			        style="fill:{black}" />
 			   </g>
 			   <g
 			      id="tarrow-down-disabled"
@@ -1348,7 +1352,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path371"
-			        style="opacity:{OpacityDisabled};fill:#dfdfdf;fill-opacity:1" />
+			        style="opacity:{opacityDisabled};fill:#dfdfdf;fill-opacity:1" />
 			   </g>
 			   <g
 			      id="arrow-right-normal"
@@ -1364,7 +1368,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path376"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-right-focused"
@@ -1380,7 +1384,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path381"
-			        style="opacity:1;fill:{Black}" />
+			        style="opacity:1;fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-right-pressed"
@@ -1396,7 +1400,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path386"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-right-toggled"
@@ -1412,7 +1416,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path391"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-right-disabled"
@@ -1428,7 +1432,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path396"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-left-normal"
@@ -1444,7 +1448,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path401"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-left-focused"
@@ -1460,7 +1464,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path406"
-			        style="opacity:1;fill:{Black}" />
+			        style="opacity:1;fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-left-pressed"
@@ -1476,7 +1480,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path411"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-left-toggled"
@@ -1492,7 +1496,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path416"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-left-disabled"
@@ -1508,7 +1512,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path421"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-up-normal"
@@ -1524,7 +1528,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path426"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-up-focused"
@@ -1540,7 +1544,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path431"
-			        style="opacity:1;fill:{Black}" />
+			        style="opacity:1;fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-up-pressed"
@@ -1556,7 +1560,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path436"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-up-toggled"
@@ -1572,7 +1576,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path441"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-up-disabled"
@@ -1588,7 +1592,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path446"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-down-normal"
@@ -1604,7 +1608,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path451"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-down-focused"
@@ -1620,7 +1624,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path456"
-			        style="opacity:1;fill:{Black}" />
+			        style="opacity:1;fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-down-pressed"
@@ -1636,7 +1640,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path461"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-down-toggled"
@@ -1652,7 +1656,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path466"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-down-disabled"
@@ -1668,7 +1672,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path471"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-plus-normal"
@@ -1683,7 +1687,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path476"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-minus-normal"
@@ -1702,7 +1706,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect481"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-plus-focused"
@@ -1717,7 +1721,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path486"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-minus-focused"
@@ -1736,7 +1740,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect491"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-plus-pressed"
@@ -1751,7 +1755,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path496"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-minus-pressed"
@@ -1770,7 +1774,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect501"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-plus-toggled"
@@ -1785,7 +1789,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path506"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-minus-toggled"
@@ -1804,7 +1808,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect511"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-plus-disabled"
@@ -1819,7 +1823,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path516"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="arrow-minus-disabled"
@@ -1838,7 +1842,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect521"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-plus-normal"
@@ -1854,7 +1858,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path526"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-plus-focused"
@@ -1870,7 +1874,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path531"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-plus-pressed"
@@ -1886,7 +1890,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path536"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-plus-toggled"
@@ -1902,7 +1906,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path541"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-plus-disabled"
@@ -1918,7 +1922,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path546"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-minus-normal"
@@ -1934,7 +1938,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path551"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-minus-focused"
@@ -1950,7 +1954,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path556"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-minus-pressed"
@@ -1966,7 +1970,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path561"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-minus-toggled"
@@ -1982,7 +1986,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path566"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="tree-minus-disabled"
@@ -1998,7 +2002,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path571"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-down-normal"
@@ -2014,7 +2018,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path576"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-down-focused"
@@ -2030,7 +2034,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path581"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-down-disabled"
@@ -2046,7 +2050,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path586"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="carrow-normal"
@@ -2062,7 +2066,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path591"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="carrow-focused"
@@ -2078,7 +2082,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path596"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="carrow-pressed"
@@ -2094,7 +2098,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path601"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="carrow-toggled"
@@ -2110,7 +2114,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path606"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="carrow-disabled"
@@ -2126,7 +2130,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path611"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-up-normal"
@@ -2142,7 +2146,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path616"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-up-focused"
@@ -2158,7 +2162,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path621"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-up-disabled"
@@ -2174,7 +2178,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path626"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-left-normal"
@@ -2190,7 +2194,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path631"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-left-focused"
@@ -2206,7 +2210,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path636"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-left-disabled"
@@ -2222,7 +2226,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path641"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-right-normal"
@@ -2238,7 +2242,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path646"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-right-focused"
@@ -2254,7 +2258,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path651"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="flat-arrow-right-disabled"
@@ -2270,7 +2274,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0.72169,0,0,1,52.664,0.42535)"
 			        d="m 194.46,532.57 -6.9282,4 v -8 l 3.4641,2 z"
 			        id="path656"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-plus-normal"
@@ -2285,7 +2289,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path661"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-minus-normal"
@@ -2304,7 +2308,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect666"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-plus-focused"
@@ -2319,7 +2323,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path671"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-minus-focused"
@@ -2338,7 +2342,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect676"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-plus-pressed"
@@ -2353,7 +2357,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path681"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-minus-pressed"
@@ -2372,7 +2376,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect686"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-plus-disabled"
@@ -2387,7 +2391,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path691"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-minus-disabled"
@@ -2406,7 +2410,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect696"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-up-normal"
@@ -2421,7 +2425,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path701"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-down-normal"
@@ -2440,7 +2444,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect706"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-up-focused"
@@ -2455,7 +2459,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path711"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-down-focused"
@@ -2474,7 +2478,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect716"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-up-pressed"
@@ -2489,7 +2493,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path721"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-down-pressed"
@@ -2508,7 +2512,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect726"
-			        style="opacity:{OpacityNormal};fill:{Black}" />
+			        style="opacity:{opacityNormal};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-up-disabled"
@@ -2523,7 +2527,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 18,317 v 3 h -3 v 2 h 3 v 3 h 2 v -3 h 3 v -2 h -3 v -3 z"
 			        id="path731"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="spin-down-disabled"
@@ -2542,7 +2546,7 @@ public static partial class ThemeTranslator
 			        width="2"
 			        height="8"
 			        id="rect736"
-			        style="opacity:{OpacityDisabled};fill:{Black}" />
+			        style="opacity:{opacityDisabled};fill:{black}" />
 			   </g>
 			   <g
 			      id="slidercursor-tickless-normal"
@@ -2559,13 +2563,13 @@ public static partial class ThemeTranslator
 			        cy="416"
 			        r="8"
 			        id="circle741"
-			        style="stroke-width:1.6;fill:{Primary};fill-opacity:1" />
+			        style="stroke-width:1.6;fill:{primary};fill-opacity:1" />
 			     <circle
 			        cx="328"
 			        cy="416"
 			        r="6"
 			        id="circle29777"
-			        style="stroke-width:1.2;fill:{White};fill-opacity:1" />
+			        style="stroke-width:1.2;fill:{white};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slidercursor-tickless-pressed"
@@ -2582,19 +2586,19 @@ public static partial class ThemeTranslator
 			        cy="416"
 			        r="11"
 			        id="circle746"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			     <circle
 			        cx="372"
 			        cy="416"
 			        r="8"
 			        id="circle748"
-			        style="stroke-width:1.6;fill:{Primary};fill-opacity:1" />
+			        style="stroke-width:1.6;fill:{primary};fill-opacity:1" />
 			     <circle
 			        cx="372"
 			        cy="416"
 			        r="5"
 			        id="circle46204"
-			        style="fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="slidercursor-tickless-focused"
@@ -2611,19 +2615,19 @@ public static partial class ThemeTranslator
 			        cy="416"
 			        r="11"
 			        id="circle43281"
-			        style="opacity:{OpacityFaint}5;fill:{Black};fill-opacity:1;stroke-width:1" />
+			        style="opacity:{opacityFaint}5;fill:{black};fill-opacity:1;stroke-width:1" />
 			     <circle
 			        cx="350"
 			        cy="416"
 			        r="8"
 			        id="circle753"
-			        style="stroke-width:0.727273;fill:{Primary};fill-opacity:1" />
+			        style="stroke-width:0.727273;fill:{primary};fill-opacity:1" />
 			     <circle
 			        cx="350"
 			        cy="416"
 			        r="6"
 			        id="circle755"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slidercursor-normal"
@@ -2638,11 +2642,11 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 328,431 c -3.8423,0 -7,3.1577 -7,7 0,3.8423 3.1577,7 7,7 h 0.002 0.002 c 1.87564,-0.003 3.67272,-0.76017 4.98632,-2.09961 l -0.5332,0.38867 c -0.11526,0.0576 0.0157,0.0317 0.31836,-0.19531 l 0.12305,-0.0918 4.90234,-5.00195 -1.37305,-1.40039 -3.39843,-3.4668 C 331.71163,431.77081 329.89527,431.00042 328,431 Z m 0,4 c 0.81332,1.8e-4 1.58867,0.3294 2.1543,0.91406 l 0.006,0.004 2.03906,2.08203 -1.82031,1.85547 -0.01,0.006 -0.23437,0.23828 C 329.5716,440.67385 328.80272,440.9983 327.99805,441 326.31849,440.99896 325,439.67984 325,438 c 0,-1.6805 1.3195,-3 3,-3 z"
 			        id="path53563"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			     <path
 			        d="m 335,438 -3.4079,-3.4767 c -0.94165,-0.97333 -2.2378,-1.5231 -3.5921,-1.5234 -2.7614,0 -5,2.2386 -5,5 0,2.7614 2.2386,5 5,5 1.3405,-0.002 2.6242,-0.54194 3.5628,-1.499 0.004,-0.002 0.009,-0.004 0.013,-0.007 z"
 			        id="path53561"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slider-normal-right"
@@ -2661,28 +2665,28 @@ public static partial class ThemeTranslator
 			      y="287.02"
 			      width="8"
 			      height="8"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="slider-toggled-bottomright"
 			      x="290.95"
 			      y="303.02"
 			      width="8"
 			      height="8"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="slider-toggled-topleft"
 			      x="282.95"
 			      y="287.02"
 			      width="8"
 			      height="8"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="slider-toggled-bottomleft"
 			      x="282.95"
 			      y="303.02"
 			      width="8"
 			      height="8"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <rect
 			      id="slider-normal-topright"
 			      x="310.95"
@@ -2720,7 +2724,7 @@ public static partial class ThemeTranslator
 			        width="8"
 			        height="8"
 			        id="rect802"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slider-toggled-left"
@@ -2731,7 +2735,7 @@ public static partial class ThemeTranslator
 			        width="8"
 			        height="8"
 			        id="rect805"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slider-normal-left"
@@ -2750,7 +2754,7 @@ public static partial class ThemeTranslator
 			      y="615"
 			      width="15"
 			      height="15"
-			      style="fill:{Primary};fill-opacity:1" />
+			      style="fill:{primary};fill-opacity:1" />
 			   <g
 			      id="menuitem-tearoff-focused"
 			      transform="translate(83.742 -272.34)">
@@ -2760,13 +2764,13 @@ public static partial class ThemeTranslator
 			        y="-229.5"
 			        width="7"
 			        height="9"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect812" />
 			     <path
 			        d="m227.24 689h-2.2462v2h2.2462zm-4.4924 0h-2.2461v2h2.2461z"
-			        fill="{PrimaryActive}"
+			        fill="{primaryActive}"
 			        id="path814"
-			        style="fill:{Primary}" />
+			        style="fill:{primary}" />
 			   </g>
 			   <g
 			      id="menuitem-tearoff-normal"
@@ -2777,12 +2781,12 @@ public static partial class ThemeTranslator
 			        y="-229.5"
 			        width="7"
 			        height="9"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect858" />
 			     <path
 			        d="m227.24 689h-2.2462v2h2.2462zm-4.4924 0h-2.2461v2h2.2461z"
 			        id="path860"
-			        style="fill:{Black};opacity:{OpacityDisabled}5" />
+			        style="fill:{black};opacity:{opacityDisabled}5" />
 			   </g>
 			   <rect
 			      id="dial"
@@ -2792,14 +2796,14 @@ public static partial class ThemeTranslator
 			      height="45"
 			      rx="22.5"
 			      ry="22.5"
-			      style="fill:{Black};opacity:{OpacityHidden}.08" />
+			      style="fill:{black};opacity:{opacityHidden}.08" />
 			   <rect
 			      id="dock-normal"
 			      x="357.5"
 			      y="912.5"
 			      width="30"
 			      height="30"
-			      style="fill:{White};fill-opacity:1" />
+			      style="fill:{white};fill-opacity:1" />
 			   <g
 			      transform="translate(2.5027073,-257.5)"
 			      id="g997">
@@ -2810,7 +2814,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="30"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-top"
 			        transform="rotate(-90)"
@@ -2819,7 +2823,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="30"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-topleft"
 			        x="399.5"
@@ -2827,7 +2831,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="5"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-topright"
 			        x="439.5"
@@ -2835,7 +2839,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="5"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-right"
 			        x="439.5"
@@ -2843,7 +2847,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="30"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-bottom"
 			        transform="rotate(-90)"
@@ -2852,7 +2856,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="30"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-bottomright"
 			        x="439.5"
@@ -2860,7 +2864,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="5"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			     <rect
 			        id="dock-focused-bottomleft"
 			        x="399.5"
@@ -2868,7 +2872,7 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="5"
 			        opacity="0.15"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <rect
 			      id="dock-normal-left"
@@ -2877,7 +2881,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="30"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-topleft"
 			      x="350"
@@ -2885,7 +2889,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="5"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-top"
 			      transform="rotate(90)"
@@ -2894,7 +2898,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="30"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-topright"
 			      x="390"
@@ -2902,7 +2906,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="5"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-right"
 			      x="390"
@@ -2910,7 +2914,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="30"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-bottomright"
 			      x="390"
@@ -2918,7 +2922,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="5"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-bottom"
 			      transform="rotate(-90)"
@@ -2927,7 +2931,7 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="30"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-normal-bottomleft"
 			      x="350"
@@ -2935,14 +2939,14 @@ public static partial class ThemeTranslator
 			      width="5"
 			      height="5"
 			      opacity="0.6"
-			      style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}2" />
+			      style="fill:{black};fill-opacity:1;opacity:{opacityFaint}2" />
 			   <rect
 			      id="dock-focused"
 			      x="409.5"
 			      y="912.5"
 			      width="30"
 			      height="30"
-			      style="fill:{White};fill-opacity:1" />
+			      style="fill:{white};fill-opacity:1" />
 			   <g
 			      id="common-normal-top"
 			      transform="translate(-372,536.96735)">
@@ -2950,7 +2954,7 @@ public static partial class ThemeTranslator
 			        d="m 610,-369.03 h 40 v 1 h -40 z"
 			        id="path1008"
 			        transform="scale(1,-1)"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <rect
 			      id="common-normal"
@@ -2966,7 +2970,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 609,368.03 c -1.1017,0 -0.99736,-0.10427 -0.99736,0.99736 H 609 Z"
 			        id="path1012"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-topright"
@@ -2974,7 +2978,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 651,368.03 c 1.1016,0 0.99736,-0.10427 0.99736,0.99736 H 651 Z"
 			        id="path1015"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-left"
@@ -2983,7 +2987,7 @@ public static partial class ThemeTranslator
 			        d="m -410.03,-609 h 40 v 0.99998 h -40 z"
 			        id="path1018"
 			        transform="matrix(0,-1,-1,0,0,0)"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-right"
@@ -2992,7 +2996,7 @@ public static partial class ThemeTranslator
 			        d="m 370.03,651 h 40 v 1 h -40 z"
 			        id="path1021"
 			        transform="matrix(0,1,1,0,0,0)"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-bottom"
@@ -3000,7 +3004,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 610,411.03 h 40 v 0.99986 h -40 z"
 			        id="path1024"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-bottomleft"
@@ -3008,7 +3012,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 609,412.03 c -1.1017,0 -0.99736,0.10447 -0.99736,-0.99735 H 609 Z"
 			        id="path1027"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-normal-bottomright"
@@ -3016,20 +3020,20 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 651,412.03 c 1.1016,0 0.99736,0.10447 0.99736,-0.99735 H 651 Z"
 			        id="path1030"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="tabBarFrame-normal-bottom"
 			      transform="matrix(0 -1 .66667 0 -510.34 777)">
 			     <path
 			        d="m174 921.5h-4l1.3e-4 -6h3.9999z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path1033" />
 			     <path
 			        d="m172 921.5h-2l1e-4 -6h2z"
 			        fill="#1e1e1e"
 			        id="path1035"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <use
 			      id="tabBarFrame-normal-bottomright"
@@ -3050,7 +3054,7 @@ public static partial class ThemeTranslator
 			        transform="scale(1,-1)"
 			        d="m 610,-369.03 h 40 v 1 h -40 z"
 			        id="path1040"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <rect
 			      id="common-focused"
@@ -3066,7 +3070,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 609,368.03 c -1.1017,0 -0.99736,-0.10427 -0.99736,0.99736 H 609 Z"
 			        id="path1044"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-topright"
@@ -3074,7 +3078,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 651,368.03 c 1.1016,0 0.99736,-0.10427 0.99736,0.99736 H 651 Z"
 			        id="path1047"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-left"
@@ -3083,7 +3087,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0,-1,-1,0,0,0)"
 			        d="m -410.03,-609 h 40 v 0.99998 h -40 z"
 			        id="path1050"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-right"
@@ -3092,7 +3096,7 @@ public static partial class ThemeTranslator
 			        transform="matrix(0,1,1,0,0,0)"
 			        d="m 370.03,651 h 40 v 1 h -40 z"
 			        id="path1053"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-bottom"
@@ -3100,7 +3104,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 610,411.03 h 40 v 0.99986 h -40 z"
 			        id="path1056"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-bottomleft"
@@ -3108,7 +3112,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 609,412.03 c -1.1017,0 -0.99736,0.10447 -0.99736,-0.99735 H 609 Z"
 			        id="path1059"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <g
 			      id="common-focused-bottomright"
@@ -3116,63 +3120,63 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 651,412.03 c 1.1016,0 0.99736,0.10447 0.99736,-0.99735 H 651 Z"
 			        id="path1062"
-			        style="fill:{Black};opacity:{OpacityFaint}2" />
+			        style="fill:{black};opacity:{opacityFaint}2" />
 			   </g>
 			   <path
 			      id="header-normal-bottom"
 			      d="m78 116.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}2" />
+			      style="fill:{black};opacity:{opacityFaint}2" />
 			   <path
 			      id="header-normal-bottomleft"
 			      d="m84 116.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}2" />
+			      style="fill:{black};opacity:{opacityFaint}2" />
 			   <path
 			      id="header-normal-bottomright"
 			      d="m90 116.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}2" />
+			      style="fill:{black};opacity:{opacityFaint}2" />
 			   <path
 			      id="header-normal-left"
 			      d="m90 110.88v-6h-6v6z"
-			      style="fill:{Black};opacity:{OpacityHidden}.01" />
+			      style="fill:{black};opacity:{opacityHidden}.01" />
 			   <path
 			      id="header-normal-right"
 			      d="m84 110.88v-6h-6v6z"
-			      style="fill:{Black};opacity:{OpacityHidden}.01" />
+			      style="fill:{black};opacity:{opacityHidden}.01" />
 			   <path
 			      id="header-normal-top"
 			      d="m78 110.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityHidden}" />
+			      style="fill:{black};opacity:{opacityHidden}" />
 			   <path
 			      id="header-normal-topright"
 			      d="m84 110.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityHidden}" />
+			      style="fill:{black};opacity:{opacityHidden}" />
 			   <path
 			      id="header-normal-topleft"
 			      d="m90 110.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityHidden}" />
+			      style="fill:{black};opacity:{opacityHidden}" />
 			   <path
 			      id="header-normal"
 			      d="m78 110.88v-6h-6v6z"
-			      style="fill:{Black};opacity:{OpacityHidden}.01" />
+			      style="fill:{black};opacity:{opacityHidden}.01" />
 			   <path
 			      id="header-separator"
 			      d="m72 104.88h-6v6h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}2" />
+			      style="fill:{black};opacity:{opacityFaint}2" />
 			   <path
 			      id="window-normal"
 			      d="m380 814.26h30v30h-30z"
-			      style="fill:{White};fill-opacity:1;opacity:1" />
+			      style="fill:{white};fill-opacity:1;opacity:1" />
 			   <path
 			      id="window-normal-inactive"
 			      d="m412 814.26h30v30h-30z"
-			      style="fill:{White};opacity:1" />
+			      style="fill:{white};opacity:1" />
 			   <rect
 			      id="menubar-normal"
 			      x="307.53"
 			      y="359.27"
 			      width="20"
 			      height="20"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-left"
 			      transform="rotate(90)"
@@ -3180,7 +3184,7 @@ public static partial class ThemeTranslator
 			      y="-307.53"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-topleft"
 			      transform="rotate(90)"
@@ -3188,14 +3192,14 @@ public static partial class ThemeTranslator
 			      y="-307.53"
 			      width="5"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-top"
 			      x="307.53"
 			      y="354.27"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-right"
 			      transform="rotate(90)"
@@ -3203,7 +3207,7 @@ public static partial class ThemeTranslator
 			      y="-332.53"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-topright"
 			      transform="rotate(90)"
@@ -3211,7 +3215,7 @@ public static partial class ThemeTranslator
 			      y="-332.53"
 			      width="5"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <g
 			      id="menubar-normal-bottomleft"
 			      transform="matrix(1,0,0,0.25,2.5269,225.02)">
@@ -3221,13 +3225,13 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="4"
 			        id="rect1157"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <g
 			        transform="matrix(0.25,0,0,1,223.75,0)"
 			        id="g1161">
 			       <path
 			          d="m 305,621 h 20 v -3 h -20 z"
-			          opacity="{OpacityHidden}"
+			          opacity="{opacityHidden}"
 			          id="path1159" />
 			     </g>
 			   </g>
@@ -3240,14 +3244,14 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="4"
 			        id="rect1164"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <g
 			        transform="matrix(0.25,0,0,1,248.75,0)"
-			        fill="#b6b6b6"
+			        fill="{gray}"
 			        id="g1168">
 			       <path
 			          d="m 305,621 h 20 v -3 h -20 z"
-			          opacity="{OpacityHidden}"
+			          opacity="{opacityHidden}"
 			          id="path1166" />
 			     </g>
 			   </g>
@@ -3260,13 +3264,13 @@ public static partial class ThemeTranslator
 			        width="20"
 			        height="4"
 			        id="rect1171"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <rect
 			        x="305"
 			        y="618"
 			        width="20"
 			        height="3"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect1173" />
 			   </g>
 			   <rect
@@ -3275,7 +3279,7 @@ public static partial class ThemeTranslator
 			      y="359.27"
 			      width="20"
 			      height="20"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-inactive-left"
 			      transform="rotate(90)"
@@ -3283,7 +3287,7 @@ public static partial class ThemeTranslator
 			      y="-342.53"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-inactive-topleft"
 			      transform="rotate(90)"
@@ -3291,14 +3295,14 @@ public static partial class ThemeTranslator
 			      y="-342.53"
 			      width="5"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-inactive-top"
 			      x="342.53"
 			      y="354.27"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-inactive-right"
 			      transform="rotate(90)"
@@ -3306,7 +3310,7 @@ public static partial class ThemeTranslator
 			      y="-367.53"
 			      width="20"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <rect
 			      id="menubar-normal-inactive-topright"
 			      transform="rotate(90)"
@@ -3314,7 +3318,7 @@ public static partial class ThemeTranslator
 			      y="-367.53"
 			      width="5"
 			      height="5"
-			      style="fill:#f2f2f2;fill-opacity:1;opacity:1" />
+			      style="fill:{titleBar};fill-opacity:1;opacity:1" />
 			   <g
 			      id="menubar-normal-inactive-bottomleft"
 			      transform="matrix(1,0,0,0.25,37.527,225.02)">
@@ -3324,13 +3328,13 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="4"
 			        id="rect1182"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <g
 			        transform="matrix(0.25,0,0,1,223.75,0)"
 			        id="g1186">
 			       <path
 			          d="m 305,621 h 20 v -3 h -20 z"
-			          opacity="{OpacityHidden}"
+			          opacity="{opacityHidden}"
 			          id="path1184" />
 			     </g>
 			   </g>
@@ -3343,14 +3347,14 @@ public static partial class ThemeTranslator
 			        width="5"
 			        height="4"
 			        id="rect1189"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <g
 			        transform="matrix(0.25,0,0,1,248.75,0)"
-			        fill="#b6b6b6"
+			        fill="{gray}"
 			        id="g1193">
 			       <path
 			          d="m 305,621 h 20 v -3 h -20 z"
-			          opacity="{OpacityHidden}"
+			          opacity="{opacityHidden}"
 			          id="path1191" />
 			     </g>
 			   </g>
@@ -3363,13 +3367,13 @@ public static partial class ThemeTranslator
 			        width="20"
 			        height="4"
 			        id="rect1196"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			     <rect
 			        x="305"
 			        y="618"
 			        width="20"
 			        height="3"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect1198" />
 			   </g>
 			   <g
@@ -3386,7 +3390,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m1-80c-3.324 0-6 2.676-6 6h6z"
 			        id="path1524"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <g
 			      id="button-normal-top"
@@ -3397,7 +3401,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="6"
 			        id="rect1527"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <g
 			      id="button-normal"
@@ -3408,7 +3412,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="26"
 			        id="rect1530"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <use
 			      id="button-normal-topright"
@@ -3460,7 +3464,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m1-80c-3.324 0-6 2.676-6 6h6z"
 			        id="path1541"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <g
 			      id="button-focused-top"
@@ -3471,7 +3475,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="6"
 			        id="rect1544"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <g
 			      id="button-focused"
@@ -3482,7 +3486,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="26"
 			        id="rect1547"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <use
 			      id="button-focused-topright"
@@ -3534,7 +3538,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m1-80c-3.324 0-6 2.676-6 6h6z"
 			        id="path1558"
-			        style="fill:{Black};opacity:{OpacityHidden}.25" />
+			        style="fill:{black};opacity:{opacityHidden}.25" />
 			   </g>
 			   <g
 			      id="button-pressed-top"
@@ -3545,7 +3549,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="6"
 			        id="rect1561"
-			        style="fill:{Black};opacity:{OpacityHidden}.25" />
+			        style="fill:{black};opacity:{opacityHidden}.25" />
 			   </g>
 			   <g
 			      id="button-pressed"
@@ -3556,7 +3560,7 @@ public static partial class ThemeTranslator
 			        width="26"
 			        height="26"
 			        id="rect1564"
-			        style="fill:{Black};opacity:{OpacityHidden}.25" />
+			        style="fill:{black};opacity:{opacityHidden}.25" />
 			   </g>
 			   <use
 			      id="button-pressed-topright"
@@ -3607,7 +3611,7 @@ public static partial class ThemeTranslator
 			        id="rect1573" />
 			     <path
 			        d="m1-80c-3.324 0-6 2.676-6 6h6z"
-			        style="paint-order:markers stroke fill;fill:{Primary};fill-opacity:1"
+			        style="paint-order:markers stroke fill;fill:{primary};fill-opacity:1"
 			        id="path1575" />
 			   </g>
 			   <g
@@ -3618,7 +3622,7 @@ public static partial class ThemeTranslator
 			        y="-80"
 			        width="26"
 			        height="6"
-			        style="paint-order:markers stroke fill;fill:{Primary};fill-opacity:1"
+			        style="paint-order:markers stroke fill;fill:{primary};fill-opacity:1"
 			        id="rect1578" />
 			   </g>
 			   <g
@@ -3629,7 +3633,7 @@ public static partial class ThemeTranslator
 			        y="-74"
 			        width="26"
 			        height="26.000259"
-			        style="fill:{Primary};fill-opacity:1;stroke-width:1.00001;paint-order:markers stroke fill"
+			        style="fill:{primary};fill-opacity:1;stroke-width:1.00001;paint-order:markers stroke fill"
 			        id="rect1581" />
 			   </g>
 			   <use
@@ -3685,7 +3689,7 @@ public static partial class ThemeTranslator
 			        transform="scale(0.26458)"
 			        d="M 92,60 C 85.352,60 80,65.352 80,72 H 92 Z"
 			        id="path1592"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <g
 			      id="tbutton-normal-top"
@@ -3696,7 +3700,7 @@ public static partial class ThemeTranslator
 			        width="3.175"
 			        height="3.175"
 			        id="rect1595"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <use
 			      id="tbutton-normal-topright"
@@ -3735,7 +3739,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m24.342 15.875c-1.7589 0-3.175 1.416-3.175 3.175h3.175z"
 			        id="path1604"
-			        style="fill:{Black};opacity:{OpacityFaint}5" />
+			        style="fill:{black};opacity:{opacityFaint}5" />
 			   </g>
 			   <g
 			      id="tbutton-toggled-top"
@@ -3746,7 +3750,7 @@ public static partial class ThemeTranslator
 			        width="3.175"
 			        height="3.175"
 			        id="rect1607"
-			        style="fill:{Black};opacity:{OpacityFaint}5" />
+			        style="fill:{black};opacity:{opacityFaint}5" />
 			   </g>
 			   <use
 			      id="tbutton-toggled-topright"
@@ -3785,7 +3789,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m24.342 15.875c-1.7589 0-3.175 1.416-3.175 3.175h3.175z"
 			        id="path1616"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <g
 			      id="tbutton-pressed-top"
@@ -3796,7 +3800,7 @@ public static partial class ThemeTranslator
 			        width="3.175"
 			        height="3.175"
 			        id="rect1619"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <use
 			      id="tbutton-pressed-topright"
@@ -3831,7 +3835,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1626"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <g
 			      id="tbutton-normal"
@@ -3842,7 +3846,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1629"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <use
 			      id="tbutton-normal-right"
@@ -3859,7 +3863,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1633"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <g
 			      id="tbutton-pressed"
@@ -3870,7 +3874,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1636"
-			        style="fill:{Black};opacity:{OpacityHidden}.2" />
+			        style="fill:{black};opacity:{opacityHidden}.2" />
 			   </g>
 			   <use
 			      id="tbutton-pressed-right"
@@ -3887,7 +3891,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1640"
-			        style="fill:{Black};opacity:{OpacityFaint}5" />
+			        style="fill:{black};opacity:{opacityFaint}5" />
 			   </g>
 			   <g
 			      id="tbutton-toggled"
@@ -3898,7 +3902,7 @@ public static partial class ThemeTranslator
 			        width="16"
 			        height="1"
 			        id="rect1643"
-			        style="fill:{Black};opacity:{OpacityFaint}5" />
+			        style="fill:{black};opacity:{opacityFaint}5" />
 			   </g>
 			   <use
 			      id="tbutton-toggled-right"
@@ -3909,75 +3913,75 @@ public static partial class ThemeTranslator
 			   <path
 			      id="menubaritem-pressed-left"
 			      d="m188 946v-17.999h-6l3.6e-4 18z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-topleft"
 			      d="m188 921c-3.2999-8e-5 -6 2.7-6 5.9999h6z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed"
 			      d="m189 928v18h18v-18z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-right"
 			      d="m208 946v-17.999h6l-3.7e-4 18z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-topright"
 			      d="m208 921c3.2999-8e-5 6 2.7 6 5.9999h-6z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-top"
 			      d="m189 927h17.999v-6h-18z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-bottom"
 			      d="m207 947h-17.999v6h18z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-bottomleft"
 			      d="m188 953c-3.2999 0-5.9999-2.7-5.9999-5.9999l5.9999-1.1e-4z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-pressed-bottomright"
 			      d="m208 953c3.2999 0 5.9999-2.7 5.9999-5.9999l-5.9999-1.1e-4z"
-			      style="fill:{Black};opacity:{OpacityHidden}.2" />
+			      style="fill:{black};opacity:{opacityHidden}.2" />
 			   <path
 			      id="menubaritem-toggled-left"
 			      d="m152 946v-17.999h-6l3.6e-4 18z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-topleft"
 			      d="m152 921c-3.2999-7e-5 -6 2.7-6 5.9999h6z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled"
 			      d="m153 928v18h18v-18z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-right"
 			      d="m172 946v-17.999h6l-3.7e-4 18z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-topright"
 			      d="m172 921c3.2999-7e-5 6 2.7 6 5.9999h-6z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-top"
 			      d="m153 927h17.999v-6h-18z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-bottom"
 			      d="m171 947h-17.999v6h18z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-bottomleft"
 			      d="m152 953c-3.2999 0-5.9999-2.7-5.9999-5.9999l5.9999-1.2e-4z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <path
 			      id="menubaritem-toggled-bottomright"
 			      d="m172 953c3.2999 0 5.9999-2.7 5.9999-5.9999l-5.9999-1.2e-4z"
-			      style="fill:{Black};opacity:{OpacityFaint}5" />
+			      style="fill:{black};opacity:{opacityFaint}5" />
 			   <use
 			      id="tab-toggled-topright"
 			      transform="matrix(-1,0,0,1,188,-2.5e-6)"
@@ -3991,13 +3995,13 @@ public static partial class ThemeTranslator
 			      transform="matrix(0 -1 .66667 0 -491.34 777)">
 			     <path
 			        d="m174 921.5h-4l1.3e-4 -6h3.9999z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path1739" />
 			     <path
 			        d="m172 921.5h-2l1e-4 -6h2z"
 			        fill="#333"
 			        id="path1741"
-			        style="fill:{Black};opacity:{OpacityFaint}" />
+			        style="fill:{black};opacity:{opacityFaint}" />
 			   </g>
 			   <use
 			      id="tabBarFrame-toggled-bottomleft"
@@ -4017,7 +4021,7 @@ public static partial class ThemeTranslator
 			      fill-rule="evenodd">
 			     <path
 			        d="m269 865h-4v4h4z"
-			        fill-opacity="{OpacityHidden}"
+			        fill-opacity="{opacityHidden}"
 			        id="path1746" />
 			     <path
 			        d="m265.5 865h-0.5v2h0.5z"
@@ -4075,7 +4079,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="683"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-toggled-topleft"
@@ -4090,7 +4094,7 @@ public static partial class ThemeTranslator
 			     <path
 			        id="rect90366"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-toggled-top"
@@ -4108,7 +4112,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-toggled-left"
@@ -4126,7 +4130,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="82"
 			        y="683"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <use
 			      x="0"
@@ -4152,7 +4156,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-toggled-bottomright"
@@ -4167,7 +4171,7 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90823"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-toggled-bottomleft"
@@ -4182,7 +4186,7 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90817"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <use
 			      id="tab-focused-topright"
@@ -4201,7 +4205,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="683"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-focused-topleft"
@@ -4216,7 +4220,7 @@ public static partial class ThemeTranslator
 			     <path
 			        id="rect90366-3"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-focused-top"
@@ -4234,7 +4238,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-focused-left"
@@ -4252,7 +4256,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="82"
 			        y="683"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <use
 			      x="0"
@@ -4278,7 +4282,7 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-focused-bottomright"
@@ -4293,7 +4297,7 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90823-0"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-focused-bottomleft"
@@ -4308,12 +4312,12 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90817-3"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-topright"
 			      transform="matrix(-1,0,0,1,146,-4)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect93067"
 			        width="8"
@@ -4324,24 +4328,24 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path93069"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal"
 			      transform="translate(-42.00001,-4.0000038)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90454-0"
 			        width="12"
 			        height="6"
 			        x="88"
 			        y="683"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-topleft"
 			      transform="translate(-42.00001,-4.0000038)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90458-6"
 			        width="8"
@@ -4352,12 +4356,12 @@ public static partial class ThemeTranslator
 			     <path
 			        id="rect90366-2"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-top"
 			      transform="translate(-42.00001,-4.0000038)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90448-6"
 			        width="12"
@@ -4371,12 +4375,12 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-left"
 			      transform="translate(-42.00001,-4.0000038)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90450-8"
 			        width="8"
@@ -4390,12 +4394,12 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="82"
 			        y="683"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-right"
 			      transform="matrix(-1,0,0,1,146,-4)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect93061"
 			        width="8"
@@ -4409,12 +4413,12 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="82"
 			        y="683"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-bottom"
 			      transform="matrix(1,0,0,-1,-42.00001,1368)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90827-9"
 			        width="12"
@@ -4428,12 +4432,12 @@ public static partial class ThemeTranslator
 			        height="6"
 			        x="88"
 			        y="677"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-bottomright"
 			      transform="matrix(0,-1,-1,0,741,773.00001)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90821-2"
 			        width="8"
@@ -4444,12 +4448,12 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90823-3"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="tab-normal-bottomleft"
 			      transform="matrix(1,0,0,-1,-42.00001,1368)"
-			      style="opacity:{OpacityHidden}">
+			      style="opacity:{opacityHidden}">
 			     <rect
 			        id="rect90815-7"
 			        width="8"
@@ -4460,22 +4464,22 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path90817-5"
 			        d="m 88,677 c -3.324,0 -6,2.676 -6,6 h 6 z"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <path
 			      id="tabframe-normal"
 			      d="m 274.99996,479.99997 h 48.00001 v 48 h -48.00001 z"
-			      style="fill:{White};fill-opacity:1" />
+			      style="fill:{white};fill-opacity:1" />
 			   <g
 			      id="tabframe-normal-topleft"
 			      transform="matrix(1.6667,0,0,1.6667,71.225402,-694.60684)">
 			     <path
 			        d="m 122.26023,699.35012 c -2.99055,9e-4 -5.39781,2.40906 -5.39781,5.39988 h 5.39988 z"
 			        id="path1079-9"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			     <path
 			        id="path66441-2"
-			        style="fill:{Black};fill-opacity:1;opacity:{OpacityFaint}5"
+			        style="fill:{black};fill-opacity:1;opacity:{opacityFaint}5"
 			        d="M 274.99609 470 C 269.45782 470.00167 265 474.46122 265 480 L 266 480 C 266 475.0152 270.01174 471.0015 274.99609 471 L 274.99609 470 z "
 			        transform="matrix(0.599988,0,0,0.599988,-42.734387,416.75577)" />
 			   </g>
@@ -4485,11 +4489,11 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.85967,703.75 h 5.39989 v 48 h -5.39989 z"
 			        id="path1082-2"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			     <path
 			        d="m 116.26,703.75 h 0.59999 v 48 H 116.26 Z"
 			        id="path66626-8"
-			        style="fill:{Black};opacity:{OpacityFaint}5" />
+			        style="fill:{black};opacity:{opacityFaint}5" />
 			   </g>
 			   <use
 			      x="0"
@@ -4545,16 +4549,16 @@ public static partial class ThemeTranslator
 			        id="path64528"
 			        cx="390"
 			        cy="310"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.999546"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.999546"
 			        r="11" />
 			     <path
 			        d="m 390,303 c -3.8423,0 -7,3.1577 -7,7 0,3.8423 3.1577,7 7,7 h 0.002 0.002 c 1.87564,-0.003 3.67272,-0.76017 4.98632,-2.09961 l -0.5332,0.38867 c -0.11526,0.0576 0.0157,0.0317 0.31836,-0.19531 l 0.12305,-0.0918 4.90234,-5.00195 -1.37305,-1.40039 -3.39843,-3.4668 C 393.71163,303.77081 391.89527,303.00042 390,303 Z m 0,4 c 0.81332,1.8e-4 1.58867,0.3294 2.1543,0.91406 l 0.006,0.004 2.03906,2.08203 -1.82031,1.85547 -0.01,0.006 -0.23437,0.23828 C 391.5716,312.67385 390.80272,312.9983 389.99805,313 388.31849,312.999 387,311.67984 387,310 c 0,-1.6805 1.3195,-3 3,-3 z"
 			        id="path64497"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			     <path
 			        d="m 397,310.0001 -3.4079,-3.4767 C 392.65045,305.55007 391.3543,305.0003 390,305 c -2.7614,0 -5,2.2386 -5,5 0,2.7614 2.2386,5 5,5 1.3405,-0.002 2.6242,-0.54194 3.5628,-1.499 0.004,-0.002 0.009,-0.004 0.013,-0.007 z"
 			        id="path64499"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="slidercursor-pressed"
@@ -4563,16 +4567,16 @@ public static partial class ThemeTranslator
 			        id="circle64788"
 			        cx="390"
 			        cy="310"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.999546"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.999546"
 			        r="11" />
 			     <path
 			        d="m 390,303 c -3.8423,0 -7,3.1577 -7,7 0,3.8423 3.1577,7 7,7 h 0.002 0.002 c 1.87564,-0.003 3.67272,-0.76017 4.98632,-2.09961 l -0.5332,0.38867 c -0.11526,0.0576 0.0157,0.0317 0.31836,-0.19531 l 0.12305,-0.0918 4.90234,-5.00195 -1.37305,-1.40039 -3.39843,-3.4668 C 393.71163,303.77081 391.89527,303.00042 390,303 Z m 0,4 c 0.81332,1.8e-4 1.58867,0.3294 2.1543,0.91406 l 0.006,0.004 2.03906,2.08203 -1.82031,1.85547 -0.01,0.006 -0.23437,0.23828 C 391.5716,312.67385 390.80272,312.9983 389.99805,313 388.31849,312.999 387,311.67984 387,310 c 0,-1.6805 1.3195,-3 3,-3 z"
 			        id="path64790"
-			        style="fill:{Primary};fill-opacity:1" />
+			        style="fill:{primary};fill-opacity:1" />
 			     <path
 			        d="m 395.8,310.00008 -2.72632,-2.78136 C 392.32036,306.44006 391.28344,306.00024 390.2,306 c -2.20912,0 -4,1.79088 -4,4 0,2.20912 1.79088,4 4,4 1.0724,-0.002 2.09936,-0.43355 2.85024,-1.1992 0.003,-0.002 0.007,-0.003 0.0104,-0.006 z"
 			        id="path64792"
-			        style="fill:{White};fill-opacity:1;stroke-width:0.8" />
+			        style="fill:{white};fill-opacity:1;stroke-width:0.8" />
 			   </g>
 			   <g
 			      id="slidercursor-tickless-disabled"
@@ -4589,13 +4593,13 @@ public static partial class ThemeTranslator
 			        cy="416"
 			        r="8"
 			        id="circle64882"
-			        style="fill:{Primary};fill-opacity:1;stroke-width:1.6;opacity:{OpacityDisabled}5" />
+			        style="fill:{primary};fill-opacity:1;stroke-width:1.6;opacity:{opacityDisabled}5" />
 			     <circle
 			        cx="328"
 			        cy="416"
 			        r="6"
 			        id="circle64884"
-			        style="fill:{White};fill-opacity:1;stroke-width:1.2" />
+			        style="fill:{white};fill-opacity:1;stroke-width:1.2" />
 			   </g>
 			   <g
 			      id="slidercursor-disabled"
@@ -4610,11 +4614,11 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 328,431 c -3.8423,0 -7,3.1577 -7,7 0,3.8423 3.1577,7 7,7 h 0.002 0.002 c 1.87564,-0.003 3.67272,-0.76017 4.98632,-2.09961 l -0.5332,0.38867 c -0.11526,0.0576 0.0157,0.0317 0.31836,-0.19531 l 0.12305,-0.0918 4.90234,-5.00195 -1.37305,-1.40039 -3.39843,-3.4668 C 331.71163,431.77081 329.89527,431.00042 328,431 Z m 0,4 c 0.81332,1.8e-4 1.58867,0.3294 2.1543,0.91406 l 0.006,0.004 2.03906,2.08203 -1.82031,1.85547 -0.01,0.006 -0.23437,0.23828 C 329.5716,440.67385 328.80272,440.9983 327.99805,441 326.31849,440.99896 325,439.67984 325,438 c 0,-1.6805 1.3195,-3 3,-3 z"
 			        id="path64890"
-			        style="fill:{Primary};fill-opacity:1;opacity:{OpacityDisabled}5" />
+			        style="fill:{primary};fill-opacity:1;opacity:{opacityDisabled}5" />
 			     <path
 			        d="m 335,438 -3.4079,-3.4767 c -0.94165,-0.97333 -2.2378,-1.5231 -3.5921,-1.5234 -2.7614,0 -5,2.2386 -5,5 0,2.7614 2.2386,5 5,5 1.3405,-0.002 2.6242,-0.54194 3.5628,-1.499 0.004,-0.002 0.009,-0.004 0.013,-0.007 z"
 			        id="path64892"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="arrow-menu-disabled"
@@ -4622,14 +4626,14 @@ public static partial class ThemeTranslator
 			      inkscape:label="#arrow-up-disabled">
 			     <path
 			        inkscape:connector-curvature="0"
-			        style="opacity:{OpacityHidden};fill:{Black}"
+			        style="opacity:{opacityHidden};fill:{black}"
 			        d="m -607.493,8 h 24 v 24 h -24 z"
 			        transform="rotate(-90)"
 			        id="path7608-3" />
 			     <path
 			        d="M 8,600.986 20,588 32,600.986 Z"
 			        id="path7610"
-			        style="fill:{Black};opacity:{OpacityDisabled}" />
+			        style="fill:{black};opacity:{opacityDisabled}" />
 			   </g>
 			   <g
 			      id="arrow-menu-normal"
@@ -4640,13 +4644,13 @@ public static partial class ThemeTranslator
 			        x="-607.49298"
 			        y="8"
 			        height="24"
-			        style="opacity:{OpacityHidden};fill:{Black}"
+			        style="opacity:{opacityHidden};fill:{black}"
 			        transform="rotate(-90)"
 			        id="rect7600" />
 			     <path
 			        d="M 8,600.986 20,588 32,600.986 Z"
 			        id="path7602-3"
-			        style="fill:{Black};opacity:{OpacityHidden}.65" />
+			        style="fill:{black};opacity:{opacityHidden}.65" />
 			   </g>
 			   <g
 			      inkscape:label="#menuitem-right-focused"
@@ -4655,7 +4659,7 @@ public static partial class ThemeTranslator
 			     <rect
 			        id="rect4826"
 			        transform="rotate(-90)"
-			        style="opacity:{OpacityHidden};fill:{Black}"
+			        style="opacity:{opacityHidden};fill:{black}"
 			        height="24"
 			        y="8"
 			        x="-607.49298"
@@ -4663,13 +4667,13 @@ public static partial class ThemeTranslator
 			     <path
 			        id="path4828"
 			        d="M 8,600.986 20,588 32,600.986 Z"
-			        style="fill:{Black};opacity:{OpacityNormal}" />
+			        style="fill:{black};opacity:{opacityNormal}" />
 			   </g>
 			   <g
 			      id="lineedit-normal"
 			      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect43255"
 			        width="3.175"
 			        height="1.5875"
@@ -4680,7 +4684,7 @@ public static partial class ThemeTranslator
 			      id="lineedit-normal-left"
 			      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect43257"
 			        width="1.5875"
 			        height="1.5875"
@@ -4691,7 +4695,7 @@ public static partial class ThemeTranslator
 			      id="lineedit-normal-top"
 			      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect43253"
 			        width="3.175"
 			        height="1.5875"
@@ -4715,7 +4719,7 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,169,-51.000001)">
 			     <path
 			        id="rect43263"
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
 			        transform="scale(0.26458333)" />
 			   </g>
@@ -4771,7 +4775,7 @@ public static partial class ThemeTranslator
 			      id="lineedit-focused"
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect44039"
 			        width="3.175"
 			        height="1.5875"
@@ -4782,14 +4786,14 @@ public static partial class ThemeTranslator
 			      id="lineedit-focused-left"
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect44043"
 			        width="1.5875"
 			        height="1.5875"
 			        x="32.808334"
 			        y="27.78125" />
 			     <rect
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44045"
 			        width="0.52916664"
 			        height="1.5875"
@@ -4800,14 +4804,14 @@ public static partial class ThemeTranslator
 			      id="lineedit-focused-top"
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="rect44049"
 			        width="3.175"
 			        height="1.5875"
 			        x="34.395832"
 			        y="26.19375" />
 			     <rect
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44051"
 			        width="3.175"
 			        height="0.52916664"
@@ -4819,11 +4823,11 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <path
 			        id="use44055"
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
 			     <path
 			        id="use44057"
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 0.529167 c 0.586317,0 1.058334,0.472016 1.058334,1.058333 z" />
 			   </g>
 			   <g
@@ -4831,12 +4835,12 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <path
 			        id="path44061"
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
 			        transform="scale(0.26458333)" />
 			     <path
 			        id="path44063"
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 2 c 0,-2.216 1.784,-4 4,-4 z"
 			        transform="scale(0.26458333)" />
 			   </g>
@@ -4845,11 +4849,11 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <path
 			        id="use44067"
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
 			     <path
 			        id="use44069"
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -0.529167 c 0,0.586317 -0.472016,1.058334 -1.058333,1.058334 z" />
 			   </g>
 			   <g
@@ -4857,18 +4861,18 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <path
 			        id="use44073"
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
 			     <path
 			        id="use44075"
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -0.529167 c -0.586317,0 -1.058334,-0.472016 -1.058334,-1.058333 z" />
 			   </g>
 			   <g
 			      id="lineedit-focused-right"
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="use44079"
 			        width="1.5875"
 			        height="1.5875"
@@ -4876,7 +4880,7 @@ public static partial class ThemeTranslator
 			        y="27.78125"
 			        transform="scale(-1,1)" />
 			     <rect
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44081"
 			        width="0.52916664"
 			        height="1.5875"
@@ -4888,7 +4892,7 @@ public static partial class ThemeTranslator
 			      id="lineedit-focused-bottom"
 			      transform="matrix(3.7795276,0,0,3.7795276,204,-51.000001)">
 			     <rect
-			        style="opacity:1;fill:#e6e6e6;stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};fill-opacity:1"
+			        style="opacity:1;fill:{interactiveBackground};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};fill-opacity:1"
 			        id="use44085"
 			        width="3.175"
 			        height="1.5875"
@@ -4896,7 +4900,7 @@ public static partial class ThemeTranslator
 			        y="-30.956251"
 			        transform="scale(1,-1)" />
 			     <rect
-			        style="opacity:1;fill:{Primary};fill-opacity:1;stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:1;fill:{primary};fill-opacity:1;stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44087"
 			        width="3.175"
 			        height="0.52916664"
@@ -4908,7 +4912,7 @@ public static partial class ThemeTranslator
 			      id="combo-normal"
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44091"
 			        width="3.175"
 			        height="1.5875"
@@ -4919,7 +4923,7 @@ public static partial class ThemeTranslator
 			      id="combo-normal-left"
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44095"
 			        width="1.5875"
 			        height="1.5875"
@@ -4930,7 +4934,7 @@ public static partial class ThemeTranslator
 			      id="combo-normal-top"
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44101"
 			        width="3.175"
 			        height="1.5875"
@@ -4942,7 +4946,7 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <path
 			        id="use44107"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
 			   </g>
 			   <g
@@ -4950,7 +4954,7 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <path
 			        id="path44113"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
 			        transform="scale(0.26458333)" />
 			   </g>
@@ -4959,7 +4963,7 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <path
 			        id="use44119"
-			        style="fill:{Black};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black};opacity:{OpacityFaint}"
+			        style="fill:{black};fill-opacity:1;stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black};opacity:{opacityFaint}"
 			        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
 			   </g>
 			   <g
@@ -4967,14 +4971,14 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <path
 			        id="use44125"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
 			   </g>
 			   <g
 			      id="combo-normal-right"
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44131"
 			        width="1.5875"
 			        height="1.5875"
@@ -4986,7 +4990,7 @@ public static partial class ThemeTranslator
 			      id="combo-normal-bottom"
 			      transform="matrix(3.7795276,0,0,3.7795276,249,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44137"
 			        width="3.175"
 			        height="1.5875"
@@ -4998,7 +5002,7 @@ public static partial class ThemeTranslator
 			      id="combo-focused"
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44143"
 			        width="3.175"
 			        height="1.5875"
@@ -5009,14 +5013,14 @@ public static partial class ThemeTranslator
 			      id="combo-focused-left"
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44147"
 			        width="1.5875"
 			        height="1.5875"
 			        x="32.808334"
 			        y="27.78125" />
 			     <rect
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44149"
 			        width="0.52916664"
 			        height="1.5875"
@@ -5027,14 +5031,14 @@ public static partial class ThemeTranslator
 			      id="combo-focused-top"
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44153"
 			        width="3.175"
 			        height="1.5875"
 			        x="34.395832"
 			        y="26.19375" />
 			     <rect
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="rect44155"
 			        width="3.175"
 			        height="0.52916664"
@@ -5046,11 +5050,11 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <path
 			        id="use44159"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
 			     <path
 			        id="use44161"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 0.529167 c 0.586317,0 1.058334,0.472016 1.058334,1.058333 z" />
 			   </g>
 			   <g
@@ -5058,12 +5062,12 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <path
 			        id="path44165"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 6 z"
 			        transform="scale(0.26458333)" />
 			     <path
 			        id="path44167"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 2 c 0,-2.216 1.784,-4 4,-4 z"
 			        transform="scale(0.26458333)" />
 			   </g>
@@ -5072,11 +5076,11 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <path
 			        id="use44171"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
 			     <path
 			        id="use44173"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -0.529167 c 0,0.586317 -0.472016,1.058334 -1.058333,1.058334 z" />
 			   </g>
 			   <g
@@ -5084,18 +5088,18 @@ public static partial class ThemeTranslator
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <path
 			        id="use44177"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
 			     <path
 			        id="use44179"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -0.529167 c -0.586317,0 -1.058334,-0.472016 -1.058334,-1.058333 z" />
 			   </g>
 			   <g
 			      id="combo-focused-right"
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44183"
 			        width="1.5875"
 			        height="1.5875"
@@ -5103,7 +5107,7 @@ public static partial class ThemeTranslator
 			        y="27.78125"
 			        transform="scale(-1,1)" />
 			     <rect
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44185"
 			        width="0.52916664"
 			        height="1.5875"
@@ -5115,7 +5119,7 @@ public static partial class ThemeTranslator
 			      id="combo-focused-bottom"
 			      transform="matrix(3.7795276,0,0,3.7795276,287,-51.000001)">
 			     <rect
-			        style="opacity:{OpacityFaint};fill:{Black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint};fill:{black};stroke:none;stroke-width:0.035319;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44189"
 			        width="3.175"
 			        height="1.5875"
@@ -5123,7 +5127,7 @@ public static partial class ThemeTranslator
 			        y="-30.956251"
 			        transform="scale(1,-1)" />
 			     <rect
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{Black}"
+			        style="opacity:{opacityFaint}5;fill:{black};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{black}"
 			        id="use44191"
 			        width="3.175"
 			        height="0.52916664"
@@ -5135,7 +5139,7 @@ public static partial class ThemeTranslator
 			      id="radio-normal"
 			      transform="translate(-118,95.17182)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect2221"
 			        width="24"
 			        height="24"
@@ -5146,13 +5150,13 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 296,122 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path2223"
-			        style="opacity:{OpacityFaint}2;fill:{Black};stroke-width:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};stroke-width:1" />
 			   </g>
 			   <g
 			      id="radio-focused"
 			      transform="translate(-88,95.17182)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect2259"
 			        width="24"
 			        height="24"
@@ -5163,7 +5167,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 296,122 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path2261"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <g
 			      id="checkbox-checked-focused"
@@ -5175,9 +5179,9 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 28,298 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path2361"
-			        style="opacity:{OpacityFaint}5;fill:{White};fill-opacity:1" />
+			        style="opacity:{opacityFaint}5;fill:{white};fill-opacity:1" />
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect2333"
 			        width="24"
 			        height="24"
@@ -5190,7 +5194,7 @@ public static partial class ThemeTranslator
 			      id="radio-checked-focused"
 			      transform="translate(225.44338,-80.82818)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect2339"
 			        width="24"
 			        height="24"
@@ -5205,14 +5209,14 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 56,298 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path2363"
-			        style="opacity:{OpacityFaint}5;fill:{White};fill-opacity:1"
+			        style="opacity:{opacityFaint}5;fill:{white};fill-opacity:1"
 			        sodipodi:nodetypes="sssss" />
 			   </g>
 			   <g
 			      id="checkbox-tristate-focused"
 			      transform="translate(326.5,-232.82818)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect2659"
 			        width="24"
 			        height="24"
@@ -5227,14 +5231,14 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 28,410 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path2691"
-			        style="opacity:{OpacityFaint}5;fill:{White};fill-opacity:1"
+			        style="opacity:{opacityFaint}5;fill:{white};fill-opacity:1"
 			        sodipodi:nodetypes="sssss" />
 			   </g>
 			   <g
 			      id="checkbox-checked-normal"
 			      transform="translate(223.44338,-92.82818)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect1125"
 			        width="24"
 			        height="24"
@@ -5251,7 +5255,7 @@ public static partial class ThemeTranslator
 			      id="radio-checked-normal"
 			      transform="translate(195.44338,-52.82818)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect1133"
 			        width="24"
 			        height="24"
@@ -5268,7 +5272,7 @@ public static partial class ThemeTranslator
 			      id="checkbox-tristate-normal"
 			      transform="translate(296.5,-204.82818)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect1127"
 			        width="24"
 			        height="24"
@@ -5285,7 +5289,7 @@ public static partial class ThemeTranslator
 			      id="checkbox-normal"
 			      transform="translate(-118,55.17182)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect3350"
 			        width="24"
 			        height="24"
@@ -5296,13 +5300,13 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 296,122 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path3352"
-			        style="opacity:{OpacityFaint}2;fill:{Black};stroke-width:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};stroke-width:1" />
 			   </g>
 			   <g
 			      id="checkbox-focused"
 			      transform="translate(-88,55.17182)">
 			     <rect
-			        style="opacity:{OpacityHidden};fill:{Black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+			        style="opacity:{opacityHidden};fill:{black};stroke-width:3;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
 			        id="rect3356"
 			        width="24"
 			        height="24"
@@ -5313,7 +5317,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 296,122 c -5.52,0 -10,4.48 -10,10 0,5.52 4.48,10 10,10 5.52,0 10,-4.48 10,-10 0,-5.52 -4.48,-10 -10,-10 z"
 			        id="path3358"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			   </g>
 			   <path
 			      id="menu-checkbox-checked-normal"
@@ -5330,19 +5334,19 @@ public static partial class ThemeTranslator
 			   <path
 			      d="m 285,137 c -4.416,0 -8,3.584 -8,8 0,4.416 3.584,8 8,8 4.416,0 8,-3.584 8,-8 0,-4.416 -3.584,-8 -8,-8 z"
 			      id="menu-radio-normal"
-			      style="opacity:{OpacityFaint}2;fill:{Black};stroke-width:0.8" />
+			      style="opacity:{opacityFaint}2;fill:{black};stroke-width:0.8" />
 			   <path
 			      d="m 315,137 c -4.416,0 -8,3.584 -8,8 0,4.416 3.584,8 8,8 4.416,0 8,-3.584 8,-8 0,-4.416 -3.584,-8 -8,-8 z"
 			      id="menu-radio-focused"
-			      style="opacity:{OpacityHidden}.2;fill:{Black};stroke-width:0.8" />
+			      style="opacity:{opacityHidden}.2;fill:{black};stroke-width:0.8" />
 			   <path
 			      d="m 285,107 c -4.416,0 -8,3.584 -8,8 0,4.416 3.584,8 8,8 4.416,0 8,-3.584 8,-8 0,-4.416 -3.584,-8 -8,-8 z"
 			      id="menu-checkbox-normal"
-			      style="opacity:{OpacityFaint}2;fill:{Black};stroke-width:0.8" />
+			      style="opacity:{opacityFaint}2;fill:{black};stroke-width:0.8" />
 			   <path
 			      d="m 315,107 c -4.416,0 -8,3.584 -8,8 0,4.416 3.584,8 8,8 4.416,0 8,-3.584 8,-8 0,-4.416 -3.584,-8 -8,-8 z"
 			      id="menu-checkbox-focused"
-			      style="opacity:{OpacityHidden}.2;fill:{Black};stroke-width:0.8" />
+			      style="opacity:{opacityHidden}.2;fill:{black};stroke-width:0.8" />
 			   <path
 			      id="menu-checkbox-checked-focused"
 			      style="fill:#5b9bf8;fill-opacity:1"
@@ -5362,13 +5366,13 @@ public static partial class ThemeTranslator
 			        y="0"
 			        width="24"
 			        height="24"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect52"
 			        style="stroke-width:0.96" />
 			     <path
 			        d="M 484,7.9999968 468,24 h 16 z"
 			        id="path54"
-			        style="opacity:{OpacityFaint};fill:{Black};stroke-width:0.914286" />
+			        style="opacity:{opacityFaint};fill:{black};stroke-width:0.914286" />
 			   </g>
 			   <path
 			      id="expand-progress-pattern-normal"
@@ -5377,28 +5381,28 @@ public static partial class ThemeTranslator
 			   <path
 			      id="expand-progress-normal"
 			      d="m 0,180 v 10 h 10 v -10 z"
-			      style="opacity:{OpacityHidden}.25;fill:{White}" />
+			      style="opacity:{opacityHidden}.25;fill:{white}" />
 			   <rect
 			      id="expand-combo-normal"
 			      x="10"
 			      y="20"
 			      width="10"
 			      height="10"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <rect
 			      id="expand-tbutton-normal"
 			      x="190"
 			      y="20"
 			      width="8"
 			      height="8"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <g
 			      id="focus-left"
 			      transform="translate(2,-19)">
 			     <path
 			        d="m 183,121 v 10 h 2 v -10 z"
 			        id="path252"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="focus-right"
@@ -5406,7 +5410,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 197,121 v 10 h 2 v -10 z"
 			        id="path255"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="focus-top"
@@ -5414,7 +5418,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 186,118 v 2 h 10 v -2 z"
 			        id="path258"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <g
 			      id="focus-bottom"
@@ -5422,24 +5426,24 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 186,132 v 2 h 10 v -2 z"
 			        id="path261"
-			        style="opacity:{OpacityFaint};fill:{Black}" />
+			        style="opacity:{opacityFaint};fill:{black}" />
 			   </g>
 			   <path
 			      id="focus-bottomleft"
 			      d="m 185.00436,111.996 h 2 v 2 c -2,0 -2,-2 -2,-2 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="focus-bottomright"
 			      d="m 199,112 h -2 v 2 c 2,0 2,-2 2,-2 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="focus-topleft"
 			      d="m 185.00436,101.996 h 2 v -2 c -2,0 -2,2 -2,2 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="focus-topright"
 			      d="m 199,102 h -2 v -2 c 2,0 2,2 2,2 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <g
 			      id="resize-grip-focused"
 			      transform="translate(0,31)">
@@ -5448,13 +5452,13 @@ public static partial class ThemeTranslator
 			        y="0"
 			        width="24"
 			        height="24"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect13860"
 			        style="stroke-width:0.96" />
 			     <path
 			        d="M 484,7.9999968 468,24 h 16 z"
 			        id="path13862"
-			        style="opacity:{OpacityHidden}.2;fill:{Black};stroke-width:0.914286" />
+			        style="opacity:{opacityHidden}.2;fill:{black};stroke-width:0.914286" />
 			   </g>
 			   <use
 			      x="0"
@@ -5475,17 +5479,17 @@ public static partial class ThemeTranslator
 			   <path
 			      id="menu-normal"
 			      d="m 118,481 h 48 v 48 h -48 z"
-			      style="fill:{White};fill-opacity:1" />
+			      style="fill:{white};fill-opacity:1" />
 			   <g
 			      id="menu-normal-topleft"
 			      transform="matrix(1.6667,0,0,1.6667,-85.774575,-693.60683)">
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1079"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			     <path
 			        id="path66441"
-			        style="opacity:{OpacityHidden}.08;fill:{White};fill-opacity:1"
+			        style="opacity:{opacityHidden}.08;fill:{white};fill-opacity:1"
 			        d="M 117.99609,471 C 112.45782,471.00167 108,475.46122 108,481 h 1 c 0,-4.9848 4.01174,-8.9985 8.99609,-9 z"
 			        transform="matrix(0.599988,0,0,0.599988,51.463716,416.15577)" />
 			   </g>
@@ -5495,11 +5499,11 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path1082"
-			        style="fill:{White};fill-opacity:1" />
+			        style="fill:{white};fill-opacity:1" />
 			     <path
 			        d="m 116.26,703.75 h 0.59999 v 48 H 116.26 Z"
 			        id="path66626"
-			        style="opacity:{OpacityHidden}.08;fill:{White};fill-opacity:1;stroke-width:0.707106" />
+			        style="opacity:{opacityHidden}.08;fill:{white};fill-opacity:1;stroke-width:0.707106" />
 			   </g>
 			   <g
 			      id="menu-shadow-top"
@@ -5511,7 +5515,7 @@ public static partial class ThemeTranslator
 			       <path
 			          d="m 190,245.02 h 50 v 17.4427 h -50 z"
 			          id="path1100"
-			          style="fill:{White}" />
+			          style="fill:{white}" />
 			     </g>
 			     <g
 			        id="shadow-top"
@@ -5522,9 +5526,9 @@ public static partial class ThemeTranslator
 			          y="292.04068"
 			          width="50"
 			          height="5.9802651"
-			          opacity="{OpacityNormal}"
+			          opacity="{opacityNormal}"
 			          id="rect1103"
-			          style="fill:url(#linearGradient64530);fill-opacity:1;stroke-width:1.00178;opacity:{OpacityDisabled}5" />
+			          style="fill:url(#linearGradient64530);fill-opacity:1;stroke-width:1.00178;opacity:{opacityDisabled}5" />
 			       <rect
 			          transform="rotate(-90)"
 			          x="-307"
@@ -5532,7 +5536,7 @@ public static partial class ThemeTranslator
 			          width="50"
 			          height="1"
 			          id="rect3953"
-			          style="opacity:{OpacityFaint}2;fill:{Black}" />
+			          style="opacity:{opacityFaint}2;fill:{black}" />
 			     </g>
 			   </g>
 			   <rect
@@ -5561,54 +5565,54 @@ public static partial class ThemeTranslator
 			      id="menu-shadow-topleft">
 			     <path
 			        d="m 30.999,464 c -9.941,0 -16,6.0588 -16,16 h 6 a 10,10 0 0 1 10,-10 z"
-			        opacity="{OpacityNormal}"
+			        opacity="{opacityNormal}"
 			        id="path1126"
-			        style="fill:url(#radialGradient64504);fill-opacity:1;opacity:{OpacityDisabled}5" />
+			        style="fill:url(#radialGradient64504);fill-opacity:1;opacity:{opacityDisabled}5" />
 			     <path
 			        d="m 20.999,480.0003 a 10,10 0 0 1 10,-10 v 10 z"
 			        id="path1128"
-			        style="fill:{White}" />
+			        style="fill:{white}" />
 			     <path
 			        id="path3894"
 			        d="M 30.998047,469 C 24.904956,469.00105 20,473.90665 20,480 h 0.998047 a 10,10 0 0 1 10,-10 z"
-			        style="opacity:{OpacityFaint}2;fill:{Black}" />
+			        style="opacity:{opacityFaint}2;fill:{black}" />
 			   </g>
 			   <path
 			      id="menuitem-normal-top"
 			      d="m 191,495 h 8 v 4 h -8 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-bottom"
 			      d="m 191,507 h 8 v 4 h -8 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal"
 			      d="m 191,499 h 8 v 8 h -8 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-right"
 			      d="m 199,499 h 4 v 8 h -4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-left"
 			      d="m 187,499 h 4 v 8 h -4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-topleft"
 			      d="m 191,495 c -2.216,0 -4,1.784 -4,4 h 4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-topright"
 			      d="m 199,495 v 4 h 4 c 0,-2.216 -1.784,-4 -4,-4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-bottomleft"
 			      d="m 187,507 c 0,2.216 1.784,4 4,4 v -4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <path
 			      id="menuitem-normal-bottomright"
 			      d="m 199,507 v 4 c 2.216,0 4,-1.784 4,-4 z"
-			      style="opacity:{OpacityFaint};fill:{Black}" />
+			      style="opacity:{opacityFaint};fill:{black}" />
 			   <use
 			      x="0"
 			      y="0"
@@ -5692,14 +5696,14 @@ public static partial class ThemeTranslator
 			   <path
 			      id="mask"
 			      d="m -80,481 h 48 v 48 h -48 z"
-			      style="fill:{Black};fill-opacity:1" />
+			      style="fill:{black};fill-opacity:1" />
 			   <g
 			      id="mask-topleft"
 			      transform="matrix(1.6667,0,0,1.6667,-283.77458,-693.60683)">
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1962"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-top"
@@ -5707,7 +5711,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path1968"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-topright"
@@ -5715,7 +5719,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1998"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-bottomright"
@@ -5723,7 +5727,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1992"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-bottomleft"
@@ -5731,7 +5735,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1986"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-right"
@@ -5739,7 +5743,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path2016"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-bottom"
@@ -5747,7 +5751,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path2010"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="mask-left"
@@ -5755,33 +5759,33 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path2004"
-			        style="fill:{Black};fill-opacity:1" />
+			        style="fill:{black};fill-opacity:1" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-topleft"
 			      transform="translate(-104,-240)">
 			     <path
 			        d="m 155,1089 c -6.648,0 -12,5.3521 -12,12 h 12 z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path898" />
 			     <path
 			        d="m 155,1090 c -2.22222,0 -4,1.638 -4,3.638 V 1101 h 4 z"
 			        fill="#989898"
 			        id="path900"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-left"
 			      transform="matrix(1,0,0,1.3939394,-104,-673.72662)">
 			     <path
 			        d="m 143,1101 v 16.5 h 12 V 1101 Z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path903" />
 			     <path
 			        d="m 151,1101 v 16.5 h 4 V 1101 Z"
 			        fill="#989898"
 			        id="path905"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-topleft">
@@ -5790,13 +5794,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect913" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path915"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-left">
@@ -5811,59 +5815,59 @@ public static partial class ThemeTranslator
 			        d="m 73,860 v 23 h 8 v -23 z"
 			        fill="#c1c1c1"
 			        id="path920"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-topright"
 			      transform="matrix(-1,0,0,1,206,-240)">
 			     <path
 			        d="m 155,1089 c -6.648,0 -12,5.3521 -12,12 h 12 z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path968" />
 			     <path
 			        d="m 155,1090 c -2.22222,0 -3.97582,1.6382 -4,3.638 V 1101 h 4 z"
 			        fill="#989898"
 			        id="path970"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-right"
 			      transform="matrix(-1,0,0,1.3939394,206,-673.72662)">
 			     <path
 			        d="m 143,1101 v 16.5 h 12 V 1101 Z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path973" />
 			     <path
 			        d="m 151,1101 v 16.5 h 4 V 1101 Z"
 			        fill="#989898"
 			        id="path975"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-bottomleft"
 			      transform="matrix(1,0,0,-1,-104,1985)">
 			     <path
 			        d="m 155,1089 c -6.648,0 -12,5.3521 -12,12 h 12 z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path978" />
 			     <path
 			        d="m 155,1090 c -2.22222,0 -4,1.638 -4,3.638 V 1101 h 4 z"
 			        fill="#989898"
 			        id="path980"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-normal-bottomright"
 			      transform="rotate(180,103,992.5)">
 			     <path
 			        d="m 155,1089 c -6.648,0 -12,5.3521 -12,12 h 12 z"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="path983" />
 			     <path
 			        d="m 155,1090 c -2.22222,0 -4,1.638 -4,3.638 V 1101 h 4 z"
 			        fill="#989898"
 			        id="path985"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-topright"
@@ -5873,13 +5877,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect1941" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path1943"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-bottomleft"
@@ -5889,13 +5893,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect1947" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path1949"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-bottomright"
@@ -5905,13 +5909,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect1953" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path1955"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-focused-right"
@@ -5927,7 +5931,7 @@ public static partial class ThemeTranslator
 			        d="m 73,860 v 23 h 8 v -23 z"
 			        fill="#c1c1c1"
 			        id="path2071"
-			        style="opacity:{OpacityFaint}5;fill:{Black}" />
+			        style="opacity:{opacityFaint}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-topleft"
@@ -5937,13 +5941,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect2157" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path2159"
-			        style="opacity:{OpacityDisabled}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityDisabled}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-left"
@@ -5959,7 +5963,7 @@ public static partial class ThemeTranslator
 			        d="m 73,860 v 23 h 8 v -23 z"
 			        fill="#c1c1c1"
 			        id="path2165"
-			        style="opacity:{OpacityDisabled}5;fill:{Black}" />
+			        style="opacity:{opacityDisabled}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-topright"
@@ -5969,13 +5973,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect2169" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path2171"
-			        style="opacity:{OpacityDisabled}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityDisabled}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-bottomleft"
@@ -5985,13 +5989,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect2175" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path2177"
-			        style="opacity:{OpacityDisabled}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityDisabled}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-bottomright"
@@ -6001,13 +6005,13 @@ public static partial class ThemeTranslator
 			        y="848"
 			        width="12"
 			        height="12"
-			        opacity="{OpacityHidden}"
+			        opacity="{opacityHidden}"
 			        id="rect2181" />
 			     <path
 			        d="m 81,852 c -4.812044,0 -8,3.20014 -8,8 h 8 z"
 			        fill="#c1c1c1"
 			        id="path2183"
-			        style="opacity:{OpacityDisabled}5;fill:{Black};stroke-width:0.888889" />
+			        style="opacity:{opacityDisabled}5;fill:{black};stroke-width:0.888889" />
 			   </g>
 			   <g
 			      id="scrollbarslider-pressed-right"
@@ -6023,7 +6027,7 @@ public static partial class ThemeTranslator
 			        d="m 73,860 v 23 h 8 v -23 z"
 			        fill="#c1c1c1"
 			        id="path2189"
-			        style="opacity:{OpacityDisabled}5;fill:{Black}" />
+			        style="opacity:{opacityDisabled}5;fill:{black}" />
 			   </g>
 			   <g
 			      id="splitter-normal">
@@ -6033,7 +6037,7 @@ public static partial class ThemeTranslator
 			        id="rect1942"
 			        x="309"
 			        y="818"
-			        style="opacity:{OpacityFaint}2;fill:{Black};fill-opacity:1" />
+			        style="opacity:{opacityFaint}2;fill:{black};fill-opacity:1" />
 			   </g>
 			   <rect
 			      id="menu-shadow-hint-right"
@@ -6071,7 +6075,7 @@ public static partial class ThemeTranslator
 			        cy="697.35999"
 			        r="11"
 			        id="circle890"
-			        style="opacity:{OpacityHidden}.08;fill:{Black}" />
+			        style="opacity:{opacityHidden}.08;fill:{black}" />
 			     <path
 			        id="path2486"
 			        d="m 289.87134,692.97131 c -0.12781,0 -0.25558,0.0485 -0.35352,0.14649 -0.19587,0.19587 -0.19587,0.51116 0,0.70703 l 3.53516,3.53516 -3.53516,3.53515 c -0.19587,0.19587 -0.19587,0.51117 0,0.70703 0.19587,0.19587 0.51117,0.19587 0.70703,0 l 3.53516,-3.53515 3.53516,3.53515 c 0.19586,0.19587 0.51116,0.19587 0.70703,0 0.19587,-0.19586 0.19587,-0.51116 0,-0.70703 l -3.53516,-3.53515 3.53516,-3.53516 c 0.19587,-0.19587 0.19587,-0.51116 0,-0.70703 -0.19587,-0.19587 -0.51117,-0.19587 -0.70703,0 l -3.53516,3.53516 -3.53516,-3.53516 c -0.0979,-0.0979 -0.2257,-0.14649 -0.35351,-0.14649 z"
@@ -6092,7 +6096,7 @@ public static partial class ThemeTranslator
 			        cy="697.35999"
 			        r="11"
 			        id="circle2695"
-			        style="opacity:{OpacityHidden}.2;fill:{Black}" />
+			        style="opacity:{opacityHidden}.2;fill:{black}" />
 			     <path
 			        id="path2697"
 			        d="m 289.87134,692.97131 c -0.12781,0 -0.25558,0.0485 -0.35352,0.14649 -0.19587,0.19587 -0.19587,0.51116 0,0.70703 l 3.53516,3.53516 -3.53516,3.53515 c -0.19587,0.19587 -0.19587,0.51117 0,0.70703 0.19587,0.19587 0.51117,0.19587 0.70703,0 l 3.53516,-3.53515 3.53516,3.53515 c 0.19586,0.19587 0.51116,0.19587 0.70703,0 0.19587,-0.19586 0.19587,-0.51116 0,-0.70703 l -3.53516,-3.53515 3.53516,-3.53516 c 0.19587,-0.19587 0.19587,-0.51116 0,-0.70703 -0.19587,-0.19587 -0.51117,-0.19587 -0.70703,0 l -3.53516,3.53516 -3.53516,-3.53516 c -0.0979,-0.0979 -0.2257,-0.14649 -0.35351,-0.14649 z"
@@ -6110,7 +6114,7 @@ public static partial class ThemeTranslator
 			        y="686.35999" />
 			     <path
 			        id="path2801"
-			        style="opacity:{OpacityDisabled}5;fill:#444444;fill-opacity:1"
+			        style="opacity:{opacityDisabled}5;fill:#444444;fill-opacity:1"
 			        d="m 266.87134,692.97131 c -0.12781,0 -0.25558,0.0485 -0.35352,0.14649 -0.19587,0.19587 -0.19587,0.51116 0,0.70703 l 3.53516,3.53516 -3.53516,3.53515 c -0.19587,0.19587 -0.19587,0.51117 0,0.70703 0.19587,0.19587 0.51117,0.19587 0.70703,0 l 3.53516,-3.53515 3.53516,3.53515 c 0.19586,0.19587 0.51116,0.19587 0.70703,0 0.19587,-0.19586 0.19587,-0.51116 0,-0.70703 l -3.53516,-3.53515 3.53516,-3.53516 c 0.19587,-0.19587 0.19587,-0.51116 0,-0.70703 -0.19587,-0.19587 -0.51117,-0.19587 -0.70703,0 l -3.53516,3.53516 -3.53516,-3.53516 c -0.0979,-0.0979 -0.2257,-0.14649 -0.35351,-0.14649 z" />
 			   </g>
 			   <use
@@ -6140,14 +6144,14 @@ public static partial class ThemeTranslator
 			   <path
 			      id="tooltip-normal"
 			      d="m 372,578 h 48 v 48 h -48 z"
-			      style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			      style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   <g
 			      id="tooltip-normal-left"
 			      transform="translate(249.74,-125.75)">
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path1202"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-topleft"
@@ -6155,7 +6159,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1205"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-top"
@@ -6163,7 +6167,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 5.99999 v 48 H 116.26 Z"
 			        id="path1208"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-topright"
@@ -6171,7 +6175,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.25999,698.75 c -3.32289,10e-4 -5.99769,2.6768 -5.99769,6 h 6 z"
 			        id="path1211"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-right"
@@ -6179,7 +6183,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path1214"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-bottomright"
@@ -6187,7 +6191,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1217"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-bottom"
@@ -6195,7 +6199,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 116.26,703.75 h 6 v 48 h -6 z"
 			        id="path1220"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-normal-bottomleft"
@@ -6203,7 +6207,7 @@ public static partial class ThemeTranslator
 			     <path
 			        d="m 122.26,698.75 c -3.3229,10e-4 -5.9977,2.6768 -5.9977,6 h 6 z"
 			        id="path1223"
-			        style="opacity:1;fill:{White};fill-opacity:1;stroke-width:1" />
+			        style="opacity:1;fill:{white};fill-opacity:1;stroke-width:1" />
 			   </g>
 			   <g
 			      id="tooltip-shadow-top"
@@ -6215,19 +6219,19 @@ public static partial class ThemeTranslator
 			        width="50"
 			        height="7"
 			        id="rect1230"
-			        style="opacity:{OpacityDisabled}5;fill:url(#linearGradient4646-3)" />
+			        style="opacity:{opacityDisabled}5;fill:url(#linearGradient4646-3)" />
 			     <path
 			        d="m 63.13,879.72 h 50 v 5.99991 h -50 z"
 			        id="path1226"
-			        style="opacity:1;fill:{White};stroke-width:0.755922" />
+			        style="opacity:1;fill:{white};stroke-width:0.755922" />
 			     <path
 			        d="m 63.13,879.72 h 50 v 1 h -50 z"
 			        id="path5692"
-			        style="opacity:{OpacityHidden}.08;fill:{White};stroke-width:0.755923" />
+			        style="opacity:{opacityHidden}.08;fill:{white};stroke-width:0.755923" />
 			     <path
 			        d="m 63.13,878.72 h 50 v 1 h -50 z"
 			        id="path5786"
-			        style="opacity:{OpacityFaint}5;fill:{Black};stroke-width:0.755923" />
+			        style="opacity:{opacityFaint}5;fill:{black};stroke-width:0.755923" />
 			   </g>
 			   <rect
 			      id="tooltip-shadow-hint-top"
@@ -6264,19 +6268,19 @@ public static partial class ThemeTranslator
 			      transform="translate(0.011,0.0097)">
 			     <path
 			        d="m 276.99,562.99 c -8.077,0 -13,4.9229 -13,13 h 7 a 6,6 0 0 1 6,-6 z"
-			        style="opacity:{OpacityDisabled}5;isolation:auto;mix-blend-mode:normal;fill:url(#radialGradient4192-5);fill-rule:nonzero;shape-rendering:auto"
+			        style="opacity:{opacityDisabled}5;isolation:auto;mix-blend-mode:normal;fill:url(#radialGradient4192-5);fill-rule:nonzero;shape-rendering:auto"
 			        id="path1273" />
 			     <path
 			        id="path5519"
-			        style="opacity:{OpacityFaint}5;fill:{Black};fill-rule:nonzero;shape-rendering:auto"
+			        style="opacity:{opacityFaint}5;fill:{black};fill-rule:nonzero;shape-rendering:auto"
 			        d="M 276.98828,569.00195 A 6.989,6.989 0 0 0 270,575.99023 h 0.98828 a 6,6 0 0 1 6,-6 z" />
 			     <path
 			        d="m 270.989,575.9903 a 6,6 0 0 1 6,-6 v 6 z"
 			        id="path1275"
-			        style="opacity:1;fill:{White};stroke-width:1" />
+			        style="opacity:1;fill:{white};stroke-width:1" />
 			     <path
 			        id="path5633"
-			        style="opacity:{OpacityHidden}.08;fill:{White};fill-rule:nonzero;shape-rendering:auto"
+			        style="opacity:{opacityHidden}.08;fill:{white};fill-rule:nonzero;shape-rendering:auto"
 			        d="m 276.98828,569.99023 a 6,6 0 0 0 -6,6 H 272 a 4.989,4.989 0 0 1 4.98828,-4.98828 z" />
 			   </g>
 			   <use

@@ -6,27 +6,23 @@ public static partial class ThemeTranslator
 	public static string KvantumConfig(ColorScheme scheme)
 	{
 		// Backgrounds & Surfaces
-		const string WindowBackground = "#F5F5F5";
-		const string BaseWhite        = "#ffffff";
-		const string AltBase          = "#f8f8f8";
-		const string ButtonBg         = "#f2f2f2";
-		const string MidLight         = "#f0f0f0";
-		const string MidGray          = "#e1e1e1";
-		const string DarkGray         = "#c8c8c8";
+		string BaseWhite        = $"#{scheme.Base}";
+		string AltBase          = $"#{scheme.Surface}";
+		string WindowBackground = $"#{scheme.Overlay}";
+		string ButtonBg         = $"#{scheme.Highlight}";
+		string MidLight         = $"#{scheme.HighlightOverlay}";
+		string MidGray          = $"#{scheme.HighlightInactive}";
+		string DarkGray         = $"#{scheme.Muted}";
 
 		// Accents
-		const string Highlight   = "#3c84f7";
-		const string LinkBlue    = "#0057AE";
-		const string LinkVisited = "#E040FB";
+		string Highlight   = $"#{scheme.Highlight}";
+		string Link        = $"#{scheme.Magenta}";
+		string LinkVisited = $"#{scheme.Lavender}";
 
 		// Typography
-		const string TextPrimary  = "#444444";
-		const string TextPressed  = "#333333";   // Slightly darker for active states
-		const string TextDisabled = "#44444474"; // Primary with alpha
-
-		// --------------------------------------------------------------------------------
-		// 2. CONFIG GENERATION
-		// --------------------------------------------------------------------------------
+		string TextPrimary  = $"#{scheme.Text}";
+		string TextPressed  = $"#{scheme.Text}";     // Slightly darker for active states
+		string TextDisabled = $"#{scheme.Inactive}"; // Primary with alpha
 
 		return
 			$"""
@@ -124,7 +120,7 @@ public static partial class ThemeTranslator
 			 disabled.text.color={TextDisabled}
 			 tooltip.text.color={TextPrimary}
 			 highlight.text.color={TextPressed}
-			 link.color={LinkBlue}
+			 link.color={Link}
 			 link.visited.color={LinkVisited}
 			 progress.indicator.text.color={TextPrimary}
 
