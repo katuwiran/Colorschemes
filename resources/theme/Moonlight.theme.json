@@ -1,7 +1,7 @@
 {
 	"name": "Moonlight",
 	"dark": true,
-	"author": "Rikai. built on top by catppuccin's template",
+	"author": "Rikai. built on top of catppuccin's template",
 	"editorScheme": "/Moonlight.xml",
 	"colors": {
 		"base": "#2a2840",
@@ -18,18 +18,16 @@
 		"yellow": "#fcb986",
 		"red": "#fa593f",
 		"orange": "#ff744d",
-		"highlight-low": "#31335f",
 		"pink": "#ec93c1",
 		"surface0": "#332e51",
 		"text": "#c0c0ff",
 		"accentColor": "#ef5abf",
 		"secondaryAccentColor": "#ef5abf",
 		"buttonForeground": "#c0c0ff",
-		"buttonBackground": "#31335f",
 		"primaryForeground": "#c0c0ff",
 		"primaryBackground": "#2a2840",
 		"secondaryBackground": "#332e51",
-		"inactiveBackground": "#666684",
+		"inactiveBackground": "#444158",
 		"panelForeground": "#c0c0ff",
 		"panelBackground": "#2a2840",
 		"toolbarBackground": "#2a2840",
@@ -395,11 +393,11 @@
 			"background": "panelBackground"
 		},
 		"TextField": {
-			"background": "2a2840",
+			"background": "#2a2840",
 			"caretForeground": "secondaryBackground",
-			"foreground": "c0c0ff",
-			"selectionForeground": "c0c0ff",
-			"selectionBackground": "31335f"
+			"foreground": "#c0c0ff",
+			"selectionForeground": "#c0c0ff",
+			"selectionBackground": "#31335f"
 		},
 		"ToggleButton": {
 			"buttonColor": "primaryForeground",
@@ -433,14 +431,14 @@
 			"background": "panelBackground"
 		},
 		"Tree": {
-			"background": "2a2840",
-			"foreground": "c0c0ff",
+			"background": "#2a2840",
+			"foreground": "#c0c0ff",
 			"hoverBackground": "hoverBackground",
 			"modifiedItemForeground": "accentColor",
 			"rowHeight": 24,
-			"selectionBackground": "31335f",
-			"selectionInactiveBackground": "31335f",
-			"selectionForeground": "c0c0ff"
+			"selectionBackground": "#31335f",
+			"selectionInactiveBackground": "#31335f",
+			"selectionForeground": "#c0c0ff"
 		},
 		"UiDesigner": {
 			"Panel.background": "panelBackground",
@@ -495,7 +493,7 @@
 		"ColorPalette": {
 			"Actions.Blue": "#848bf4",
 			"Actions.Green": "#c8e899",
-			"Actions.Grey": "#666684",
+			"Actions.Grey": "#444158",
 			"Actions.GreyInline": "#848bf4",
 			"Actions.GreyInline.Dark": "#848bf4",
 			"Actions.Red": "#fa593f",
@@ -503,7 +501,7 @@
 			"Objects.BlackText": "#332e51",
 			"Objects.Blue": "#848bf4",
 			"Objects.Green": "#c8e899",
-			"Objects.Grey": "#666684",
+			"Objects.Grey": "#444158",
 			"Objects.Pink": "#ec93c1",
 			"Objects.Purple": "#c188ef",
 			"Objects.Red": "#fa593f",
@@ -519,8 +517,8 @@
 			"Checkbox.Border.Default": "#332e51",
 			"Checkbox.Border.Disabled": "#332e51",
 			"Checkbox.Border.Selected": "#332e51",
-			"Checkbox.Foreground.Disabled": "#666684",
-			"Checkbox.Foreground.Disabled.Dark": "#666684",
+			"Checkbox.Foreground.Disabled": "#444158",
+			"Checkbox.Foreground.Disabled.Dark": "#444158",
 			"Checkbox.Foreground.Selected": "#ef5abf",
 			"Checkbox.Foreground.Selected.Dark": "#ef5abf",
 			"Tree.iconColor": "#c0c0ff"

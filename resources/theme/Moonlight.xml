@@ -63,7 +63,7 @@
     <option name="INLINE_REFACTORING_SETTINGS_DEFAULT" value="908caa" />
     <option name="INLINE_REFACTORING_SETTINGS_FOCUSED" value="" />
     <option name="INLINE_REFACTORING_SETTINGS_HOVERED" value="" />
-    <option name="LINE_NUMBERS_COLOR" value="666684" />
+    <option name="LINE_NUMBERS_COLOR" value="908caa" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="c0c0ff" />
     <option name="LOOKUP_COLOR" value="332e51"/>
     <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="444158" />
@@ -223,7 +223,6 @@
         <option name="BACKGROUND" value="ff744d"/>
       </value>
     </option>
-
     <option name="BLOCK_TERMINAL_BLACK_BRIGHT">
       <value>
         <option name="FOREGROUND" value="c0c0ff"/>
@@ -707,7 +706,7 @@
     </option>
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="666684" />
+        <option name="FOREGROUND" value="908caa" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -743,7 +742,7 @@
     </option>
     <option name="DEFAULT_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="666684" />
+        <option name="FOREGROUND" value="908caa" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -828,7 +827,7 @@
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="666684" />
+        <option name="FOREGROUND" value="908caa" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1013,7 +1012,7 @@
     </option>
     <option name="INACTIVE_HYPERLINK_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="666684" />
+        <option name="EFFECT_COLOR" value="908caa" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1361,8 +1360,8 @@
     </option>
     <option name="ReSharper.HINT">
       <value>
-        <option name="EFFECT_COLOR" value="666684" />
-        <option name="ERROR_STRIPE_COLOR" value="666684" />
+        <option name="EFFECT_COLOR" value="908caa" />
+        <option name="ERROR_STRIPE_COLOR" value="908caa" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -1584,8 +1583,8 @@
     </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="666684" />
-        <option name="ERROR_STRIPE_COLOR" value="666684" />
+        <option name="EFFECT_COLOR" value="908caa" />
+        <option name="ERROR_STRIPE_COLOR" value="908caa" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
