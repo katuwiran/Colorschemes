@@ -4,77 +4,67 @@ public class Program
 {
 	public static void Main()
 	{
-		int    columns   = 8;
-		string prefix    = $"outputs{Path.DirectorySeparatorChar}";
-		string moonlight = $"{prefix}moonlight.png";
-		string skylight  = $"{prefix}skylight.png";
+		int    columns = 8;
+		string prefix  = $"outputs{Path.DirectorySeparatorChar}";
 
-		string riderJsonDarkFilepath  = $"{prefix}Moonlight.theme.json";
-		string riderJsonLightFilepath = $"{prefix}Skylight.theme.json";
+		// diagrams
+		string diagramMoonlight = $"{prefix}moonlight.png";
+		string diagramSkylight  = $"{prefix}skylight.png";
 
-		string riderXmlDarkFilepath  = $"{prefix}Moonlight.xml";
-		string riderXmlLightFilepath = $"{prefix}Skylight.xml";
+		// rider json
+		string riderJsonMoonlight = $"{prefix}Moonlight.theme.json";
+		string riderJsonSkylight  = $"{prefix}Skylight.theme.json";
 
-		string sublimeDarkPath  = $"{prefix}Moonlight.sublime-color-scheme";
-		string sublimeLightPath = $"{prefix}Skylight.sublime-color-scheme";
+		// rider xml
+		string riderXmlMoonlight = $"{prefix}Moonlight.xml";
+		string riderXmlSkylight  = $"{prefix}Skylight.xml";
 
-		PublishRiderJson(ColorScheme.Moonlight, riderJsonDarkFilepath);
-		PublishRiderJson(ColorScheme.Skylight,  riderJsonLightFilepath);
+		// sublime
+		string sublimeMoonlight = $"{prefix}Moonlight.sublime-color-scheme";
+		string sublimeSkylight  = $"{prefix}Skylight.sublime-color-scheme";
 
-		PublishRiderXml(ColorScheme.Moonlight, riderXmlDarkFilepath);
-		PublishRiderXml(ColorScheme.Skylight,  riderXmlLightFilepath);
+		PublishRiderJson(ColorScheme.Moonlight, riderJsonMoonlight);
+		PublishRiderJson(ColorScheme.Skylight,  riderJsonSkylight);
 
-		PublishSublime(ColorScheme.Moonlight, sublimeDarkPath);
-		PublishSublime(ColorScheme.Skylight,  sublimeLightPath);
+		PublishRiderXml(ColorScheme.Moonlight, riderXmlMoonlight);
+		PublishRiderXml(ColorScheme.Skylight,  riderXmlSkylight);
 
+		PublishSublime(ColorScheme.Moonlight, sublimeMoonlight);
+		PublishSublime(ColorScheme.Skylight,  sublimeSkylight);
+		
 		DiagramGenerator generator = new();
 
-		generator.Generate(ColorSchemeEntry.Moonlight, columns, ConvertToTargetDir(moonlight));
-		generator.Generate(ColorSchemeEntry.Skylight,  columns, ConvertToTargetDir(skylight));
+		generator.Generate(ColorSchemeEntry.Moonlight, columns, ConvertToTargetDir(diagramMoonlight));
+		generator.Generate(ColorSchemeEntry.Skylight,  columns, ConvertToTargetDir(diagramSkylight));
 	}
 
-	static void PublishSublime(ColorScheme scheme, string filePath)
+	static void Publish(ColorScheme scheme, string filePath, Func<ColorScheme, string> formatter)
 	{
 		using (StreamWriter sw = new StreamWriter(ConvertToTargetDir(filePath)))
 		{
-			sw.Write(ThemeTranslator.Sublime(scheme));
+			sw.Write(formatter(scheme));
 		}
 
 		Console.WriteLine($"Generated Sublime Color scheme for {scheme.Name}");
 	}
 
-	static void PublishRiderJson(ColorScheme scheme, string filePath)
-	{
-		using (StreamWriter sw = new StreamWriter(ConvertToTargetDir(filePath)))
-		{
-			sw.Write(ThemeTranslator.RiderJson(scheme));
-		}
-
-		Console.WriteLine($"Generated Rider json for {scheme.Name}");
-	}
-
-	static void PublishRiderXml(ColorScheme scheme, string filePath)
-	{
-		using (StreamWriter sw = new StreamWriter(ConvertToTargetDir(filePath)))
-		{
-			sw.Write(ThemeTranslator.RiderXml(scheme));
-		}
-
-		Console.WriteLine($"Generated Rider xml for {scheme.Name}");
-	}
+	static void PublishSublime(ColorScheme      scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.Sublime);
+	static void PublishRiderJson(ColorScheme    scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderJson);
+	static void PublishRiderXml(ColorScheme     scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderXml);
+	static void PublishKcolorscheme(ColorScheme scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.KColorscheme);
 
 	static string ConvertToTargetDir(string path)
 	{
-		// 1. Get the path to the bin folder (TargetDir)
+		// Get the path to the bin folder (TargetDir)
 		string binPath = AppContext.BaseDirectory;
 
-		// 2. Combine with filename
+		// Combine with filename
 		string filePath = Path.Combine(binPath, path);
 
-		// 1. Get the directory path (handles just filename cases too)
+		// Get the directory path (handles just filename cases too)
 		string? directory = Path.GetDirectoryName(filePath);
 
-		// 2. Create the directory if it's not null/empty
+		// Create the directory if it's not null/empty
 		if (!string.IsNullOrEmpty(directory))
 		{
 			Directory.CreateDirectory(directory);
