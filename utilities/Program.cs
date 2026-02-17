@@ -51,7 +51,6 @@ public class Program
 	static void PublishSublime(ColorScheme      scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.Sublime);
 	static void PublishRiderJson(ColorScheme    scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderJson);
 	static void PublishRiderXml(ColorScheme     scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderXml);
-	static void PublishKcolorscheme(ColorScheme scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.KColorscheme);
 
 	static string ConvertToTargetDir(string path)
 	{
