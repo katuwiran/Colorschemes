@@ -1,28 +1,37 @@
 namespace ColorschemeUtils;
 
-public static partial class ThemeTranslator
+public class KvantumConfig : ITheme
 {
+	public string      FilePath { get; set; }
+	public ColorScheme Scheme  { get; set; }
+
+	public KvantumConfig(ColorScheme colorScheme)
+	{
+		FilePath = $"{colorScheme.Name}.kvconfig";
+		Scheme  = colorScheme;
+	}
+
 	// for Kvantum's svg format
-	public static string KvantumConfig(ColorScheme scheme)
+	public override string ToString()
 	{
 		// Backgrounds & Surfaces
-		string BaseWhite        = $"#{scheme.Base}";
-		string AltBase          = $"#{scheme.Surface}";
-		string WindowBackground = $"#{scheme.Overlay}";
-		string ButtonBg         = $"#{scheme.Highlight}";
-		string MidLight         = $"#{scheme.HighlightOverlay}";
-		string MidGray          = $"#{scheme.HighlightInactive}";
-		string DarkGray         = $"#{scheme.Muted}";
+		string baseWhite        = $"#{Scheme.Base}";
+		string altBase          = $"#{Scheme.Surface}";
+		string windowBackground = $"#{Scheme.Overlay}";
+		string buttonBg         = $"#{Scheme.Highlight}";
+		string midLight         = $"#{Scheme.HighlightOverlay}";
+		string midGray          = $"#{Scheme.HighlightInactive}";
+		string darkGray         = $"#{Scheme.Muted}";
 
 		// Accents
-		string Highlight   = $"#{scheme.Highlight}";
-		string Link        = $"#{scheme.Magenta}";
-		string LinkVisited = $"#{scheme.Lavender}";
+		string highlight   = $"#{Scheme.Highlight}";
+		string link        = $"#{Scheme.Magenta}";
+		string linkVisited = $"#{Scheme.Lavender}";
 
 		// Typography
-		string TextPrimary  = $"#{scheme.Text}";
-		string TextPressed  = $"#{scheme.Overlay}";     // Slightly darker for active states
-		string TextDisabled = $"#{scheme.Inactive}"; // Primary with alpha
+		string textPrimary  = $"#{Scheme.Text}";
+		string textPressed  = $"#{Scheme.Overlay}";  // Slightly darker for active states
+		string textDisabled = $"#{Scheme.Inactive}"; // Primary with alpha
 
 		return
 			$"""
@@ -104,25 +113,25 @@ public static partial class ThemeTranslator
 			 tooltip_blur_radius=0
 
 			 [GeneralColors]
-			 window.color={WindowBackground}
-			 base.color={BaseWhite}
-			 alt.base.color={AltBase}
-			 button.color={ButtonBg}
-			 light.color={BaseWhite}
-			 mid.light.color={MidLight}
-			 dark.color={DarkGray}
-			 mid.color={MidGray}
-			 highlight.color={Highlight}
-			 inactive.highlight.color={Highlight}
-			 text.color={TextPrimary}
-			 window.text.color={TextPrimary}
-			 button.text.color={TextPrimary}
-			 disabled.text.color={TextDisabled}
-			 tooltip.text.color={TextPrimary}
-			 highlight.text.color={TextPressed}
-			 link.color={Link}
-			 link.visited.color={LinkVisited}
-			 progress.indicator.text.color={TextPrimary}
+			 window.color={windowBackground}
+			 base.color={baseWhite}
+			 alt.base.color={altBase}
+			 button.color={buttonBg}
+			 light.color={baseWhite}
+			 mid.light.color={midLight}
+			 dark.color={darkGray}
+			 mid.color={midGray}
+			 highlight.color={highlight}
+			 inactive.highlight.color={highlight}
+			 text.color={textPrimary}
+			 window.text.color={textPrimary}
+			 button.text.color={textPrimary}
+			 disabled.text.color={textDisabled}
+			 tooltip.text.color={textPrimary}
+			 highlight.text.color={textPressed}
+			 link.color={link}
+			 link.visited.color={linkVisited}
+			 progress.indicator.text.color={textPrimary}
 
 			 [Hacks]
 			 transparent_ktitle_label=true
@@ -162,9 +171,9 @@ public static partial class ThemeTranslator
 			 interior=true
 			 interior.element=button
 			 indicator.size=8
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
 			 text.toggle.color=white
 			 highlight.text.color=white
 			 text.shadow=0
@@ -175,11 +184,11 @@ public static partial class ThemeTranslator
 
 			 [PanelButtonTool]
 			 inherits=PanelButtonCommand
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
 			 text.toggle.color=white
-			 text.disabled.color={TextDisabled}
+			 text.disabled.color={textDisabled}
 			 text.bold=false
 			 indicator.element=arrow
 			 indicator.size=8
@@ -194,11 +203,11 @@ public static partial class ThemeTranslator
 			 frame.left=14
 			 frame.right=14
 			 indicator.element=tarrow
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
-			 text.disabled.color={TextDisabled}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
+			 text.disabled.color={textDisabled}
 			 text.bold=false
 			 frame.expansion=28
 
@@ -210,14 +219,14 @@ public static partial class ThemeTranslator
 			 frame.bottom=1
 			 frame.left=1
 			 frame.right=1
-			 text.normal.color={TextPrimary}
+			 text.normal.color={textPrimary}
 
 			 [DockTitle]
 			 inherits=PanelButtonCommand
 			 frame=false
 			 interior=false
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
 			 text.bold=false
 
 			 [IndicatorSpinBox]
@@ -230,7 +239,7 @@ public static partial class ThemeTranslator
 			 frame.right=2
 			 indicator.element=spin
 			 indicator.size=8
-			 text.normal.color={TextPrimary}
+			 text.normal.color={textPrimary}
 			 text.margin.top=2
 			 text.margin.bottom=2
 			 text.margin.left=2
@@ -240,10 +249,10 @@ public static partial class ThemeTranslator
 			 inherits=PanelButtonCommand
 			 frame=false
 			 interior.element=radio
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 min_width=+0.3font
 			 min_height=+0.3font
 
@@ -251,10 +260,10 @@ public static partial class ThemeTranslator
 			 inherits=PanelButtonCommand
 			 frame=false
 			 interior.element=checkbox
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 min_width=+0.3font
 			 min_height=+0.3font
 
@@ -306,9 +315,9 @@ public static partial class ThemeTranslator
 
 			 [ToolboxTab]
 			 inherits=PanelButtonCommand
-			 text.normal.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.focus.color={TextPrimary}
+			 text.normal.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.focus.color={textPrimary}
 
 			 [Tab]
 			 inherits=PanelButtonCommand
@@ -324,10 +333,10 @@ public static partial class ThemeTranslator
 			 frame.bottom=8
 			 frame.left=8
 			 frame.right=8
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 frame.expansion=0
 			 text.bold=false
 
@@ -353,10 +362,10 @@ public static partial class ThemeTranslator
 			 frame.bottom=1
 			 frame.left=1
 			 frame.right=1
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 frame.expansion=0
 
 			 [SizeGrip]
@@ -369,10 +378,10 @@ public static partial class ThemeTranslator
 			 text.margin=0
 			 interior.element=menubar
 			 frame.element=menubar
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 frame.left=6
 			 frame.right=6
 			 frame.top=0
@@ -399,10 +408,10 @@ public static partial class ThemeTranslator
 			 frame.element=progress
 			 interior.element=progress
 			 text.margin=0
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 text.bold=false
 			 frame.expansion=8
 
@@ -425,10 +434,10 @@ public static partial class ThemeTranslator
 			 text.margin.bottom=0
 			 text.margin.left=8
 			 text.margin.right=8
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 min_width=+0.3font
 			 min_height=+0.3font
 			 frame.expansion=0
@@ -467,7 +476,7 @@ public static partial class ThemeTranslator
 			 frame.right=10
 			 frame.element=menu
 			 interior.element=menu
-			 text.normal.color={TextPrimary}
+			 text.normal.color={textPrimary}
 			 text.shadow=false
 			 frame.expansion=0
 			 text.bold=false
@@ -478,8 +487,8 @@ public static partial class ThemeTranslator
 			 frame.element=menuitem
 			 interior.element=menuitem
 			 indicator.element=menuitem
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPressed}
 			 text.margin.top=0
 			 text.margin.bottom=0
 			 text.margin.left=6
@@ -496,10 +505,10 @@ public static partial class ThemeTranslator
 			 frame.element=menubar
 			 interior.element=menubar
 			 frame.bottom=0
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 frame.expansion=0
 			 text.bold=false
 
@@ -516,10 +525,10 @@ public static partial class ThemeTranslator
 			 text.margin.right=4
 			 text.margin.top=0
 			 text.margin.bottom=0
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 text.bold=false
 			 min_width=+0.3font
 			 min_height=+0.3font
@@ -535,8 +544,8 @@ public static partial class ThemeTranslator
 			 interior.element=titlebar
 			 indicator.size=16
 			 indicator.element=mdi
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPrimary}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPrimary}
 			 text.bold=false
 			 text.italic=true
 			 frame.expansion=0
@@ -553,7 +562,7 @@ public static partial class ThemeTranslator
 			 text.margin.bottom=2
 			 text.margin.left=2
 			 text.margin.right=2
-			 text.normal.color={TextPrimary}
+			 text.normal.color={textPrimary}
 			 text.focus.color=#424242
 			 text.press.color=#424242
 			 text.toggle.color=#424242
@@ -563,8 +572,8 @@ public static partial class ThemeTranslator
 			 frame=false
 			 text.shadow=0
 			 text.margin=0
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPressed}
 			 text.bold=false
 			 frame.expansion=0
 
@@ -584,10 +593,10 @@ public static partial class ThemeTranslator
 			 text.margin=6
 			 interior.element=tooltip
 			 frame.element=tooltip
-			 text.normal.color={TextPrimary}
-			 text.focus.color={TextPressed}
-			 text.press.color={TextPressed}
-			 text.toggle.color={TextPressed}
+			 text.normal.color={textPrimary}
+			 text.focus.color={textPressed}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 			 frame.expansion=6
 
 			 [StatusBar]

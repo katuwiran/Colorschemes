@@ -1,54 +1,64 @@
 namespace ColorschemeUtils;
 
-public static partial class ThemeTranslator
+public class RiderJson : ITheme
 {
-	public static string RiderJson(ColorScheme scheme)
+	public string      FilePath { get; set; }
+	public ColorScheme Scheme   { get; set; }
+
+	public RiderJson(ColorScheme colorScheme)
+	{
+		FilePath = $"{colorScheme.Name}.theme.json";
+		Scheme   = colorScheme;
+	}
+
+	// for Kvantum's svg format
+	public override string ToString()
 	{
 		return
 			$$"""
 			  {
-			  	"name": "{{scheme.Name}}",
-			  	"dark": {{scheme.IsDark.ToString().ToLower()}},
+			  	"name": "{{Scheme.Name}}",
+			  	"dark": {{Scheme.IsDark.ToString().ToLower()}},
 			  	"author": "Rikai. built on top of catppuccin's template",
-			  	"editorScheme": "/{{scheme.Name}}.xml",
+			  	"editorScheme": "/{{Scheme.Name}}.xml",
 			  	"colors": {
-			  		"base": "#{{scheme.Base}}",
-			  		"surface": "#{{scheme.Surface}}",
-			  		"overlay": "#{{scheme.Overlay}}",
-			  		"subtle": "#{{scheme.Subtle}}",
-			  		"muted": "#{{scheme.Muted}}",
-			  		"magenta": "#{{scheme.Magenta}}",
-			  		"lavender": "#{{scheme.Lavender}}",
-			  		"blue": "#{{scheme.Blue}}",
-			  		"purple": "#{{scheme.Purple}}",
-			  		"cyan": "#{{scheme.Cyan}}",
-			  		"green": "#{{scheme.Green}}",
-			  		"yellow": "#{{scheme.Yellow}}",
-			  		"red": "#{{scheme.Red}}",
-			  		"orange": "#{{scheme.Orange}}",
-			  		"pink": "#{{scheme.Lavender}}",
-			  		"surface0": "#{{scheme.Surface}}",
-			  		"text": "#{{scheme.Text}}",
-			  		"accentColor": "#{{scheme.Magenta}}",
-			  		"secondaryAccentColor": "#{{scheme.Magenta}}",
-			  		"buttonForeground": "#{{scheme.Text}}",
-			  		"primaryForeground": "#{{scheme.Text}}",
-			  		"primaryBackground": "#{{scheme.Base}}",
-			  		"secondaryBackground": "#{{scheme.Surface}}",
-			  		"inactiveBackground": "#{{scheme.Muted}}",
-			  		"panelForeground": "#{{scheme.Text}}",
-			  		"panelBackground": "#{{scheme.Base}}",
-			  		"toolbarBackground": "#{{scheme.Base}}",
-			  		"hoverBackground": "#{{scheme.Highlight}}",
-			  		"pressedBackground": "#{{scheme.HighlightOverlay}}",
-			  		"selectionForeground": "#{{scheme.Text}}",
-			  		"selectionBackground": "#{{scheme.Highlight}}",
-			  		"selectionInactiveBackground": "#{{scheme.HighlightInactive}}",
-			  		"borderColor": "#{{scheme.HighlightInactive}}",
-			  		"separatorColor": "#{{scheme.Surface}}",
-			  		"searchMatchBackground": "#{{scheme.Highlight}}",
-			  		"gitLogBackground": "#{{scheme.Base}}",
-			  		"dragAndDropBackground": "#{{scheme.Base}}"
+			  		"base": "#{{Scheme.Base}}",
+			  		"surface": "#{{Scheme.Surface}}",
+			  		"overlay": "#{{Scheme.Overlay}}",
+			  		"subtle": "#{{Scheme.Subtle}}",
+			  		"muted": "#{{Scheme.Muted}}",
+			  		"magenta": "#{{Scheme.Magenta}}",
+			  		"lavender": "#{{Scheme.Lavender}}",
+			  		"blue": "#{{Scheme.Blue}}",
+			  		"purple": "#{{Scheme.Purple}}",
+			  		"cyan": "#{{Scheme.Cyan}}",
+			  		"green": "#{{Scheme.Green}}",
+			  		"yellow": "#{{Scheme.Yellow}}",
+			  		"red": "#{{Scheme.Red}}",
+			  		"orange": "#{{Scheme.Orange}}",
+			  		"pink": "#{{Scheme.Lavender}}",
+			  		"surface0": "#{{Scheme.Surface}}",
+			  		"text": "#{{Scheme.Text}}",
+			  		"accentColor": "#{{Scheme.Magenta}}",
+			  		"secondaryAccentColor": "#{{Scheme.Magenta}}",
+			  		"buttonForeground": "#{{Scheme.Text}}",
+			  		"primaryForeground": "#{{Scheme.Text}}",
+			  		"primaryBackground": "#{{Scheme.Base}}",
+			  		"secondaryBackground": "#{{Scheme.Surface}}",
+			  		"inactiveBackground": "#{{Scheme.Muted}}",
+			  		"panelForeground": "#{{Scheme.Text}}",
+			  		"panelBackground": "#{{Scheme.Base}}",
+			  		"toolbarBackground": "#{{Scheme.Base}}",
+			  		"hoverBackground": "#{{Scheme.Highlight}}",
+			  		"pressedBackground": "#{{Scheme.HighlightOverlay}}",
+			  		"selectionForeground": "#{{Scheme.Text}}",
+			  		"selectionBackground": "#{{Scheme.Highlight}}",
+			  		"selectionInactiveBackground": "#{{Scheme.HighlightInactive}}",
+			  		"borderColor": "#{{Scheme.HighlightInactive}}",
+			  		"separatorColor": "#{{Scheme.Surface}}",
+			  		"searchMatchBackground": "#{{Scheme.Highlight}}",
+			  		"gitLogBackground": "#{{Scheme.Base}}",
+			  		"dragAndDropBackground": "#{{Scheme.Base}}"
 			  	},
 			  	"ui": {
 			  		"*": {
@@ -72,10 +82,10 @@ public static partial class ThemeTranslator
 			  			"pressedBorderColor": "selectionBackground"
 			  		},
 			  		"Banner": {
-			  			"errorBackground": "#{{scheme.Red}}",
-			  			"errorBorderColor": "#{{scheme.Red}}",
-			  			"warningBackground": "#{{scheme.Yellow}}",
-			  			"warningBorderColor": "#{{scheme.Yellow}}"
+			  			"errorBackground": "#{{Scheme.Red}}",
+			  			"errorBorderColor": "#{{Scheme.Red}}",
+			  			"warningBackground": "#{{Scheme.Yellow}}",
+			  			"warningBorderColor": "#{{Scheme.Yellow}}"
 			  		},
 			  		"Bookmark": {
 			  			"Mnemonic": {
@@ -176,7 +186,7 @@ public static partial class ThemeTranslator
 			  		},
 			  		"EditorTabs": {
 			  			"background": "primaryBackground",
-			  			"inactiveUnderlineColor": "#{{scheme.Purple}}",
+			  			"inactiveUnderlineColor": "#{{Scheme.Purple}}",
 			  			"hoverBackground": "hoverBackground",
 			  			"underlineColor": "accentColor",
 			  			"underlineHeight": 1,
@@ -184,12 +194,12 @@ public static partial class ThemeTranslator
 			  			"unselectedBlend": 0.9
 			  		},
 			  		"FileColor": {
-			  			"Blue": "#{{scheme.Blue}}",
-			  			"Green": "#{{scheme.Green}}",
-			  			"Orange": "#{{scheme.Orange}}",
-			  			"Rose": "#{{scheme.Red}}",
-			  			"Violet": "#{{scheme.Purple}}",
-			  			"Yellow": "#{{scheme.Yellow}}"
+			  			"Blue": "#{{Scheme.Blue}}",
+			  			"Green": "#{{Scheme.Green}}",
+			  			"Orange": "#{{Scheme.Orange}}",
+			  			"Rose": "#{{Scheme.Red}}",
+			  			"Violet": "#{{Scheme.Purple}}",
+			  			"Yellow": "#{{Scheme.Yellow}}"
 			  		},
 			  		"Label": {
 			  			"background": "panelBackground",
@@ -197,9 +207,9 @@ public static partial class ThemeTranslator
 			  		},
 			  		"GotItTooltip": {
 			  			"background": "panelBackground",
-			  			"codeBackground": "#{{scheme.Red}}",
-			  			"codeBorderColor": "#{{scheme.Blue}}",
-			  			"shortcutForeground": "{{scheme.Magenta}}"
+			  			"codeBackground": "#{{Scheme.Red}}",
+			  			"codeBorderColor": "#{{Scheme.Blue}}",
+			  			"shortcutForeground": "{{Scheme.Magenta}}"
 			  		},
 			  		"Link": {
 			  			"activeForeground": "accentColor",
@@ -401,11 +411,11 @@ public static partial class ThemeTranslator
 			  			"background": "panelBackground"
 			  		},
 			  		"TextField": {
-			  			"background": "#{{scheme.Base}}",
+			  			"background": "#{{Scheme.Base}}",
 			  			"caretForeground": "secondaryBackground",
-			  			"foreground": "#{{scheme.Text}}",
-			  			"selectionForeground": "#{{scheme.Text}}",
-			  			"selectionBackground": "#{{scheme.Highlight}}"
+			  			"foreground": "#{{Scheme.Text}}",
+			  			"selectionForeground": "#{{Scheme.Text}}",
+			  			"selectionBackground": "#{{Scheme.Highlight}}"
 			  		},
 			  		"ToggleButton": {
 			  			"buttonColor": "primaryForeground",
@@ -439,14 +449,14 @@ public static partial class ThemeTranslator
 			  			"background": "panelBackground"
 			  		},
 			  		"Tree": {
-			  			"background": "#{{scheme.Base}}",
-			  			"foreground": "#{{scheme.Text}}",
+			  			"background": "#{{Scheme.Base}}",
+			  			"foreground": "#{{Scheme.Text}}",
 			  			"hoverBackground": "hoverBackground",
 			  			"modifiedItemForeground": "accentColor",
 			  			"rowHeight": 24,
-			  			"selectionBackground": "#{{scheme.Highlight}}",
-			  			"selectionInactiveBackground": "#{{scheme.Highlight}}",
-			  			"selectionForeground": "#{{scheme.Text}}"
+			  			"selectionBackground": "#{{Scheme.Highlight}}",
+			  			"selectionInactiveBackground": "#{{Scheme.Highlight}}",
+			  			"selectionForeground": "#{{Scheme.Text}}"
 			  		},
 			  		"UiDesigner": {
 			  			"Panel.background": "panelBackground",
@@ -499,37 +509,37 @@ public static partial class ThemeTranslator
 			  	},
 			  	"icons": {
 			  		"ColorPalette": {
-			  			"Actions.Blue": "#{{scheme.Blue}}",
-			  			"Actions.Green": "#{{scheme.Green}}",
-			  			"Actions.Grey": "#{{scheme.Muted}}",
-			  			"Actions.GreyInline": "#{{scheme.Blue}}",
-			  			"Actions.GreyInline.Dark": "#{{scheme.Blue}}",
-			  			"Actions.Red": "#{{scheme.Red}}",
-			  			"Actions.Yellow": "#{{scheme.Yellow}}",
-			  			"Objects.BlackText": "#{{scheme.Surface}}",
-			  			"Objects.Blue": "#{{scheme.Blue}}",
-			  			"Objects.Green": "#{{scheme.Green}}",
-			  			"Objects.Grey": "#{{scheme.Muted}}",
-			  			"Objects.Pink": "#{{scheme.Lavender}}",
-			  			"Objects.Purple": "#{{scheme.Purple}}",
-			  			"Objects.Red": "#{{scheme.Red}}",
-			  			"Objects.RedStatus": "#{{scheme.Red}}",
-			  			"Objects.Yellow": "#{{scheme.Yellow}}",
-			  			"Objects.YellowDark": "#{{scheme.Orange}}",
-			  			"Checkbox.Background.Default": "#{{scheme.Base}}",
-			  			"Checkbox.Background.Default.Dark": "#{{scheme.Surface}}",
-			  			"Checkbox.Background.Disabled": "#{{scheme.Base}}",
-			  			"Checkbox.Background.Disabled.Dark": "#{{scheme.Surface}}",
-			  			"Checkbox.Background.Selected": "#{{scheme.HighlightOverlay}}",
-			  			"Checkbox.Background.Selected.Dark": "#{{scheme.HighlightInactive}}",
-			  			"Checkbox.Border.Default": "#{{scheme.Surface}}",
-			  			"Checkbox.Border.Disabled": "#{{scheme.Surface}}",
-			  			"Checkbox.Border.Selected": "#{{scheme.Surface}}",
-			  			"Checkbox.Foreground.Disabled": "#{{scheme.Muted}}",
-			  			"Checkbox.Foreground.Disabled.Dark": "#{{scheme.Muted}}",
-			  			"Checkbox.Foreground.Selected": "#{{scheme.Magenta}}",
-			  			"Checkbox.Foreground.Selected.Dark": "#{{scheme.Magenta}}",
-			  			"Tree.iconColor": "#{{scheme.Text}}"
+			  			"Actions.Blue": "#{{Scheme.Blue}}",
+			  			"Actions.Green": "#{{Scheme.Green}}",
+			  			"Actions.Grey": "#{{Scheme.Muted}}",
+			  			"Actions.GreyInline": "#{{Scheme.Blue}}",
+			  			"Actions.GreyInline.Dark": "#{{Scheme.Blue}}",
+			  			"Actions.Red": "#{{Scheme.Red}}",
+			  			"Actions.Yellow": "#{{Scheme.Yellow}}",
+			  			"Objects.BlackText": "#{{Scheme.Surface}}",
+			  			"Objects.Blue": "#{{Scheme.Blue}}",
+			  			"Objects.Green": "#{{Scheme.Green}}",
+			  			"Objects.Grey": "#{{Scheme.Muted}}",
+			  			"Objects.Pink": "#{{Scheme.Lavender}}",
+			  			"Objects.Purple": "#{{Scheme.Purple}}",
+			  			"Objects.Red": "#{{Scheme.Red}}",
+			  			"Objects.RedStatus": "#{{Scheme.Red}}",
+			  			"Objects.Yellow": "#{{Scheme.Yellow}}",
+			  			"Objects.YellowDark": "#{{Scheme.Orange}}",
+			  			"Checkbox.Background.Default": "#{{Scheme.Base}}",
+			  			"Checkbox.Background.Default.Dark": "#{{Scheme.Surface}}",
+			  			"Checkbox.Background.Disabled": "#{{Scheme.Base}}",
+			  			"Checkbox.Background.Disabled.Dark": "#{{Scheme.Surface}}",
+			  			"Checkbox.Background.Selected": "#{{Scheme.HighlightOverlay}}",
+			  			"Checkbox.Background.Selected.Dark": "#{{Scheme.HighlightInactive}}",
+			  			"Checkbox.Border.Default": "#{{Scheme.Surface}}",
+			  			"Checkbox.Border.Disabled": "#{{Scheme.Surface}}",
+			  			"Checkbox.Border.Selected": "#{{Scheme.Surface}}",
+			  			"Checkbox.Foreground.Disabled": "#{{Scheme.Muted}}",
+			  			"Checkbox.Foreground.Disabled.Dark": "#{{Scheme.Muted}}",
+			  			"Checkbox.Foreground.Selected": "#{{Scheme.Magenta}}",
+			  			"Checkbox.Foreground.Selected.Dark": "#{{Scheme.Magenta}}",
+			  			"Tree.iconColor": "#{{Scheme.Text}}"
 			  		}
 			  	}
 			  }

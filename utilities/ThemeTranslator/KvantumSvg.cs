@@ -1,25 +1,34 @@
 namespace ColorschemeUtils;
 
-public static partial class ThemeTranslator
+public class KvantumSvg : ITheme
 {
+	public string      FilePath    { get; set; }
+	public ColorScheme Scheme { get; set; }
+
+	public KvantumSvg(ColorScheme colorScheme)
+	{
+		FilePath    = $"{colorScheme.Name}.svg";
+		Scheme = colorScheme;
+	}
+
 	// for Kvantum's svg format
-	public static string KvantumSvg(ColorScheme scheme)
+	public override string ToString()
 	{
 		// Brand Colors
-		string primary       = $"#{scheme.Lavender}";
-		string primaryActive = $"#{scheme.Purple}";
-		string alert         = $"#{scheme.Magenta}";
+		string primary       = $"#{Scheme.Lavender}";
+		string primaryActive = $"#{Scheme.Purple}";
+		string alert         = $"#{Scheme.Magenta}";
 
-		string titleBar              = $"#{scheme.Surface}";
-		string gray                  = $"#{scheme.Muted}";
-		string interactiveBackground = $"#{scheme.Highlight}";
+		string titleBar              = $"#{Scheme.Surface}";
+		string gray                  = $"#{Scheme.Muted}";
+		string interactiveBackground = $"#{Scheme.Highlight}";
 
 		// UI Neutrals
-		string white    = $"#{scheme.Base}";
-		string black    = $"#{scheme.Text}";
-		string iconGray = $"#{scheme.HighlightInactive}";
-		string border   = $"#{scheme.Overlay}";
-		string desk     = $"#{scheme.Inactive}";
+		string white    = $"#{Scheme.Base}";
+		string black    = $"#{Scheme.Text}";
+		string iconGray = $"#{Scheme.HighlightInactive}";
+		string border   = $"#{Scheme.Overlay}";
+		string desk     = $"#{Scheme.Inactive}";
 
 		// Opacity Levels
 		const string opacityHidden   = "0";

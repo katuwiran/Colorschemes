@@ -1,36 +1,46 @@
 namespace ColorschemeUtils;
 
-public static partial class ThemeTranslator
+public class Sublime : ITheme
 {
-	public static string Sublime(ColorScheme scheme)
+	public string      FilePath    { get; set; }
+	public ColorScheme Scheme { get; set; }
+
+	public Sublime(ColorScheme colorScheme)
+	{
+		FilePath    = $"{colorScheme.Name}.sublime-color-scheme";
+		Scheme = colorScheme;
+	}
+
+	// for Sublimes's .sublime-color-scheme format
+	public override string ToString()
 	{
 		return $$"""
 		             {
 		         	// "inspired" by https://github.com/rose-pine/sublime-text/
-		             "name": "{{scheme.Name}}",
-		             "description": "{{scheme.Description}}",
-		             "type": "{{scheme.IsDark}}",
+		             "name": "{{Scheme.Name}}",
+		             "description": "{{Scheme.Description}}",
+		             "type": "{{Scheme.IsDark}}",
 		             // "project": "",
 		             "author": "Rikaisuru",
 		             "variables": {
-		                 "base":           "#{{scheme.Base}}",
-		                 "surface":        "#{{scheme.Surface}}",
-		                 "overlay":        "#{{scheme.Overlay}}",
-		                 "subtle":         "#{{scheme.Subtle}}",
-		                 "muted":          "#{{scheme.Muted}}",
-		                 "magenta":        "#{{scheme.Magenta}}",
-		                 "lavender":       "#{{scheme.Lavender}}",
-		                 "blue":           "#{{scheme.Blue}}",
-		                 "purple":         "#{{scheme.Purple}}",
-		                 "cyan":           "#{{scheme.Cyan}}",
-		                 "text":           "#{{scheme.Text}}",
-		                 "green":          "#{{scheme.Green}}",
-		                 "yellow":         "#{{scheme.Yellow}}",
-		                 "red":            "#{{scheme.Red}}",
-		                 "orange":         "#{{scheme.Orange}}",
-		                 "highlight-low":  "#{{scheme.HighlightInactive}}",
-		                 "highlight-med":  "#{{scheme.Highlight}}",
-		                 "highlight-high": "#{{scheme.HighlightOverlay}}",
+		                 "base":           "#{{Scheme.Base}}",
+		                 "surface":        "#{{Scheme.Surface}}",
+		                 "overlay":        "#{{Scheme.Overlay}}",
+		                 "subtle":         "#{{Scheme.Subtle}}",
+		                 "muted":          "#{{Scheme.Muted}}",
+		                 "magenta":        "#{{Scheme.Magenta}}",
+		                 "lavender":       "#{{Scheme.Lavender}}",
+		                 "blue":           "#{{Scheme.Blue}}",
+		                 "purple":         "#{{Scheme.Purple}}",
+		                 "cyan":           "#{{Scheme.Cyan}}",
+		                 "text":           "#{{Scheme.Text}}",
+		                 "green":          "#{{Scheme.Green}}",
+		                 "yellow":         "#{{Scheme.Yellow}}",
+		                 "red":            "#{{Scheme.Red}}",
+		                 "orange":         "#{{Scheme.Orange}}",
+		                 "highlight-low":  "#{{Scheme.HighlightInactive}}",
+		                 "highlight-med":  "#{{Scheme.Highlight}}",
+		                 "highlight-high": "#{{Scheme.HighlightOverlay}}",
 
 		                 "comments":    "var(muted)",
 		                 "variables":   "var(text)",

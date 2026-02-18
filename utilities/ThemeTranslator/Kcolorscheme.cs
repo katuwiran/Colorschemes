@@ -1,9 +1,18 @@
 namespace ColorschemeUtils;
 
-public static partial class ThemeTranslator
+public class Kcolorscheme : ITheme
 {
-	// for KDE's kcolorscheme format
-	public static string KColorscheme(ColorScheme scheme)
+	public string      FilePath { get; set; }
+	public ColorScheme Scheme   { get; set; }
+
+	public Kcolorscheme(ColorScheme colorScheme)
+	{
+		FilePath = $"{colorScheme.Name.ToLower()}.kvconfig";
+		Scheme   = colorScheme;
+	}
+
+	// for Kvantum's svg format
+	public override string ToString()
 	{
 		// Base Grayscale
 		const string White      = "255,255,255";
@@ -175,8 +184,8 @@ public static partial class ThemeTranslator
 		        ForegroundVisited={VisitedGray}
 
 		        [General]
-		        ColorScheme={scheme.Name}
-		        Name={scheme.Name}
+		        ColorScheme={Scheme.Name}
+		        Name={Scheme.Name}
 		        shadeSortColumn=true
 
 		        [KDE]

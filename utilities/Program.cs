@@ -4,78 +4,46 @@ public class Program
 {
 	public static void Main()
 	{
-		int    columns = 8;
 		// todo: can probably DRY this thing more, but sometime
-		string prefix  = $"outputs{Path.DirectorySeparatorChar}";
+		int columns = 8;
 
-		// diagrams
-		string diagramMoonlight = $"{prefix}moonlight.png";
-		string diagramSkylight  = $"{prefix}skylight.png";
+		List<ITheme> themes = new()
+		{
+			new RiderJson(ColorScheme.Moonlight),
+			new RiderJson(ColorScheme.Skylight),
+			new RiderXml(ColorScheme.Moonlight),
+			new RiderXml(ColorScheme.Skylight),
+			new Sublime(ColorScheme.Moonlight),
+			new Sublime(ColorScheme.Skylight),
+			new KvantumConfig(ColorScheme.Moonlight),
+			new KvantumConfig(ColorScheme.Skylight),
+			new KvantumSvg(ColorScheme.Moonlight),
+			new KvantumSvg(ColorScheme.Skylight),
+			new Kcolorscheme(ColorScheme.Moonlight),
+			new Kcolorscheme(ColorScheme.Skylight),
+			// new Konsole(ColorScheme.Skylight),
+		};
 
-		// rider json
-		string riderJsonMoonlight = $"{prefix}Moonlight.theme.json";
-		string riderJsonSkylight  = $"{prefix}Skylight.theme.json";
-
-		// rider xml
-		string riderXmlMoonlight = $"{prefix}Moonlight.xml";
-		string riderXmlSkylight  = $"{prefix}Skylight.xml";
-
-		// sublime
-		string sublimeMoonlight = $"{prefix}Moonlight.sublime-color-scheme";
-		string sublimeSkylight  = $"{prefix}Skylight.sublime-color-scheme";
-
-		// kcolorscheme
-		string kcolorschemeMoonlight = $"{prefix}moonlight.colors";
-		string kcolorschemeSkylight  = $"{prefix}skylight.colors";
-
-		// kvantum svg
-		string kvantumSvgMoonlight = $"{prefix}Moonlight.svg";
-		string kvantumSvgSkylight  = $"{prefix}Skylight.svg";
-
-		// kvantum kvconfig
-		string kvantumCfgMoonlight = $"{prefix}Moonlight.kvconfig";
-		string kvantumCfgSkylight  = $"{prefix}Skylight.kvconfig";
-
-		PublishRiderJson(ColorScheme.Moonlight, riderJsonMoonlight);
-		PublishRiderJson(ColorScheme.Skylight,  riderJsonSkylight);
-
-		PublishRiderXml(ColorScheme.Moonlight, riderXmlMoonlight);
-		PublishRiderXml(ColorScheme.Skylight,  riderXmlSkylight);
-
-		PublishSublime(ColorScheme.Moonlight, sublimeMoonlight);
-		PublishSublime(ColorScheme.Skylight,  sublimeSkylight);
-
-		PublishKColorscheme(ColorScheme.Moonlight, kcolorschemeMoonlight);
-		PublishKColorscheme(ColorScheme.Skylight,  kcolorschemeSkylight);
-
-		PublishKvantumSvg(ColorScheme.Moonlight, kvantumSvgMoonlight);
-		PublishKvantumSvg(ColorScheme.Skylight,  kvantumSvgSkylight);
-
-		PublishKvantumCfg(ColorScheme.Moonlight, kvantumCfgMoonlight);
-		PublishKvantumCfg(ColorScheme.Skylight,  kvantumCfgSkylight);
+		foreach (ITheme theme in themes)
+		{
+			Publish(theme);
+		}
 
 		DiagramGenerator generator = new();
 
-		generator.Generate(ColorSchemeEntry.Moonlight, columns, ConvertToTargetDir(diagramMoonlight));
-		generator.Generate(ColorSchemeEntry.Skylight,  columns, ConvertToTargetDir(diagramSkylight));
+		generator.Generate(ColorSchemeEntry.Moonlight, columns, ConvertToTargetDir($"{Prefix}moonlight.png"));
+		generator.Generate(ColorSchemeEntry.Skylight,  columns, ConvertToTargetDir($"{Prefix}skylight.png"));
 	}
 
-	static void Publish(ColorScheme scheme, string filePath, Func<ColorScheme, string> formatter)
+	static void Publish(ITheme theme)
 	{
-		using (StreamWriter sw = new StreamWriter(ConvertToTargetDir(filePath)))
+		using (StreamWriter sw = new StreamWriter(ConvertToTargetDir($"{Prefix}{theme.FilePath}")))
 		{
-			sw.Write(formatter(scheme));
+			sw.Write(theme);
 		}
 
-		Console.WriteLine($"Generated Sublime Color scheme for {scheme.Name}");
+		Console.WriteLine($"Generated Sublime Color scheme for {theme.Scheme.Name}");
 	}
-
-	static void PublishSublime(ColorScheme      scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.Sublime);
-	static void PublishRiderJson(ColorScheme    scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderJson);
-	static void PublishRiderXml(ColorScheme     scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.RiderXml);
-	static void PublishKColorscheme(ColorScheme scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.KColorscheme);
-	static void PublishKvantumSvg(ColorScheme   scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.KvantumSvg);
-	static void PublishKvantumCfg(ColorScheme   scheme, string filePath) => Publish(scheme, filePath, ThemeTranslator.KvantumConfig);
 
 	static string ConvertToTargetDir(string path)
 	{
@@ -96,4 +64,6 @@ public class Program
 
 		return filePath;
 	}
+
+	private static string Prefix => $"outputs{Path.DirectorySeparatorChar}";
 }
