@@ -66,24 +66,24 @@
     <option name="LINE_NUMBERS_COLOR" value="908caa" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="c0c0ff" />
     <option name="LOOKUP_COLOR" value="332e51"/>
-    <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="444158" />
+    <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="696383" />
     <option name="METHOD_SEPARATORS_COLOR" value="" />
     <option name="MODIFIED_LINES_COLOR" value="ec93c1"/>
     <option name="MODIFIED_TAB_ICON" value="848bf4"/>
-    <option name="NOTIFICATION_BACKGROUND" value="444158" />
+    <option name="NOTIFICATION_BACKGROUND" value="696383" />
     <option name="PREVIEW_BACKGROUND" value="2a2840" />
     <option name="PROMOTION_PANE" value="332e51"/>
     <option name="QUESTION_HINT" value="332e51"/>
     <option name="RECENT_LOCATIONS_SELECTION" value="332e51"/>
     <option name="RIGHT_MARGIN_COLOR" value="3d375f" />
     <option name="SELECTED_INDENT_GUIDE" value="3d375f" />
-    <option name="SELECTED_TEARLINE_COLOR" value="444158" />
+    <option name="SELECTED_TEARLINE_COLOR" value="696383" />
     <option name="SELECTION_BACKGROUND" value="31335f" />
     <option name="SELECTION_FOREGROUND" value="c0c0ff" />
     <option name="SEPARATOR_BELOW_COLOR" value=""/>
-    <option name="ScrollBar.thumbColor" value="444158" />
+    <option name="ScrollBar.thumbColor" value="696383" />
     <option name="ScrollBar.thumbBorderColor" value="332e51"/>
-    <option name="ScrollBar.hoverThumbColor" value="444158" />
+    <option name="ScrollBar.hoverThumbColor" value="696383" />
     <option name="ScrollBar.hoverThumbBorderColor" value="333a54"/>
     <option name="ScrollBar.Mac.thumbColor" value="332e51"/>
     <option name="ScrollBar.Mac.thumbBorderColor" value="332e51"/>
@@ -94,8 +94,8 @@
     <option name="VCS_ANNOTATIONS_COLOR_3" value="c0c0ff"/>
     <option name="VCS_ANNOTATIONS_COLOR_4" value="c0c0ff"/>
     <option name="VCS_ANNOTATIONS_COLOR_5" value="c0c0ff"/>
-    <option name="TEARLINE_COLOR" value="444158" />
-    <option name="VISUAL_INDENT_GUIDE" value="444158" />
+    <option name="TEARLINE_COLOR" value="696383" />
+    <option name="VISUAL_INDENT_GUIDE" value="696383" />
     <option name="WHITESPACES" value="332e51" />
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="332e51"/>
   </colors>
