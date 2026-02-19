@@ -96,7 +96,7 @@ public class Sublime : ITheme
 		                 "block_caret_border":       "var(highlight-high)",
 		                 "block_caret_underline":    "var(text)",
 		                 "block_caret_corner_style": "square",
-		                 "line_highlight":           "var(highlight-low)",
+		                 "line_highlight":           "var(base)",
 
 		                 // Accents
 		                 "misspelling":    "var(red)",
