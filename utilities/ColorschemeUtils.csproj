@@ -60,5 +60,12 @@
         <Copy SourceFiles="@(kvantumSkylight)"
               DestinationFolder="$(ProjectDir)../platforms/Kvantum/Skylight"
               SkipUnchangedFiles="true"/>
+        <ItemGroup>
+            <konsole Include="$(TargetDir)outputs/Moonlight.colorscheme"/>
+            <konsole Include="$(TargetDir)outputs/Skylight.colorscheme"/>
+        </ItemGroup>
+        <Copy SourceFiles="@(konsole)"
+              DestinationFolder="$(ProjectDir)../platforms/Konsole"
+              SkipUnchangedFiles="true"/>
     </Target>
 </Project>

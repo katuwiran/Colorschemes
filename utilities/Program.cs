@@ -5,6 +5,10 @@ public class Program
 	public static void Main()
 	{
 		// todo: can probably DRY this thing more, but sometime
+		// todo: kcolorschemes
+		// todo: konsole setup
+		// todo: alacritty
+		// todo: fix bugs
 		int columns = 8;
 
 		List<ITheme> themes = new()
@@ -21,7 +25,8 @@ public class Program
 			new KvantumSvg(ColorScheme.Skylight),
 			new Kcolorscheme(ColorScheme.Moonlight),
 			new Kcolorscheme(ColorScheme.Skylight),
-			// new Konsole(ColorScheme.Skylight),
+			new Konsole(ColorScheme.Moonlight),
+			new Konsole(ColorScheme.Skylight),
 		};
 
 		foreach (ITheme theme in themes)
