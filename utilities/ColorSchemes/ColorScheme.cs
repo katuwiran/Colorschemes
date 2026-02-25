@@ -58,18 +58,18 @@ public partial class ColorScheme
 	public string Caret                => Text;
 	public string ConsoleBackground    => Background; // Console 0. Background
 	public string ConsoleBackgroundAlt => Background; // Console 0. Bright
-	public string ConsoleRed           => Red;        // Console 1. Red
-	public string ConsoleRedAlt        => Red;        // Console 1. Red
-	public string ConsoleGreen         => Plum;       // Console 2. Green
-	public string ConsoleGreenAlt      => Plum;       // Console 2. Green Bright
+	public string ConsoleRed           => Magenta;    // Console 1. Red
+	public string ConsoleRedAlt        => Magenta;    // Console 1. Red
+	public string ConsoleGreen         => Purple;     // Console 2. Green
+	public string ConsoleGreenAlt      => Purple;     // Console 2. Green Bright
 	public string ConsoleYellow        => Cyan;       // Console 3. Yellow
 	public string ConsoleYellowAlt     => Cyan;       // Console 3. Yellow Bright
 	public string ConsoleBlue          => Blue;       // Console 4. Blue
 	public string ConsoleBlueAlt       => Blue;       // Console 4. Blue Bright
-	public string ConsoleMagenta       => Purple;     // Console 5. Magenta
-	public string ConsoleMagentaAlt    => Purple;     // Console 5. Magenta Bright
-	public string ConsoleCyan          => Magenta;    // Console 6. Cyan
-	public string ConsoleCyanAlt       => Magenta;    // Console 6. Cyan Bright
+	public string ConsoleMagenta       => Red;        // Console 5. Magenta
+	public string ConsoleMagentaAlt    => Red;        // Console 5. Magenta Bright
+	public string ConsoleCyan          => Plum;       // Console 6. Cyan
+	public string ConsoleCyanAlt       => Plum;       // Console 6. Cyan Bright
 	public string ConsoleForeground    => Text;       // Console 7. Text 
 	public string ConsoleForegroundAlt => Text;       // Console 7. Text Bright
 
