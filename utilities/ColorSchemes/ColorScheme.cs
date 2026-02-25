@@ -16,7 +16,7 @@ public partial class ColorScheme
 	public required string Text     { get; set; }
 
 	public required string Magenta  { get; set; }
-	public required string Lavender { get; set; }
+	public required string Plum { get; set; }
 	public required string Blue     { get; set; }
 	public required string Purple   { get; set; }
 	public required string Cyan     { get; set; }
@@ -53,7 +53,7 @@ public partial class ColorScheme
 	public string DiffDeleted  => Magenta;
 	public string DiffModified => Purple;
 	public string DiffIgnored  => Subtle;
-	public string DiffConflict => Lavender;
+	public string DiffConflict => Plum;
 
 	public static string ToRGB(string hex)
 	{

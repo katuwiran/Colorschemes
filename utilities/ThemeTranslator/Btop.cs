@@ -60,23 +60,23 @@ theme[temp_start]="#{Scheme.Green}"
 theme[temp_mid]="#{Scheme.Yellow}"
 theme[temp_end]="#{Scheme.Green}"
 
-# CPU graph colors (Teal -> Lavender)
+# CPU graph colors (Teal -> Plum)
 theme[cpu_start]="#{Scheme.Green}"
 theme[cpu_mid]="#{Scheme.Cyan}"
 theme[cpu_end]="#{Scheme.Purple}"
 
-# Mem/Disk free meter (Mauve -> Lavender -> Blue)
+# Mem/Disk free meter (Mauve -> Plum -> Blue)
 theme[free_start]="#{Scheme.Magenta}"
 theme[free_mid]="#{Scheme.Purple}"
 theme[free_end]="#8caaee"
 
-# Mem/Disk cached meter (Sapphire -> Lavender)
+# Mem/Disk cached meter (Sapphire -> Plum)
 theme[cached_start]="#{Scheme.Cyan}"
 theme[cached_mid]="#8caaee"
 theme[cached_end]="#{Scheme.Purple}"
 
-# Mem/Disk available meter (Peach -> Red)
-theme[available_start]="#{Scheme.Lavender}"
+# Mem/Disk available meter (Plum -> Red)
+theme[available_start]="#{Scheme.Plum}"
 theme[available_mid]="#{Scheme.Magenta}"
 theme[available_end]="#{Scheme.Red}"
 
@@ -85,8 +85,8 @@ theme[used_start]="#{Scheme.Green}"
 theme[used_mid]="#{Scheme.Cyan}"
 theme[used_end]="#{Scheme.Blue}"
 
-# Download graph colors (Peach -> Red)
-theme[download_start]="#{Scheme.Lavender}"
+# Download graph colors (Plum -> Red)
+theme[download_start]="#{Scheme.Plum}"
 theme[download_mid]="#{Scheme.Magenta}"
 theme[download_end]="#{Scheme.Red}"
 

@@ -24,7 +24,7 @@ public static class ColorSchemeEntry
 			new() { Index = "hi1", Name = "highlight", HexCode   = $"#{scheme.Highlight}" },
 			new() { Index = "hi2", Name = "hi-overlay", HexCode  = $"#{scheme.HighlightOverlay}" },
 			new() { Index = "1", Name = "magenta", HexCode = $"#{scheme.Magenta}" },
-			new() { Index = "2", Name = "lavender", HexCode = $"#{scheme.Lavender}" },
+			new() { Index = "2", Name = "lavender", HexCode = $"#{scheme.Plum}" },
 			new() { Index = "3", Name = "purple", HexCode  = $"#{scheme.Purple}" },
 			new() { Index = "4", Name = "blue", HexCode    = $"#{scheme.Blue}" },
 			new() { Index = "5", Name = "cyan", HexCode     = $"#{scheme.Cyan}" },

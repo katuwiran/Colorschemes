@@ -57,7 +57,7 @@ public class Alacritty : ITheme
 			 [colors.normal]
 			 black = "#{Scheme.Base}"
 			 red = "#{Scheme.Red}"
-			 green = "#{Scheme.Lavender}"
+			 green = "#{Scheme.Plum}"
 			 yellow = "#{Scheme.Cyan}"
 			 blue = "#{Scheme.Blue}"
 			 magenta = "#{Scheme.Purple}"
@@ -67,7 +67,7 @@ public class Alacritty : ITheme
 			 [colors.bright]
 			 black = "#{Scheme.Base}"
 			 red = "#{Scheme.Red}"
-			 green = "#{Scheme.Lavender}"
+			 green = "#{Scheme.Plum}"
 			 yellow = "#{Scheme.Cyan}"
 			 blue = "#{Scheme.Blue}"
 			 magenta = "#{Scheme.Purple}"

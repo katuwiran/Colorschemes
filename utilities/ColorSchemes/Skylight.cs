@@ -18,7 +18,7 @@ public partial class ColorScheme
 		Text     = "525b8f",
 
 		Magenta  = "e153b3",
-		Lavender = "dd6e96",
+		Plum = "dd6e96",
 		Blue     = "4d5de5",
 		Purple   = "9e55dd",
 		Cyan     = "4897e8",

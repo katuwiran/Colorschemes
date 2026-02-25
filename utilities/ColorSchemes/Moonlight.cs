@@ -20,15 +20,15 @@ public partial class ColorScheme
 		Magenta  = "ef5abf",
 		Red      = "eb517c",
 		Purple   = "c188ef",
-		Lavender = "ec93c1",
+		Plum = "ec93c1",
 		Blue     = "848bf4",
 		Cyan     = "80b5f7",
 		Yellow   = "fcb986",
 		Orange   = "ff8c4f",
 		Green    = "c8e899",
 
-		HighlightInactive = "333a54",
+		HighlightInactive = "b65da5",
 		Highlight         = "89537f",
-		HighlightOverlay  = "394781"
+		HighlightOverlay  = "ec93c1"
 	};
 }

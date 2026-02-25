@@ -50,7 +50,7 @@ public class RiderXml : ITheme
 			     <option name="ERROR_HINT" value="{Scheme.Red}"/>
 			     <option name="CARET_ROW_COLOR" value="{Scheme.Overlay}" />
 			     <option name="DOCUMENTATION_COLOR" value="" />
-			     <option name="DOC_COMMENT_LINK" value="{Scheme.Lavender}" />
+			     <option name="DOC_COMMENT_LINK" value="{Scheme.Plum}" />
 			     <option name="EDITOR_GUTTER_BACKGROUND" value="" />
 			     <option name="FILESTATUS_ADDED" value="{Scheme.Green}"/>
 			     <option name="FILESTATUS_COPIED" value="{Scheme.Green}"/>
@@ -58,9 +58,9 @@ public class RiderXml : ITheme
 			     <option name="FILESTATUS_HIJACKED" value="{Scheme.Orange}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="{Scheme.Magenta}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{Scheme.Subtle}"/>
-			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="{Scheme.Lavender}"/>
-			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="{Scheme.Lavender}"/>
-			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="{Scheme.Lavender}"/>
+			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="{Scheme.Plum}"/>
+			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="{Scheme.Plum}"/>
+			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_IDEA_SVN_FILESTATUS_EXTERNAL" value="{Scheme.Green}"/>
 			     <option name="FILESTATUS_IGNORE.PROJECT_VIEW.IGNORED" value="{Scheme.Subtle}"/>
 			     <option name="FILESTATUS_MERGED" value="{Scheme.Purple}"/>
@@ -68,15 +68,15 @@ public class RiderXml : ITheme
 			     <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="{Scheme.Blue}"/>
 			     <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="{Scheme.Blue}"/>
 			     <option name="FILESTATUS_SUPPRESSED" value="{Scheme.Subtle}"/>
-			     <option name="FILESTATUS_SWITCHED" value="{Scheme.Lavender}"/>
+			     <option name="FILESTATUS_SWITCHED" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_UNKNOWN" value="{Scheme.Subtle}"/>
 			     <option name="FILESTATUS_addedOutside" value="{Scheme.Green}"/>
-			     <option name="FILESTATUS_changelistConflict" value="{Scheme.Lavender}"/>
+			     <option name="FILESTATUS_changelistConflict" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_modifiedOutside" value="{Scheme.Purple}"/>
 			     <option name="FOLDED_TEXT_BORDER_COLOR" value="" />
 			     <option name="GUTTER_BACKGROUND" value="{Scheme.Base}"/>
 			     <option name="HTML_TAG_TREE_LEVEL0" value="{Scheme.Magenta}"/>
-			     <option name="HTML_TAG_TREE_LEVEL1" value="{Scheme.Lavender}"/>
+			     <option name="HTML_TAG_TREE_LEVEL1" value="{Scheme.Plum}"/>
 			     <option name="HTML_TAG_TREE_LEVEL2" value="{Scheme.Cyan}"/>
 			     <option name="HTML_TAG_TREE_LEVEL3" value="{Scheme.Blue}"/>
 			     <option name="HTML_TAG_TREE_LEVEL4" value="{Scheme.Purple}"/>
@@ -91,7 +91,7 @@ public class RiderXml : ITheme
 			     <option name="LOOKUP_COLOR" value="{Scheme.Surface}"/>
 			     <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="{Scheme.Muted}" />
 			     <option name="METHOD_SEPARATORS_COLOR" value="" />
-			     <option name="MODIFIED_LINES_COLOR" value="{Scheme.Lavender}"/>
+			     <option name="MODIFIED_LINES_COLOR" value="{Scheme.Plum}"/>
 			     <option name="MODIFIED_TAB_ICON" value="{Scheme.Blue}"/>
 			     <option name="NOTIFICATION_BACKGROUND" value="{Scheme.Muted}" />
 			     <option name="PREVIEW_BACKGROUND" value="{Scheme.Base}" />
@@ -135,7 +135,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="ANGLE_BRACKETS_RAINBOW_COLOR1">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="ANGLE_BRACKETS_RAINBOW_COLOR2">
@@ -335,7 +335,7 @@ public class RiderXml : ITheme
 			     <option name="BUILDOUT.LINE_COMMENT" baseAttributes="DEFAULT_LINE_COMMENT"/>
 			     <option name="BUILDOUT.SECTION_NAME">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="BUILDOUT.VALUE">
@@ -351,7 +351,7 @@ public class RiderXml : ITheme
 			     <option name="CODE_LENS_BORDER_COLOR">
 			       <value>
 			         <option name="BACKGROUND" value="{Scheme.Surface}"/>
-			         <option name="EFFECT_COLOR" value="{Scheme.Lavender}"/>
+			         <option name="EFFECT_COLOR" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CODE_VISION_DEFAULT">
@@ -366,7 +366,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="COFFEESCRIPT.CLASS_NAME">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CONDITIONALLY_NOT_COMPILED">
@@ -475,12 +475,12 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CONSTRUCTOR_CALL_ATTRIBUTES">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CONSTRUCTOR_DECLARATION_ATTRIBUTES">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CSS.BRACKETS">
@@ -506,7 +506,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CSS.IMPORTANT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CSS.KEYWORD">
@@ -586,7 +586,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CSV_PLUGIN_COLUMN_COLORING_ATTRIBUTE_9">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CTRL_CLICKABLE">
@@ -607,7 +607,7 @@ public class RiderXml : ITheme
 			     <option name="CUSTOM_KEYWORD1_ATTRIBUTES" baseAttributes="DEFAULT_KEYWORD"/>
 			     <option name="CUSTOM_KEYWORD2_ATTRIBUTES">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CUSTOM_KEYWORD3_ATTRIBUTES">
@@ -646,7 +646,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="Clojure Numbers">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="Clojure Strings">
@@ -666,7 +666,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CodeWithMe.USER_2_MARKER">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Lavender}"/>
+			         <option name="BACKGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CodeWithMe.USER_2_SELECTION">
@@ -755,12 +755,12 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_COMMA">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_CONSTANT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_DOC_COMMENT">
@@ -782,12 +782,12 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_DOC_MARKUP">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_DOT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_ENTITY">
@@ -839,7 +839,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_KEYWORD">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			         <option name="BACKGROUND" value="{Scheme.Base}" />
 			       </value>
 			     </option>
@@ -932,7 +932,7 @@ public class RiderXml : ITheme
 			     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR" baseAttributes="TEXT" />
 			     <option name="DEFAULT_VALID_STRING_ESCAPE">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="DELETED_TEXT_ATTRIBUTES">
@@ -950,8 +950,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DIFF_CONFLICT">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Lavender}"/>
-			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.Lavender}"/>
+			         <option name="BACKGROUND" value="{Scheme.Plum}"/>
+			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="DIFF_DELETED">
@@ -1009,15 +1009,15 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
-			         <option name="EFFECT_COLOR" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
+			         <option name="EFFECT_COLOR" value="{Scheme.Plum}"/>
 			         <option name="EFFECT_TYPE" value="1"/>
 			       </value>
 			     </option>
 			     <option name="HYPERLINK_ATTRIBUTES">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
-			         <option name="EFFECT_COLOR" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.Plum}" />
 			         <option name="EFFECT_TYPE" value="1" />
 			       </value>
 			     </option>
@@ -1046,7 +1046,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="INDENT_GUIDES_RAINBOW_COLOR1">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="INDENT_GUIDES_RAINBOW_COLOR2">
@@ -1231,7 +1231,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_HEADER_LEVEL_2">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="MARKDOWN_HEADER_LEVEL_3">
@@ -1251,7 +1251,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_HEADER_LEVEL_6">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="MARKDOWN_HRULE">
@@ -1282,12 +1282,12 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_LINK_LABEL">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="MARKDOWN_LINK_TEXT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			         <option name="EFFECT_TYPE" value="1"/>
 			       </value>
 			     </option>
@@ -1343,7 +1343,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="ReSharper.ASP_NET_RUN_AT_ATTRIBUTE">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="ReSharper.BRACE_OUTLINE">
@@ -1353,17 +1353,17 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="ReSharper.BUILTIN_TYPE_KEYWORD">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="ReSharper.CONTROL_FLOW_KEYWORD">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="ReSharper.CONTROL_TRANSFER_KEYWORD">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}" />
+			         <option name="FOREGROUND" value="{Scheme.Plum}" />
 			       </value>
 			     </option>
 			     <option name="ReSharper.CSHARP_TYPE_PARAMETER_IDENTIFIER">
@@ -1431,7 +1431,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="ReSharper.MATCHED_FORMAT_STRING_ITEM">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="ReSharper.OUTLINED_ENTITY">
@@ -1473,7 +1473,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="SQUARE_BRACKETS_RAINBOW_COLOR1">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="SQUARE_BRACKETS_RAINBOW_COLOR2">
@@ -1498,7 +1498,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR1">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR2">
@@ -1637,7 +1637,7 @@ public class RiderXml : ITheme
 			     <option name="XML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY"/>
 			     <option name="XML_NS_PREFIX">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="XML_TAG" baseAttributes="DEFAULT_TAG"/>
@@ -1655,7 +1655,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="RAINBOW_COLOR1">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Lavender}"/>
+			         <option name="FOREGROUND" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="RAINBOW_COLOR2">

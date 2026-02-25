@@ -28,12 +28,14 @@ public class KvantumConfig : ITheme
 		// Accents
 		string highlight   = $"#{Scheme.HighlightOverlay}";
 		string link        = $"#{Scheme.Magenta}";
-		string linkVisited = $"#{Scheme.Lavender}";
+		string linkVisited = $"#{Scheme.Plum}";
 
 		// Typography
 		string textPrimary  = $"#{Scheme.Text}";
-		string textPressed  = $"#{Scheme.Overlay}";  // Slightly darker for active states
+		string textFocus    = $"#{Scheme.HighlightInactive}";
+		string textPressed  = $"#{Scheme.Subtle}";   // Slightly darker for active states
 		string textDisabled = $"#{Scheme.Inactive}"; // Primary with alpha
+		string textSelected = $"#{Scheme.SelectedText}"; // Primary with alpha
 
 		return
 			$"""
@@ -130,7 +132,7 @@ public class KvantumConfig : ITheme
 			 button.text.color={textPrimary}
 			 disabled.text.color={textDisabled}
 			 tooltip.text.color={textPrimary}
-			 highlight.text.color={textPressed}
+			 highlight.text.color={textSelected}
 			 link.color={link}
 			 link.visited.color={linkVisited}
 			 progress.indicator.text.color={textPrimary}
@@ -174,10 +176,10 @@ public class KvantumConfig : ITheme
 			 interior.element=button
 			 indicator.size=8
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
-			 text.toggle.color=white
-			 highlight.text.color=white
+			 text.toggle.color={textPrimary}
+			 highlight.text.color={textSelected}
 			 text.shadow=0
 			 text.margin=4
 			 text.iconspacing=4
@@ -187,9 +189,9 @@ public class KvantumConfig : ITheme
 			 [PanelButtonTool]
 			 inherits=PanelButtonCommand
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
-			 text.toggle.color=white
+			 text.toggle.color={textPrimary}
 			 text.disabled.color={textDisabled}
 			 text.bold=false
 			 indicator.element=arrow
@@ -206,7 +208,7 @@ public class KvantumConfig : ITheme
 			 frame.right=14
 			 indicator.element=tarrow
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 text.disabled.color={textDisabled}
@@ -228,7 +230,7 @@ public class KvantumConfig : ITheme
 			 frame=false
 			 interior=false
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.bold=false
 
 			 [IndicatorSpinBox]
@@ -252,7 +254,7 @@ public class KvantumConfig : ITheme
 			 frame=false
 			 interior.element=radio
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 min_width=+0.3font
@@ -263,7 +265,7 @@ public class KvantumConfig : ITheme
 			 frame=false
 			 interior.element=checkbox
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 min_width=+0.3font
@@ -319,7 +321,7 @@ public class KvantumConfig : ITheme
 			 inherits=PanelButtonCommand
 			 text.normal.color={textPrimary}
 			 text.press.color={textPressed}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 
 			 [Tab]
 			 inherits=PanelButtonCommand
@@ -336,7 +338,7 @@ public class KvantumConfig : ITheme
 			 frame.left=8
 			 frame.right=8
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 frame.expansion=0
@@ -365,7 +367,7 @@ public class KvantumConfig : ITheme
 			 frame.left=1
 			 frame.right=1
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 frame.expansion=0
@@ -381,7 +383,7 @@ public class KvantumConfig : ITheme
 			 interior.element=menubar
 			 frame.element=menubar
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 frame.left=6
@@ -411,7 +413,7 @@ public class KvantumConfig : ITheme
 			 interior.element=progress
 			 text.margin=0
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 text.bold=false
@@ -437,7 +439,7 @@ public class KvantumConfig : ITheme
 			 text.margin.left=8
 			 text.margin.right=8
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 min_width=+0.3font
@@ -508,7 +510,7 @@ public class KvantumConfig : ITheme
 			 interior.element=menubar
 			 frame.bottom=0
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 frame.expansion=0
@@ -528,7 +530,7 @@ public class KvantumConfig : ITheme
 			 text.margin.top=0
 			 text.margin.bottom=0
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.press.color={textPressed}
 			 text.toggle.color={textPressed}
 			 text.bold=false
@@ -547,7 +549,7 @@ public class KvantumConfig : ITheme
 			 indicator.size=16
 			 indicator.element=mdi
 			 text.normal.color={textPrimary}
-			 text.focus.color={textPrimary}
+			 text.focus.color={textFocus}
 			 text.bold=false
 			 text.italic=true
 			 frame.expansion=0
@@ -565,9 +567,9 @@ public class KvantumConfig : ITheme
 			 text.margin.left=2
 			 text.margin.right=2
 			 text.normal.color={textPrimary}
-			 text.focus.color=#424242
-			 text.press.color=#424242
-			 text.toggle.color=#424242
+			 text.focus.color={textFocus}
+			 text.press.color={textPressed}
+			 text.toggle.color={textPressed}
 
 			 [GroupBox]
 			 inherits=GenericFrame

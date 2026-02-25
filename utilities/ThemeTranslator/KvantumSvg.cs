@@ -17,12 +17,12 @@ public class KvantumSvg : ITheme
 	public override string ToString()
 	{
 		// Brand Colors
-		string primary       = $"#{Scheme.Lavender}";
+		string primary       = $"#{Scheme.Plum}";
 		string primaryActive = $"#{Scheme.Purple}";
 		string alert         = $"#{Scheme.Magenta}";
 
 		string titleBar              = $"#{Scheme.Surface}";
-		string gray                  = $"#{Scheme.Muted}";
+		string gray                  = $"#{Scheme.Inactive}";
 		string interactiveBackground = $"#{Scheme.Highlight}";
 
 		// UI Neutrals

@@ -29,7 +29,7 @@ public class Sublime : ITheme
 		                 "subtle":         "#{{Scheme.Subtle}}",
 		                 "muted":          "#{{Scheme.Muted}}",
 		                 "magenta":        "#{{Scheme.Magenta}}",
-		                 "lavender":       "#{{Scheme.Lavender}}",
+		                 "lavender":       "#{{Scheme.Plum}}",
 		                 "blue":           "#{{Scheme.Blue}}",
 		                 "purple":         "#{{Scheme.Purple}}",
 		                 "cyan":           "#{{Scheme.Cyan}}",

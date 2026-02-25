@@ -44,13 +44,13 @@ public class Konsole : ITheme
 			 Color=#{Scheme.Red}
 
 			 [Color2]
-			 Color=#{Scheme.Lavender}
+			 Color=#{Scheme.Plum}
 
 			 [Color2Faint]
-			 Color=#{Scheme.Lavender}
+			 Color=#{Scheme.Plum}
 
 			 [Color2Intense]
-			 Color=#{Scheme.Lavender}
+			 Color=#{Scheme.Plum}
 
 			 [Color3]
 			 Color=#{Scheme.Cyan}
