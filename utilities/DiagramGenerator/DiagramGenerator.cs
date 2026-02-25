@@ -107,13 +107,13 @@ public class DiagramGenerator
 			HorizontalAlignment = HorizontalAlignment.Center,
 			VerticalAlignment   = VerticalAlignment.Bottom
 		};
-		
+
 		// If no hexcode provided, treat as an empty
 		if (Color.ParseHex(entry.HexCode) == Color.Transparent)
 		{
 			ctx.DrawText(hexOpts, "", dimTextColor);
 		}
-		else 
+		else
 		{
 			ctx.DrawText(hexOpts, entry.HexCode, dimTextColor);
 		}

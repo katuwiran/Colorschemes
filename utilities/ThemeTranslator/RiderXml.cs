@@ -30,25 +30,25 @@ public class RiderXml : ITheme
 			   <colors>
 			     <option name="ADDED_LINES_COLOR" value="{Scheme.Green}"/>
 			     <option name="ANNOTATIONS_COLOR" value="{Scheme.Text}"/>
-			     <option name="BLOCK_TERMINAL_BLOCK_BACKGROUND_END" value="{Scheme.Base}"/>
-			     <option name="BLOCK_TERMINAL_BLOCK_BACKGROUND_START" value="{Scheme.Base}"/>
-			     <option name="BLOCK_TERMINAL_DEFAULT_BACKGROUND" value="{Scheme.Base}"/>
+			     <option name="BLOCK_TERMINAL_BLOCK_BACKGROUND_END" value="{Scheme.Background}"/>
+			     <option name="BLOCK_TERMINAL_BLOCK_BACKGROUND_START" value="{Scheme.Background}"/>
+			     <option name="BLOCK_TERMINAL_DEFAULT_BACKGROUND" value="{Scheme.Background}"/>
 			     <option name="BLOCK_TERMINAL_DEFAULT_FOREGROUND" value="{Scheme.Text}"/>
 			     <option name="BLOCK_TERMINAL_ERROR_BLOCK_STROKE_COLOR" value="{Scheme.Red}"/>
 			     <option name="BLOCK_TERMINAL_INACTIVE_SELECTED_BLOCK_BACKGROUND" value="{Scheme.HighlightInactive}"/>
-			     <option name="BLOCK_TERMINAL_INACTIVE_SELECTED_BLOCK_STROKE_COLOR" value="{Scheme.Overlay}"/>
+			     <option name="BLOCK_TERMINAL_INACTIVE_SELECTED_BLOCK_STROKE_COLOR" value="{Scheme.BackgroundOverlay}"/>
 			     <option name="BLOCK_TERMINAL_PROMPT_SEPARATOR_COLOR" value="{Scheme.HighlightInactive}"/>
-			     <option name="BLOCK_TERMINAL_SELECTED_BLOCK_BACKGROUND" value="{Scheme.Surface}"/>
+			     <option name="BLOCK_TERMINAL_SELECTED_BLOCK_BACKGROUND" value="{Scheme.BackgroundEdges}"/>
 			     <option name="BLOCK_TERMINAL_SELECTED_BLOCK_STROKE_COLOR" value="{Scheme.Blue}"/>
 			     <option name="CARET_COLOR" value="{Scheme.Text}"/>
 			     <option name="CARET_ROW_COLOR" value="{Scheme.Text}"/>
-			     <option name="CONSOLE_BACKGROUND_KEY" value="{Scheme.Base}"/>
+			     <option name="CONSOLE_BACKGROUND_KEY" value="{Scheme.Background}"/>
 			     <option name="DELETED_LINES_COLOR" value="{Scheme.Magenta}"/>
-			     <option name="DIFF_SEPARATORS_BACKGROUND" value="{Scheme.Overlay}"/>
-			     <option name="DOCUMENTATION_COLOR" value="{Scheme.Base}"/>
+			     <option name="DIFF_SEPARATORS_BACKGROUND" value="{Scheme.BackgroundOverlay}"/>
+			     <option name="DOCUMENTATION_COLOR" value="{Scheme.Background}"/>
 			     <option name="DOC_COMMENT_LINK" value="{Scheme.Blue}"/>
 			     <option name="ERROR_HINT" value="{Scheme.Red}"/>
-			     <option name="CARET_ROW_COLOR" value="{Scheme.Overlay}" />
+			     <option name="CARET_ROW_COLOR" value="{Scheme.BackgroundOverlay}" />
 			     <option name="DOCUMENTATION_COLOR" value="" />
 			     <option name="DOC_COMMENT_LINK" value="{Scheme.Plum}" />
 			     <option name="EDITOR_GUTTER_BACKGROUND" value="" />
@@ -57,59 +57,59 @@ public class RiderXml : ITheme
 			     <option name="FILESTATUS_DELETED" value="{Scheme.Magenta}"/>
 			     <option name="FILESTATUS_HIJACKED" value="{Scheme.Orange}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="{Scheme.Magenta}"/>
-			     <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{Scheme.Subtle}"/>
+			     <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="{Scheme.TextFaded}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_IDEA_SVN_FILESTATUS_EXTERNAL" value="{Scheme.Green}"/>
-			     <option name="FILESTATUS_IGNORE.PROJECT_VIEW.IGNORED" value="{Scheme.Subtle}"/>
+			     <option name="FILESTATUS_IGNORE.PROJECT_VIEW.IGNORED" value="{Scheme.TextFaded}"/>
 			     <option name="FILESTATUS_MERGED" value="{Scheme.Purple}"/>
 			     <option name="FILESTATUS_MODIFIED" value="{Scheme.Purple}"/>
 			     <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="{Scheme.Blue}"/>
 			     <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="{Scheme.Blue}"/>
-			     <option name="FILESTATUS_SUPPRESSED" value="{Scheme.Subtle}"/>
+			     <option name="FILESTATUS_SUPPRESSED" value="{Scheme.TextFaded}"/>
 			     <option name="FILESTATUS_SWITCHED" value="{Scheme.Plum}"/>
-			     <option name="FILESTATUS_UNKNOWN" value="{Scheme.Subtle}"/>
+			     <option name="FILESTATUS_UNKNOWN" value="{Scheme.TextFaded}"/>
 			     <option name="FILESTATUS_addedOutside" value="{Scheme.Green}"/>
 			     <option name="FILESTATUS_changelistConflict" value="{Scheme.Plum}"/>
 			     <option name="FILESTATUS_modifiedOutside" value="{Scheme.Purple}"/>
 			     <option name="FOLDED_TEXT_BORDER_COLOR" value="" />
-			     <option name="GUTTER_BACKGROUND" value="{Scheme.Base}"/>
+			     <option name="GUTTER_BACKGROUND" value="{Scheme.Background}"/>
 			     <option name="HTML_TAG_TREE_LEVEL0" value="{Scheme.Magenta}"/>
 			     <option name="HTML_TAG_TREE_LEVEL1" value="{Scheme.Plum}"/>
 			     <option name="HTML_TAG_TREE_LEVEL2" value="{Scheme.Cyan}"/>
 			     <option name="HTML_TAG_TREE_LEVEL3" value="{Scheme.Blue}"/>
 			     <option name="HTML_TAG_TREE_LEVEL4" value="{Scheme.Purple}"/>
 			     <option name="HTML_TAG_TREE_LEVEL5" value="{Scheme.Yellow}"/>
-			     <option name="INDENT_GUIDE" value="{Scheme.Surface}" />
-			     <option name="INFORMATION_HINT" value="{Scheme.Surface}"/>
-			     <option name="INLINE_REFACTORING_SETTINGS_DEFAULT" value="{Scheme.Subtle}" />
+			     <option name="INDENT_GUIDE" value="{Scheme.BackgroundEdges}" />
+			     <option name="INFORMATION_HINT" value="{Scheme.BackgroundEdges}"/>
+			     <option name="INLINE_REFACTORING_SETTINGS_DEFAULT" value="{Scheme.TextFaded}" />
 			     <option name="INLINE_REFACTORING_SETTINGS_FOCUSED" value="" />
 			     <option name="INLINE_REFACTORING_SETTINGS_HOVERED" value="" />
-			     <option name="LINE_NUMBERS_COLOR" value="{Scheme.Subtle}" />
+			     <option name="LINE_NUMBERS_COLOR" value="{Scheme.TextFaded}" />
 			     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="{Scheme.Text}" />
-			     <option name="LOOKUP_COLOR" value="{Scheme.Surface}"/>
-			     <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="{Scheme.Muted}" />
+			     <option name="LOOKUP_COLOR" value="{Scheme.BackgroundEdges}"/>
+			     <option name="MATCHED_BRACES_INDENT_GUIDE_COLOR" value="{Scheme.TextHidden}" />
 			     <option name="METHOD_SEPARATORS_COLOR" value="" />
 			     <option name="MODIFIED_LINES_COLOR" value="{Scheme.Plum}"/>
 			     <option name="MODIFIED_TAB_ICON" value="{Scheme.Blue}"/>
-			     <option name="NOTIFICATION_BACKGROUND" value="{Scheme.Muted}" />
-			     <option name="PREVIEW_BACKGROUND" value="{Scheme.Base}" />
-			     <option name="PROMOTION_PANE" value="{Scheme.Surface}"/>
-			     <option name="QUESTION_HINT" value="{Scheme.Surface}"/>
-			     <option name="RECENT_LOCATIONS_SELECTION" value="{Scheme.Surface}"/>
-			     <option name="RIGHT_MARGIN_COLOR" value="{Scheme.Overlay}" />
-			     <option name="SELECTED_INDENT_GUIDE" value="{Scheme.Overlay}" />
-			     <option name="SELECTED_TEARLINE_COLOR" value="{Scheme.Muted}" />
+			     <option name="NOTIFICATION_BACKGROUND" value="{Scheme.TextHidden}" />
+			     <option name="PREVIEW_BACKGROUND" value="{Scheme.Background}" />
+			     <option name="PROMOTION_PANE" value="{Scheme.BackgroundEdges}"/>
+			     <option name="QUESTION_HINT" value="{Scheme.BackgroundEdges}"/>
+			     <option name="RECENT_LOCATIONS_SELECTION" value="{Scheme.BackgroundEdges}"/>
+			     <option name="RIGHT_MARGIN_COLOR" value="{Scheme.BackgroundOverlay}" />
+			     <option name="SELECTED_INDENT_GUIDE" value="{Scheme.BackgroundOverlay}" />
+			     <option name="SELECTED_TEARLINE_COLOR" value="{Scheme.TextHidden}" />
 			     <option name="SELECTION_BACKGROUND" value="{Scheme.Highlight}" />
 			     <option name="SELECTION_FOREGROUND" value="{Scheme.Text}" />
 			     <option name="SEPARATOR_BELOW_COLOR" value=""/>
-			     <option name="ScrollBar.thumbColor" value="{Scheme.Muted}" />
-			     <option name="ScrollBar.thumbBorderColor" value="{Scheme.Surface}"/>
-			     <option name="ScrollBar.hoverThumbColor" value="{Scheme.Muted}" />
+			     <option name="ScrollBar.thumbColor" value="{Scheme.TextHidden}" />
+			     <option name="ScrollBar.thumbBorderColor" value="{Scheme.BackgroundEdges}"/>
+			     <option name="ScrollBar.hoverThumbColor" value="{Scheme.TextHidden}" />
 			     <option name="ScrollBar.hoverThumbBorderColor" value="{Scheme.HighlightInactive}"/>
-			     <option name="ScrollBar.Mac.thumbColor" value="{Scheme.Surface}"/>
-			     <option name="ScrollBar.Mac.thumbBorderColor" value="{Scheme.Surface}"/>
+			     <option name="ScrollBar.Mac.thumbColor" value="{Scheme.BackgroundEdges}"/>
+			     <option name="ScrollBar.Mac.thumbBorderColor" value="{Scheme.BackgroundEdges}"/>
 			     <option name="ScrollBar.Mac.hoverThumbColor" value="{Scheme.HighlightInactive}"/>
 			     <option name="ScrollBar.Mac.hoverThumbBorderColor" value="{Scheme.HighlightInactive}"/>
 			     <option name="VCS_ANNOTATIONS_COLOR_1" value="{Scheme.Text}"/>
@@ -117,10 +117,10 @@ public class RiderXml : ITheme
 			     <option name="VCS_ANNOTATIONS_COLOR_3" value="{Scheme.Text}"/>
 			     <option name="VCS_ANNOTATIONS_COLOR_4" value="{Scheme.Text}"/>
 			     <option name="VCS_ANNOTATIONS_COLOR_5" value="{Scheme.Text}"/>
-			     <option name="TEARLINE_COLOR" value="{Scheme.Muted}" />
-			     <option name="VISUAL_INDENT_GUIDE" value="{Scheme.Muted}" />
-			     <option name="WHITESPACES" value="{Scheme.Surface}" />
-			     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="{Scheme.Surface}"/>
+			     <option name="TEARLINE_COLOR" value="{Scheme.TextHidden}" />
+			     <option name="VISUAL_INDENT_GUIDE" value="{Scheme.TextHidden}" />
+			     <option name="WHITESPACES" value="{Scheme.BackgroundEdges}" />
+			     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="{Scheme.BackgroundEdges}"/>
 			   </colors>
 			   <attributes>
 			     <option name="ABSTRACT_METHOD_ATTRIBUTES">
@@ -179,7 +179,7 @@ public class RiderXml : ITheme
 			         <option name="FOREGROUND" value="{Scheme.Purple}"/>
 			       </value>
 			     </option>
-			     <option name="TERMINAL_BACKGROUND" value="{Scheme.Base}"/>
+			     <option name="TERMINAL_BACKGROUND" value="{Scheme.Background}"/>
 			     <option name="BLOCK_TERMINAL_COMMAND">
 			       <value>
 			         <option name="FOREGROUND" value="{Scheme.Blue}"/>
@@ -200,8 +200,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="BLOCK_TERMINAL_BLACK">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Surface}"/>
-			         <option name="BACKGROUND" value="{Scheme.Surface}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundEdges}"/>
+			         <option name="BACKGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <option name="BLOCK_TERMINAL_BLUE">
@@ -236,8 +236,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="BLOCK_TERMINAL_WHITE">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}"/>
-			         <option name="BACKGROUND" value="{Scheme.Subtle}"/>
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}"/>
+			         <option name="BACKGROUND" value="{Scheme.TextFaded}"/>
 			       </value>
 			     </option>
 			     <option name="BLOCK_TERMINAL_YELLOW">
@@ -300,7 +300,7 @@ public class RiderXml : ITheme
 			     <option name="BREADCRUMBS_CURRENT">
 			       <value>
 			         <option name="FOREGROUND" value="{Scheme.Text}"/>
-			         <option name="BACKGROUND" value="{Scheme.Surface}"/>
+			         <option name="BACKGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <option name="BREADCRUMBS_DEFAULT">
@@ -311,7 +311,7 @@ public class RiderXml : ITheme
 			     <option name="BREADCRUMBS_HOVERED">
 			       <value>
 			         <option name="FOREGROUND" value="{Scheme.Text}"/>
-			         <option name="BACKGROUND" value="{Scheme.Surface}"/>
+			         <option name="BACKGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <option name="BREADCRUMBS_INACTIVE">
@@ -350,13 +350,13 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CODE_LENS_BORDER_COLOR">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Surface}"/>
+			         <option name="BACKGROUND" value="{Scheme.BackgroundEdges}"/>
 			         <option name="EFFECT_COLOR" value="{Scheme.Plum}"/>
 			       </value>
 			     </option>
 			     <option name="CODE_VISION_DEFAULT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			       </value>
 			     </option>
 			     <option name="CODE_VISION_HOVERED">
@@ -371,14 +371,14 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="CONDITIONALLY_NOT_COMPILED">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Surface}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <!-- Terminal colors -->
 			     <!-- ANSI Color 00 -->
 			     <option name="CONSOLE_BLACK_OUTPUT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Surface}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <!-- ANSI Color 01 -->
@@ -420,7 +420,7 @@ public class RiderXml : ITheme
 			     <!-- ANSI Color 07 -->
 			     <option name="CONSOLE_GRAY_OUTPUT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}"/>
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}"/>
 			       </value>
 			     </option>
 			     <!-- ANSI Color 08 -->
@@ -729,7 +729,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_BLOCK_COMMENT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			         <option name="FONT_TYPE" value="{FontItalic}" />
 			       </value>
 			     </option>
@@ -765,7 +765,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_DOC_COMMENT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			         <option name="FONT_TYPE" value="{FontItalic}" />
 			       </value>
 			     </option>
@@ -817,7 +817,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_IDENTIFIER">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_INSTANCE_FIELD">
@@ -840,7 +840,7 @@ public class RiderXml : ITheme
 			     <option name="DEFAULT_KEYWORD">
 			       <value>
 			         <option name="FOREGROUND" value="{Scheme.Plum}" />
-			         <option name="BACKGROUND" value="{Scheme.Base}" />
+			         <option name="BACKGROUND" value="{Scheme.Background}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_LABEL">
@@ -850,7 +850,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_LINE_COMMENT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			         <option name="FONT_TYPE" value="{FontItalic}" />
 			       </value>
 			     </option>
@@ -886,7 +886,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DEFAULT_PREDEFINED_SYMBOL">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
 			       </value>
 			     </option>
 			     <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE">
@@ -937,8 +937,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DELETED_TEXT_ATTRIBUTES">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Base}" />
-			         <option name="EFFECT_COLOR" value="{Scheme.Subtle}" />
+			         <option name="BACKGROUND" value="{Scheme.Background}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.TextFaded}" />
 			         <option name="EFFECT_TYPE" value="3" />
 			       </value>
 			     </option>
@@ -974,7 +974,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="DUPLICATE_FROM_SERVER">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Base}" />
+			         <option name="FOREGROUND" value="{Scheme.Background}" />
 			         <option name="BACKGROUND" value="{Scheme.Orange}" />
 			       </value>
 			     </option>
@@ -987,7 +987,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="EXECUTIONPOINT_ATTRIBUTES">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Base}"/>
+			         <option name="BACKGROUND" value="{Scheme.Background}"/>
 			       </value>
 			     </option>
 			     <option name="FOLDED_TEXT_ATTRIBUTES">
@@ -1023,7 +1023,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
 			       <value>
-			         <option name="BACKGROUND" value="{Scheme.Overlay}" />
+			         <option name="BACKGROUND" value="{Scheme.BackgroundOverlay}" />
 			         <option name="FONT_TYPE" value="{FontBold}" />
 			         <option name="EFFECT_TYPE" value="1" />
 			       </value>
@@ -1035,7 +1035,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="INACTIVE_HYPERLINK_ATTRIBUTES">
 			       <value>
-			         <option name="EFFECT_COLOR" value="{Scheme.Subtle}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.TextFaded}" />
 			         <option name="EFFECT_TYPE" value="1" />
 			       </value>
 			     </option>
@@ -1083,8 +1083,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="INLINE_PARAMETER_HINT">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Subtle}" />
-			         <option name="BACKGROUND" value="{Scheme.Base}" />
+			         <option name="FOREGROUND" value="{Scheme.TextFaded}" />
+			         <option name="BACKGROUND" value="{Scheme.Background}" />
 			       </value>
 			     </option>
 			     <option name="INLINE_PARAMETER_HINT_CURRENT">
@@ -1205,7 +1205,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_BOLD_MARKER">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Overlay}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundOverlay}"/>
 			         <option name="FONT_TYPE" value="{FontBold}"/>
 			       </value>
 			     </option>
@@ -1271,7 +1271,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_ITALIC_MARKER">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Overlay}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundOverlay}"/>
 			         <option name="FONT_TYPE" value="{FontBold}"/>
 			       </value>
 			     </option>
@@ -1313,7 +1313,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="MARKDOWN_TABLE_SEPARATOR">
 			       <value>
-			         <option name="FOREGROUND" value="{Scheme.Surface}"/>
+			         <option name="FOREGROUND" value="{Scheme.BackgroundEdges}"/>
 			       </value>
 			     </option>
 			     <option name="MARKDOWN_UNORDERED_LIST">
@@ -1337,7 +1337,7 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
 			       <value>
-			         <option name="EFFECT_COLOR" value="{Scheme.Subtle}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.TextFaded}" />
 			         <option name="EFFECT_TYPE" value="1" />
 			       </value>
 			     </option>
@@ -1383,8 +1383,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="ReSharper.HINT">
 			       <value>
-			         <option name="EFFECT_COLOR" value="{Scheme.Subtle}" />
-			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.Subtle}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.TextFaded}" />
+			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.TextFaded}" />
 			         <option name="EFFECT_TYPE" value="5" />
 			       </value>
 			     </option>
@@ -1552,7 +1552,7 @@ public class RiderXml : ITheme
 			     <option name="TEXT">
 			       <value>
 			         <option name="FOREGROUND" value="{Scheme.Text}" />
-			         <option name="BACKGROUND" value="{Scheme.Base}" />
+			         <option name="BACKGROUND" value="{Scheme.Background}" />
 			       </value>
 			     </option>
 			     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
@@ -1606,8 +1606,8 @@ public class RiderXml : ITheme
 			     </option>
 			     <option name="WARNING_ATTRIBUTES">
 			       <value>
-			         <option name="EFFECT_COLOR" value="{Scheme.Subtle}" />
-			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.Subtle}" />
+			         <option name="EFFECT_COLOR" value="{Scheme.TextFaded}" />
+			         <option name="ERROR_STRIPE_COLOR" value="{Scheme.TextFaded}" />
 			         <option name="EFFECT_TYPE" value="5" />
 			       </value>
 			     </option>

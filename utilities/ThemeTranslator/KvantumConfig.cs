@@ -17,25 +17,25 @@ public class KvantumConfig : ITheme
 	public override string ToString()
 	{
 		// Backgrounds & Surfaces
-		string baseWhite        = $"#{Scheme.Base}";
-		string altBase          = $"#{Scheme.Surface}";
-		string windowBackground = $"#{Scheme.Overlay}";
+		string baseWhite        = $"#{Scheme.Background}";
+		string altBase          = $"#{Scheme.BackgroundEdges}";
+		string windowBackground = $"#{Scheme.BackgroundOverlay}";
 		string buttonBg         = $"#{Scheme.Highlight}";
-		string midLight         = $"#{Scheme.HighlightOverlay}";
+		string midLight         = $"#{Scheme.HighlightFocused}";
 		string midGray          = $"#{Scheme.HighlightInactive}";
-		string darkGray         = $"#{Scheme.Muted}";
+		string darkGray         = $"#{Scheme.TextHidden}";
 
 		// Accents
-		string highlight   = $"#{Scheme.HighlightOverlay}";
+		string highlight   = $"#{Scheme.HighlightFocused}";
 		string link        = $"#{Scheme.Magenta}";
 		string linkVisited = $"#{Scheme.Plum}";
 
 		// Typography
 		string textPrimary  = $"#{Scheme.Text}";
 		string textFocus    = $"#{Scheme.HighlightInactive}";
-		string textPressed  = $"#{Scheme.Subtle}";   // Slightly darker for active states
-		string textDisabled = $"#{Scheme.Inactive}"; // Primary with alpha
-		string textSelected = $"#{Scheme.SelectedText}"; // Primary with alpha
+		string textPressed  = $"#{Scheme.TextFaded}";   // Slightly darker for active states
+		string textDisabled = $"#{Scheme.TextInactive}"; // Primary with alpha
+		string textSelected = $"#{Scheme.SelectionText}"; // Primary with alpha
 
 		return
 			$"""

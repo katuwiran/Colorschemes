@@ -4,8 +4,8 @@ public class Program
 {
 	public static void Main()
 	{
-		// todo: btop
 		// todo: fix bugs
+		// todo: refactor with named variables
 		// - highlighting is wrong
 		// - highlighted text in rider
 		int columns = 7;

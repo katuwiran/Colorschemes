@@ -17,13 +17,13 @@ public class Konsole : ITheme
 		return
 			$"""
 			 [Background]
-			 Color=#{Scheme.Base}
+			 Color=#{Scheme.Background}
 
 			 [BackgroundFaint]
-			 Color=#{Scheme.Surface}
+			 Color=#{Scheme.BackgroundEdges}
 
 			 [BackgroundIntense]
-			 Color=#{Scheme.Overlay}
+			 Color=#{Scheme.BackgroundOverlay}
 
 			 [Color0]
 			 Color=#{Scheme.ConsoleBackground}

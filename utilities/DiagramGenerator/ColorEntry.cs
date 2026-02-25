@@ -6,7 +6,6 @@ public class ColorEntry
 
 	public ColorEntry()
 	{
-		
 	}
 
 	public ColorEntry(string name, string hexCode, string index)

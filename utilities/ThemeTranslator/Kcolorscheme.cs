@@ -14,7 +14,7 @@ public class Kcolorscheme : ITheme
 	// for Kvantum's svg format
 	public override string ToString()
 	{
-		// Base Grayscale
+		// Background Grayscale
 		const string White      = "255,255,255";
 		const string OffWhite   = "245,245,245";
 		const string LightGray  = "235,235,235";
@@ -60,7 +60,7 @@ public class Kcolorscheme : ITheme
 		        IntensityAmount=0.1
 		        IntensityEffect=2
 
-		        [ColorEffects:Inactive]
+		        [ColorEffects:TextInactive]
 		        ChangeSelectionColor=true
 		        Color=112,111,110
 		        ColorAmount=0.025
@@ -113,7 +113,7 @@ public class Kcolorscheme : ITheme
 		        ForegroundPositive={PositiveGreen}
 		        ForegroundVisited={VisitedGray}
 
-		        [Colors:Header][Inactive]
+		        [Colors:Header][TextInactive]
 		        BackgroundAlternate=232,232,232
 		        BackgroundNormal=242,242,242
 		        DecorationFocus={AccentBlue},150

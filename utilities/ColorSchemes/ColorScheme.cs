@@ -2,18 +2,19 @@ namespace ColorschemeUtils;
 
 public partial class ColorScheme
 {
+	// Scheme Descriptions
 	public required string Name        { get; set; }
 	public required string Description { get; set; }
 	public required bool   IsDark      { get; set; }
-	public required string Accent      { get; set; }
 
-	public required string Base     { get; set; }
-	public required string Surface  { get; set; }
-	public required string Overlay  { get; set; }
-	public required string Inactive { get; set; }
-	public required string Subtle   { get; set; }
-	public required string Muted    { get; set; }
-	public required string Text     { get; set; }
+	public required string Background        { get; set; } // background
+	public required string BackgroundEdges   { get; set; } // borders, dividers, etc.
+	public required string BackgroundOverlay { get; set; } // scrollbars, unpressed buttons
+
+	public required string Text         { get; set; } // foreground
+	public required string TextFaded    { get; set; } // comments, 
+	public required string TextInactive { get; set; } // disabled, unfocused
+	public required string TextHidden   { get; set; } // toggled off, whitespace
 
 	public required string Magenta { get; set; }
 	public required string Plum    { get; set; }
@@ -25,64 +26,61 @@ public partial class ColorScheme
 	public required string Red     { get; set; }
 	public required string Orange  { get; set; }
 
-	public required string Highlight         { get; set; }
-	public required string HighlightInactive { get; set; }
-	public required string HighlightOverlay  { get; set; }
+	// Highlights
+	public required string Highlight         { get; set; } // selected result, on press
+	public required string HighlightInactive { get; set; } // search results, unpressed
+	public required string HighlightFocused  { get; set; } // on hover
 
-	public string Caret => Text;
+	public string HoverText       => Background;       // on hover, text
+	public string HoverBackground => HighlightFocused; // on hover, background
 
-	public string MenuBackground => Base;
+	public string PressedText       => Magenta;   // on press, text
+	public string PressedBackground => Highlight; // on press, background
+
+	public string SelectionText         => Background;
+	public string SelectionInactiveText => HighlightInactive;
+
+	public string InactiveText => Highlight;
+	public string Inactive     => HighlightInactive;
+
+
+	public string MenuBackground => Background;
 	public string TextForeground => Text;
-	public string Error          => Red;
-	public string Warning        => Orange;
-	public string Info           => Yellow;
-	public string Annotations    => Text;
 
-	public string SelectedText             => Text;
-	public string SelectedTextBackground   => Highlight;
-	public string UnselectedText           => Text;
-	public string UnselectedTextBackground => Base;
 
-	// Console 0. Background
-	public string ConsoleBackground    => Base;
-	public string ConsoleBackgroundAlt => Base;
+	// linting
+	public string Error       => Red;
+	public string Warning     => Orange;
+	public string Info        => Yellow;
+	public string Annotations => Text;
 
-	// Console 1
-	public string ConsoleRed    => Red;
-	public string ConsoleRedAlt => Red;
+	// Console
+	public string Caret                => Text;
+	public string ConsoleBackground    => Background; // Console 0. Background
+	public string ConsoleBackgroundAlt => Background; // Console 0. Bright
+	public string ConsoleRed           => Red;        // Console 1. Red
+	public string ConsoleRedAlt        => Red;        // Console 1. Red
+	public string ConsoleGreen         => Plum;       // Console 2. Green
+	public string ConsoleGreenAlt      => Plum;       // Console 2. Green Bright
+	public string ConsoleYellow        => Cyan;       // Console 3. Yellow
+	public string ConsoleYellowAlt     => Cyan;       // Console 3. Yellow Bright
+	public string ConsoleBlue          => Blue;       // Console 4. Blue
+	public string ConsoleBlueAlt       => Blue;       // Console 4. Blue Bright
+	public string ConsoleMagenta       => Purple;     // Console 5. Magenta
+	public string ConsoleMagentaAlt    => Purple;     // Console 5. Magenta Bright
+	public string ConsoleCyan          => Magenta;    // Console 6. Cyan
+	public string ConsoleCyanAlt       => Magenta;    // Console 6. Cyan Bright
+	public string ConsoleForeground    => Text;       // Console 7. Text 
+	public string ConsoleForegroundAlt => Text;       // Console 7. Text Bright
 
-	// Console 2
-	public string ConsoleGreen    => Plum;
-	public string ConsoleGreenAlt => Plum;
+	// git diffs
+	public string DiffAdded    => Green;
+	public string DiffDeleted  => Magenta;
+	public string DiffModified => Purple;
+	public string DiffIgnored  => TextFaded;
+	public string DiffConflict => Plum;
 
-	// Console 3
-	public string ConsoleYellow    => Cyan;
-	public string ConsoleYellowAlt => Cyan;
-
-	// Console 4
-	public string ConsoleBlue    => Blue;
-	public string ConsoleBlueAlt => Blue;
-
-	// Console 5
-	public string ConsoleMagenta    => Purple;
-	public string ConsoleMagentaAlt => Purple;
-
-	// Console 6
-	public string ConsoleCyan    => Magenta;
-	public string ConsoleCyanAlt => Magenta;
-
-	// Console 7
-	public string ConsoleForeground    => Text;
-	public string ConsoleForegroundAlt => Text;
-
-	public string SearchHighlight => Highlight;
-	public string DiffAdded       => Green;
-	public string DiffDeleted     => Magenta;
-	public string DiffModified    => Purple;
-	public string DiffIgnored     => Subtle;
-	public string DiffConflict    => Plum;
-
-	public static string ToRGB(string hex)
+	public static string ToRgb(string hex)
 	{
 		string r = $"{HexadecimalToDecimal(hex.Substring(0, 2))}";
 		string g = $"{HexadecimalToDecimal(hex.Substring(2, 2))}";

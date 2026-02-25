@@ -21,16 +21,16 @@ public class KvantumSvg : ITheme
 		string primaryActive = $"#{Scheme.Purple}";
 		string alert         = $"#{Scheme.Magenta}";
 
-		string titleBar              = $"#{Scheme.Surface}";
-		string gray                  = $"#{Scheme.Inactive}";
+		string titleBar              = $"#{Scheme.BackgroundEdges}";
+		string gray                  = $"#{Scheme.TextInactive}";
 		string interactiveBackground = $"#{Scheme.Highlight}";
 
 		// UI Neutrals
-		string white    = $"#{Scheme.Base}";
+		string white    = $"#{Scheme.Background}";
 		string black    = $"#{Scheme.Text}";
 		string iconGray = $"#{Scheme.HighlightInactive}";
-		string border   = $"#{Scheme.Overlay}";
-		string desk     = $"#{Scheme.Inactive}";
+		string border   = $"#{Scheme.BackgroundOverlay}";
+		string desk     = $"#{Scheme.TextInactive}";
 
 		// Opacity Levels
 		const string opacityHidden   = "0";

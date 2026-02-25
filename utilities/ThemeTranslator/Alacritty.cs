@@ -17,41 +17,41 @@ public class Alacritty : ITheme
 		return
 			$"""
 			 [colors.primary]
-			 background = "#{Scheme.Base}"
+			 background = "#{Scheme.Background}"
 			 foreground = "#{Scheme.Text}"
-			 dim_foreground = "#{Scheme.Inactive}"
+			 dim_foreground = "#{Scheme.TextInactive}"
 			 bright_foreground = "#{Scheme.Text}"
 
 			 [colors.cursor]
-			 text = "#{Scheme.Base}"
+			 text = "#{Scheme.Background}"
 			 cursor = "#{Scheme.Highlight}"
 
 			 [colors.vi_mode_cursor]
-			 text = "#{Scheme.Base}"
+			 text = "#{Scheme.Background}"
 			 cursor = "#babbf1"
 
 			 [colors.search.matches]
-			 foreground = "#{Scheme.Base}"
+			 foreground = "#{Scheme.Background}"
 			 background = "#{Scheme.HighlightInactive}"
 
 			 [colors.search.focused_match]
-			 foreground = "#{Scheme.Base}"
+			 foreground = "#{Scheme.Background}"
 			 background = "#{Scheme.HighlightInactive}"
 
 			 [colors.footer_bar]
-			 foreground = "#{Scheme.Base}"
+			 foreground = "#{Scheme.Background}"
 			 background = "#{Scheme.HighlightInactive}"
 
 			 [colors.hints.start]
-			 foreground = "#{Scheme.Base}"
+			 foreground = "#{Scheme.Background}"
 			 background = "#{Scheme.Yellow}"
 
 			 [colors.hints.end]
-			 foreground = "#{Scheme.Base}"
+			 foreground = "#{Scheme.Background}"
 			 background = "#{Scheme.HighlightInactive}"
 
 			 [colors.selection]
-			 text = "#{Scheme.Base}"
+			 text = "#{Scheme.Background}"
 			 background = "#{Scheme.Highlight}"
 
 			 [colors.normal]

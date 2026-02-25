@@ -23,13 +23,13 @@ public class Sublime : ITheme
 		             // "project": "",
 		             "author": "Rikaisuru",
 		             "variables": {
-		                 "base":           "#{{Scheme.Base}}",
-		                 "surface":        "#{{Scheme.Surface}}",
-		                 "overlay":        "#{{Scheme.Overlay}}",
-		                 "subtle":         "#{{Scheme.Subtle}}",
-		                 "muted":          "#{{Scheme.Muted}}",
+		                 "background":     "#{{Scheme.Background}}",
+		                 "edges":          "#{{Scheme.BackgroundEdges}}",
+		                 "overlay":        "#{{Scheme.BackgroundOverlay}}",
+		                 "faded":          "#{{Scheme.TextFaded}}",
+		                 "hidden":         "#{{Scheme.TextHidden}}",
 		                 "magenta":        "#{{Scheme.Magenta}}",
-		                 "lavender":       "#{{Scheme.Plum}}",
+		                 "plum":           "#{{Scheme.Plum}}",
 		                 "blue":           "#{{Scheme.Blue}}",
 		                 "purple":         "#{{Scheme.Purple}}",
 		                 "cyan":           "#{{Scheme.Cyan}}",
@@ -38,26 +38,26 @@ public class Sublime : ITheme
 		                 "yellow":         "#{{Scheme.Yellow}}",
 		                 "red":            "#{{Scheme.Red}}",
 		                 "orange":         "#{{Scheme.Orange}}",
-		                 "highlight-low":  "#{{Scheme.HighlightInactive}}",
-		                 "highlight-med":  "#{{Scheme.Highlight}}",
-		                 "highlight-high": "#{{Scheme.HighlightOverlay}}",
+		                 "high-inactive":  "#{{Scheme.HighlightInactive}}",
+		                 "highlight":      "#{{Scheme.Highlight}}",
+		                 "high-focused":   "#{{Scheme.HighlightFocused}}",
 
-		                 "comments":    "var(muted)",
+		                 "comments":    "var(faded)",
 		                 "variables":   "var(text)",
-		                 "punctuation": "var(subtle)",
+		                 "punctuation": "var(faded)",
 		                 "operators":   "var(magenta)",
-		                 "built-ins":   "var(lavender)",
+		                 "built-ins":   "var(plum)",
 		                 "strings":     "var(cyan)",
 		                 "booleans":    "var(yellow)",
 		                 "numeric":     "var(green)",
 		                 "functions":   "var(blue)",
 		                 "keys":        "var(purple)",
 		                 "tags":        "var(purple)",
-		                 "parameters":  "var(lavender)",
+		                 "parameters":  "var(plum)",
 
 
 		                 // Usage notes and extrapolations
-		                 "borders":   "var(highlight-high)",
+		                 "borders":   "var(edges)",
 		                 "constants": "var(booleans)",
 		                 "links":     "var(purple)",
 
@@ -66,12 +66,12 @@ public class Sublime : ITheme
 		                 "info":    "var(cyan)",
 		                 "warning": "var(yellow)",
 
-		                 "match":            "var(lavender)",
-		                 "match_foreground": "var(base)",
+		                 "match":            "var(plum)",
+		                 "match_foreground": "var(background)",
 
 		                 // Tooltips and Extensions
 		                 "--foreground": "var(text)",
-		                 "--background": "var(base)",
+		                 "--background": "var(background)",
 		                 "--redish":     "var(magenta)",
 		                 "--orangish":   "var(red)",
 		                 "--yellowish":  "var(yellow)",
@@ -79,7 +79,7 @@ public class Sublime : ITheme
 		                 "--cyanish":    "var(cyan)",
 		                 "--bluish":     "var(blue)",
 		                 "--purplish":   "var(purple)",
-		                 "--pinkish":    "var(magenta)",
+		                 "--pinkish":    "var(plum)",
 		             },
 		             "globals": {
 		                 /**
@@ -88,15 +88,15 @@ public class Sublime : ITheme
 		                  */
 
 		                 // Global
-		                 "background":               "var(base)",
+		                 "background":               "var(background)",
 		                 "foreground":               "var(text)",
 		                 "invisibles":               "var(overlay)",
 		                 "caret":                    "var(text)",
-		                 "block_caret":              "var(highlight-high)",
-		                 "block_caret_border":       "var(highlight-high)",
+		                 "block_caret":              "var(high-focused)",
+		                 "block_caret_border":       "var(high-focused)",
 		                 "block_caret_underline":    "var(text)",
 		                 "block_caret_corner_style": "square",
-		                 "line_highlight":           "var(base)",
+		                 "line_highlight":           "var(background)",
 
 		                 // Accents
 		                 "misspelling":    "var(red)",
@@ -105,22 +105,22 @@ public class Sublime : ITheme
 		                 "accent":         "var(cyan)",    // interface colors
 
 		                 // Gutter
-		                 "gutter":                      "var(base)", // background
-		                 "gutter_foreground":           "var(muted)",
+		                 "gutter":                      "var(background)", // background
+		                 "gutter_foreground":           "var(faded)",
 		                 "gutter_foreground_highlight": "var(info)",
 
 		                 // Diff
 		                 "line_diff_width":    "4",
 		                 "line_diff_added":    "var(cyan)",
 		                 "line_diff_deleted":  "var(magenta)",
-		                 "line_diff_modified": "var(lavender)",
+		                 "line_diff_modified": "var(plum)",
 
 		                 // Selection
-		                 "selection":                     "var(highlight-med)",
+		                 "selection":                     "var(highlight)"    ,
 		                 "selection_foreground":          "var(text)",
-		                 "selection_border":              "var(highlight-med)",
+		                 "selection_border":              "var(highlight)"    ,
 		                 "selection_border_width":        "1",
-		                 "inactive_selection":            "var(highlight-low)",
+		                 "inactive_selection":            "var(high-inactive)",
 		                 "inactive_selection_border":     "var(match_foreground)",
 		                 "inactive_selection_foreground": "var(text)",
 		                 "selection_corner_style":        "rounded",
@@ -150,7 +150,7 @@ public class Sublime : ITheme
 		                 "tags_foreground": "var(tags)",
 
 		                 // Shadow (to the right when text overflows)
-		                 "shadow":       "var(highlight-high)",
+		                 "shadow":       "var(high-focused)",
 		                 "shadow_width": "2",
 		             },
 		             "rules": [
@@ -3754,7 +3754,7 @@ public class Sublime : ITheme
 		                 {
 		                     "name": "Invalid",
 		                     "scope": "invalid",
-		                     "foreground": "var(lavender)"
+		                     "foreground": "var(plum)"
 		                 },
 		                 {
 		                     "name": "Deprecated",
@@ -3766,7 +3766,7 @@ public class Sublime : ITheme
 		                 {
 		                     "name": "diff: header",
 		                     "scope": "meta.diff, meta.diff.header",
-		                     "foreground": "var(muted)"
+		                     "foreground": "var(faded)"
 		                 },
 		                 {
 		                     "name": "diff: range",
@@ -3781,7 +3781,7 @@ public class Sublime : ITheme
 		                 {
 		                     "name": "diff: changed",
 		                     "scope": "markup.changed",
-		                     "foreground": "var(lavender)"
+		                     "foreground": "var(plum)"
 		                 },
 		                 {
 		                     "name": "diff: inserted",
@@ -3879,14 +3879,14 @@ public class Sublime : ITheme
 		                 {
 		                     "name":       "Markdown quote",
 		                     "scope":      "markup.quote",
-		                     "foreground": "var(lavender)",
+		                     "foreground": "var(plum)",
 		                     "font_style": "italic",
 		                 },
 		                 {
 		                     "name":       "Markdown quote punctuation",
 		                     "scope":      "punctuation.definition.blockquote",
-		                     "foreground": "var(lavender)",
-		                     "background": "var(lavender)",
+		                     "foreground": "var(plum)",
+		                     "background": "var(plum)",
 		                     "thankyou":   "Dracula Theme",
 		                 },
 		                 {
