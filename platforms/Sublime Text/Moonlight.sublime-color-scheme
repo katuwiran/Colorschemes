@@ -6,41 +6,41 @@
     // "project": "",
     "author": "Rikaisuru",
     "variables": {
-        "base":           "#2a2840",
-        "surface":        "#332e51",
+        "background":     "#2a2840",
+        "edges":          "#332e51",
         "overlay":        "#3d375f",
-        "subtle":         "#908caa",
-        "muted":          "#696383",
+        "faded":          "#908caa",
+        "hidden":         "#696383",
         "magenta":        "#ef5abf",
-        "lavender":       "#ec93c1",
+        "plum":           "#ec93c1",
         "blue":           "#848bf4",
         "purple":         "#c188ef",
         "cyan":           "#80b5f7",
         "text":           "#c0c0ff",
-        "green":          "#c8e899",
+        "green":          "#6a3654",
         "yellow":         "#fcb986",
         "red":            "#eb517c",
         "orange":         "#ff8c4f",
-        "highlight-low":  "#333a54",
-        "highlight-med":  "#89537f",
-        "highlight-high": "#394781",
+        "high-inactive":  "#6c3b62",
+        "highlight":      "#89537f",
+        "high-focused":   "#e981c6",
 
-        "comments":    "var(muted)",
+        "comments":    "var(faded)",
         "variables":   "var(text)",
-        "punctuation": "var(subtle)",
+        "punctuation": "var(faded)",
         "operators":   "var(magenta)",
-        "built-ins":   "var(lavender)",
+        "built-ins":   "var(plum)",
         "strings":     "var(cyan)",
         "booleans":    "var(yellow)",
         "numeric":     "var(green)",
         "functions":   "var(blue)",
         "keys":        "var(purple)",
         "tags":        "var(purple)",
-        "parameters":  "var(lavender)",
+        "parameters":  "var(plum)",
 
 
         // Usage notes and extrapolations
-        "borders":   "var(highlight-high)",
+        "borders":   "var(edges)",
         "constants": "var(booleans)",
         "links":     "var(purple)",
 
@@ -49,12 +49,12 @@
         "info":    "var(cyan)",
         "warning": "var(yellow)",
 
-        "match":            "var(lavender)",
-        "match_foreground": "var(base)",
+        "match":            "var(plum)",
+        "match_foreground": "var(background)",
 
         // Tooltips and Extensions
         "--foreground": "var(text)",
-        "--background": "var(base)",
+        "--background": "var(background)",
         "--redish":     "var(magenta)",
         "--orangish":   "var(red)",
         "--yellowish":  "var(yellow)",
@@ -62,7 +62,7 @@
         "--cyanish":    "var(cyan)",
         "--bluish":     "var(blue)",
         "--purplish":   "var(purple)",
-        "--pinkish":    "var(magenta)",
+        "--pinkish":    "var(plum)",
     },
     "globals": {
         /**
@@ -71,15 +71,15 @@
          */
 
         // Global
-        "background":               "var(base)",
+        "background":               "var(background)",
         "foreground":               "var(text)",
         "invisibles":               "var(overlay)",
         "caret":                    "var(text)",
-        "block_caret":              "var(highlight-high)",
-        "block_caret_border":       "var(highlight-high)",
+        "block_caret":              "var(high-focused)",
+        "block_caret_border":       "var(high-focused)",
         "block_caret_underline":    "var(text)",
         "block_caret_corner_style": "square",
-        "line_highlight":           "var(base)",
+        "line_highlight":           "var(background)",
 
         // Accents
         "misspelling":    "var(red)",
@@ -88,22 +88,22 @@
         "accent":         "var(cyan)",    // interface colors
 
         // Gutter
-        "gutter":                      "var(base)", // background
-        "gutter_foreground":           "var(muted)",
+        "gutter":                      "var(background)", // background
+        "gutter_foreground":           "var(faded)",
         "gutter_foreground_highlight": "var(info)",
 
         // Diff
         "line_diff_width":    "4",
         "line_diff_added":    "var(cyan)",
         "line_diff_deleted":  "var(magenta)",
-        "line_diff_modified": "var(lavender)",
+        "line_diff_modified": "var(plum)",
 
         // Selection
-        "selection":                     "var(highlight-med)",
+        "selection":                     "var(highlight)"    ,
         "selection_foreground":          "var(text)",
-        "selection_border":              "var(highlight-med)",
+        "selection_border":              "var(highlight)"    ,
         "selection_border_width":        "1",
-        "inactive_selection":            "var(highlight-low)",
+        "inactive_selection":            "var(high-inactive)",
         "inactive_selection_border":     "var(match_foreground)",
         "inactive_selection_foreground": "var(text)",
         "selection_corner_style":        "rounded",
@@ -133,7 +133,7 @@
         "tags_foreground": "var(tags)",
 
         // Shadow (to the right when text overflows)
-        "shadow":       "var(highlight-high)",
+        "shadow":       "var(high-focused)",
         "shadow_width": "2",
     },
     "rules": [
@@ -3737,7 +3737,7 @@
         {
             "name": "Invalid",
             "scope": "invalid",
-            "foreground": "var(lavender)"
+            "foreground": "var(plum)"
         },
         {
             "name": "Deprecated",
@@ -3749,7 +3749,7 @@
         {
             "name": "diff: header",
             "scope": "meta.diff, meta.diff.header",
-            "foreground": "var(muted)"
+            "foreground": "var(faded)"
         },
         {
             "name": "diff: range",
@@ -3764,7 +3764,7 @@
         {
             "name": "diff: changed",
             "scope": "markup.changed",
-            "foreground": "var(lavender)"
+            "foreground": "var(plum)"
         },
         {
             "name": "diff: inserted",
@@ -3862,14 +3862,14 @@
         {
             "name":       "Markdown quote",
             "scope":      "markup.quote",
-            "foreground": "var(lavender)",
+            "foreground": "var(plum)",
             "font_style": "italic",
         },
         {
             "name":       "Markdown quote punctuation",
             "scope":      "punctuation.definition.blockquote",
-            "foreground": "var(lavender)",
-            "background": "var(lavender)",
+            "foreground": "var(plum)",
+            "background": "var(plum)",
             "thankyou":   "Dracula Theme",
         },
         {

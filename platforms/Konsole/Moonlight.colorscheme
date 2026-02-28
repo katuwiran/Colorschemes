@@ -8,31 +8,31 @@ Color=#332e51
 Color=#3d375f
 
 [Color0]
-Color=#333a54
+Color=#2a2840
 
 [Color0Faint]
-Color=#333a54
+Color=#2a2840
 
 [Color0Intense]
-Color=#333a54
+Color=#2a2840
 
 [Color1]
-Color=#eb517c
+Color=#ef5abf
 
 [Color1Faint]
-Color=#eb517c
+Color=#ef5abf
 
 [Color1Intense]
-Color=#eb517c
+Color=#ef5abf
 
 [Color2]
-Color=#ec93c1
+Color=#c188ef
 
 [Color2Faint]
-Color=#ec93c1
+Color=#c188ef
 
 [Color2Intense]
-Color=#ec93c1
+Color=#c188ef
 
 [Color3]
 Color=#80b5f7
@@ -53,22 +53,22 @@ Color=#848bf4
 Color=#848bf4
 
 [Color5]
-Color=#c188ef
+Color=#eb517c
 
 [Color5Faint]
-Color=#c188ef
+Color=#eb517c
 
 [Color5Intense]
-Color=#c188ef
+Color=#eb517c
 
 [Color6]
-Color=#ef5abf
+Color=#ec93c1
 
 [Color6Faint]
-Color=#ef5abf
+Color=#ec93c1
 
 [Color6Intense]
-Color=#ef5abf
+Color=#ec93c1
 
 [Color7]
 Color=#c0c0ff

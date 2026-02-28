@@ -7,7 +7,7 @@ ContrastEffect=1
 IntensityAmount=0.1
 IntensityEffect=2
 
-[ColorEffects:Inactive]
+[ColorEffects:TextInactive]
 ChangeSelectionColor=true
 Color=112,111,110
 ColorAmount=0.025
@@ -60,7 +60,7 @@ ForegroundNormal=36,36,36
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
-[Colors:Header][Inactive]
+[Colors:Header][TextInactive]
 BackgroundAlternate=232,232,232
 BackgroundNormal=242,242,242
 DecorationFocus=49,91,239,150
