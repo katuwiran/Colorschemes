@@ -21,13 +21,14 @@ public partial class ColorScheme
 		Blue    = "4d5de5",
 		Purple  = "9e55dd",
 		Cyan    = "4897e8",
-		Green   = "70b20c",
+		Green   = "70b20c", // todo should be closer to cyan than orange
 		Yellow  = "d19700",
 		Red     = "f04f4e",
 		Orange  = "f28a70",
 
-		HighlightLow = "e3e9ed",
-		Highlight         = "acc2df",
-		HighlightHigh  = "85bbff"
+		// todo follow changes in moonlight's highlighting
+		HighlightLow  = "e3e9ed",
+		Highlight     = "acc2df",
+		HighlightHigh = "85bbff",
 	};
 }

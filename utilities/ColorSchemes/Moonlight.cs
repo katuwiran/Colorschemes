@@ -24,10 +24,10 @@ public partial class ColorScheme
 		Cyan    = "80b5f7",
 		Yellow  = "fcb986",
 		Orange  = "ff8c4f",
-		Green   = "c8e899",
+		Green   = "6a3654",
 
 		HighlightLow  = "6c3b62",
 		Highlight     = "89537f",
-		HighlightHigh = "e981c6"
+		HighlightHigh = "e981c6",
 	};
 }

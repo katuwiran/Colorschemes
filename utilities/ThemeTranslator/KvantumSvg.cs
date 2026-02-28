@@ -33,8 +33,8 @@ public class KvantumSvg : ITheme
 		string desk     = $"#{Scheme.TextInactive}";
 
 		string inactive         = $"#{Scheme.InactiveBackground}";          // default color of buttons 
-		string selectedListItem = $"#{Scheme.SelectionInactiveBackground}"; // in the list view
-		string focusedutton     = $"#{Scheme.SelectionBackground}";         // buttons on hover
+		string selectedListItem = $"#{Scheme.SelectionBackground}";         // in the list view
+		string focusedutton     = $"#{Scheme.HoverBackground}";             // buttons on hover
 		string buttonPressed    = $"#{Scheme.PressedBackground}";           // buttons on press
 		string toggled          = $"#{Scheme.SelectionInactiveBackground}"; // selected button on a list?
 		string disabled         = $"#{Scheme.InactiveBackground}";          // todo continue this

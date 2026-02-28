@@ -33,7 +33,7 @@ public class KvantumConfig : ITheme
 		// Typography
 		string textPrimary  = $"#{Scheme.Text}";
 		string textFocus    = $"#{Scheme.HoverText}";
-		string textPressed  = $"#{Scheme.PressedText}"; // sometimes dark, sometimes light in context
+		string textPressed  = $"#{Scheme.PressedText}";
 		string textDisabled = $"#{Scheme.InactiveText}";
 		string textSelected = $"#{Scheme.SelectionText}";
 		string textToggled  = $"#{Scheme.SelectionText}";
@@ -495,7 +495,9 @@ public class KvantumConfig : ITheme
 			 interior.element=menuitem
 			 indicator.element=menuitem
 			 text.normal.color={textPrimary}
+			 text.press.color={textPressed}
 			 text.focus.color={textPressed}
+			 text.toggle.color={textPressed}
 			 text.margin.top=0
 			 text.margin.bottom=0
 			 text.margin.left=6

@@ -73,9 +73,9 @@ public partial class ColorScheme
 	public string ConsoleForeground    => Text;         // Console 7. Text 
 	public string ConsoleForegroundAlt => TextFaded;    // Console 7. Text Bright
 
-	// git diffs
+	// git diff marks
 	public string DiffAdded    => Green;
-	public string DiffDeleted  => Magenta;
+	public string DiffDeleted  => Red;
 	public string DiffModified => Purple;
 	public string DiffIgnored  => TextFaded;
 	public string DiffConflict => Plum;
