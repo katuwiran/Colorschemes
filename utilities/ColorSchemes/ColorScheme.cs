@@ -30,6 +30,9 @@ public partial class ColorScheme
 	public required string Highlight     { get; set; } // selected result, on press
 	public required string HighlightHigh { get; set; } // on hover
 
+	public string Accent     => HighlightHigh; // primary color
+	public string AccentText => Background;    // primary color
+
 	public string HoverText             => Plum;              // text on hover
 	public string PressedText           => BackgroundOverlay; // text on press
 	public string SelectionText         => Background;        // selected text
@@ -52,6 +55,7 @@ public partial class ColorScheme
 
 	// Console
 	public string Caret                => Highlight;
+	public string CaretText            => Background;
 	public string ConsoleBackground    => Background;   // Console 0. Background
 	public string ConsoleBackgroundAlt => TextInactive; // Console 0. Bright
 	public string ConsoleRed           => Magenta;      // Console 1. Red
