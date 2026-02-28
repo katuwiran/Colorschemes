@@ -30,5 +30,11 @@ public partial class ColorScheme
 		HighlightLow  = "e3e9ed",
 		Highlight     = "acc2df",
 		HighlightHigh = "85bbff",
+		
+		// todo adapt this to light mode
+		DiffAddedHighlight    = "444d56",
+		DiffAddedBackground   = "556565",
+		DiffDeletedHighlight  = "6a3654",
+		DiffDeletedBackground = "51304c",
 	};
 }

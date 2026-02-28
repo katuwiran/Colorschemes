@@ -22,6 +22,7 @@ public class Program
 			(scheme) => new Konsole(scheme),
 			(scheme) => new Alacritty(scheme),
 			(scheme) => new Btop(scheme),
+			(scheme) => new SourceGit(scheme),
 		};
 
 		// create a list that holds all themes later

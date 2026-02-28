@@ -80,6 +80,12 @@ public partial class ColorScheme
 	public string DiffIgnored  => TextFaded;
 	public string DiffConflict => Plum;
 
+	// git diff text highlights, for source git
+	public required string DiffAddedHighlight    { get; set; }
+	public required string DiffAddedBackground   { get; set; }
+	public required string DiffDeletedHighlight  { get; set; }
+	public required string DiffDeletedBackground { get; set; }
+
 	public static string ToRgb(string hex)
 	{
 		string r = $"{HexadecimalToDecimal(hex.Substring(0, 2))}";

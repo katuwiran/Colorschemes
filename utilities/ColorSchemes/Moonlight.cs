@@ -29,5 +29,10 @@ public partial class ColorScheme
 		HighlightLow  = "6c3b62",
 		Highlight     = "89537f",
 		HighlightHigh = "e981c6",
+
+		DiffAddedHighlight    = "61766f",
+		DiffAddedBackground   = "36394a",
+		DiffDeletedHighlight  = "9a4063",
+		DiffDeletedBackground = "51304c",
 	};
 }
