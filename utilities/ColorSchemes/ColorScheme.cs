@@ -33,11 +33,11 @@ public partial class ColorScheme
 	public string Accent     => HighlightHigh; // primary color
 	public string AccentText => Background;    // primary color
 
-	public string HoverText             => Plum;              // text on hover
-	public string PressedText           => BackgroundOverlay; // text on press
-	public string SelectionText         => Background;        // selected text
-	public string SelectionInactiveText => Text;              // selected text but unfocused
-	public string InactiveText          => TextInactive;      // inactive text on buttons
+	public string HoverText             => Plum;       // text on hover
+	public string PressedText           => Plum;       // text on press
+	public string SelectionText         => Background; // selected text
+	public string SelectionInactiveText => Text;       // selected text but unfocused
+	public string InactiveText          => Text;       // inactive text on buttons
 
 	public string HoverBackground             => HighlightLow;      // on hover
 	public string PressedBackground           => HighlightHigh;     // on press
